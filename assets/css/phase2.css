@@ -1,0 +1,115 @@
+/* Phase 2 construction layer. Final generated art will replace many CSS-only set pieces. */
+
+:root{
+  --hand:"Segoe Print","Bradley Hand","Comic Sans MS",sans-serif;
+  --book:Georgia,"Times New Roman",serif;
+  --carved:"Palatino Linotype","Book Antiqua",Palatino,serif;
+}
+
+.skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;z-index:9999;background:#111;color:#fff;padding:.8rem 1rem;border:2px solid #d6bf80}
+.realm-title{font-family:var(--carved);letter-spacing:.06em;text-transform:uppercase}
+.realm-subtitle{font-family:var(--book);color:#aaa397}
+.path-note{font-family:var(--book);font-size:.9rem;color:#aaa397;border-left:3px solid #6d6657;padding-left:1rem}
+.status-chip{display:inline-block;padding:.28rem .55rem;border:1px solid currentColor;border-radius:999px;font:700 .72rem/1.1 var(--book);letter-spacing:.08em;text-transform:uppercase}
+.btn{display:inline-block;padding:.7rem 1rem;border:1px solid currentColor;border-radius:.65rem;background:#171715;color:#eee;text-decoration:none;font:inherit;cursor:pointer}
+.btn:hover{filter:brightness(1.15)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+
+/* NEXUS expansion */
+.nexus-landmarks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0 0}
+.landmark-note{padding:1rem;border:1px dashed rgba(220,210,190,.25);background:rgba(0,0,0,.18);font-family:var(--book)}
+.forest-carvings{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
+.forest-carvings span{padding:.35rem .6rem;border:1px solid rgba(255,255,255,.15);border-radius:999px;font-family:var(--book);font-size:.82rem}
+.portal[data-future="true"]{opacity:.62;filter:saturate(.6)}
+.portal[data-future="true"]::after{content:"FUTURE ONLY";position:absolute;top:1rem;right:1rem;padding:.25rem .45rem;border:1px solid #8b8173;border-radius:.4rem;font:700 .68rem/1 var(--book);letter-spacing:.08em;background:#111}
+
+/* LIBRARY decontamination sequence */
+.decon-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.5rem 0}
+.decon-step{padding:1rem;border:1px solid #5f6b6c;background:#121919;font-family:var(--book)}
+.decon-step[data-complete="true"]{background:#1c2927;border-color:#92aaa4}
+.decon-console{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-top:1.2rem}
+.decon-status{min-height:3.4rem;padding:1rem;border:1px solid #4c5657;background:#0b1011;font-family:var(--book)}
+.archive-entry[hidden]{display:none}
+.archive-entry{margin-top:1rem;padding:1rem;border:1px solid #8b7b51;background:rgba(112,88,38,.13)}
+.library-districts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.district{min-height:210px;padding:1.1rem;border:1px solid #4f4634;background:linear-gradient(180deg,rgba(103,78,39,.12),rgba(0,0,0,.3));position:relative;overflow:hidden}
+.district::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,#4a321d,#9d8150,#4a321d);opacity:.5}
+.platform-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.platform{font:700 .72rem/1 var(--book);letter-spacing:.04em;padding:.35rem .5rem;border:1px solid #6d6556;border-radius:.4rem;color:#c9bea9}
+.zombie-walkway{min-height:220px;position:relative;overflow:hidden;border:1px solid #3f493b;background:linear-gradient(#11150f,#070806);padding:1rem}
+.zombie-figure{width:min(260px,75%);padding:1rem;border:1px solid #4f5b47;background:#172016;animation:zombie-shamble 9s ease-in-out infinite alternate}
+@keyframes zombie-shamble{from{transform:translateX(0) rotate(-1deg)}to{transform:translateX(min(60vw,520px)) rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){.zombie-figure,.ghost{animation:none!important}.portal{transition:none!important}html{scroll-behavior:auto}}
+
+/* Forbidden Library */
+.black-door-warning{font-family:var(--book);font-size:.82rem;color:#a99b93;margin-top:1rem}
+.restricted-lock{padding:1rem;border:1px solid #63222a;background:#110708;font-family:var(--book)}
+.restricted-shelves[aria-hidden="true"]{filter:blur(5px);pointer-events:none;user-select:none;opacity:.35}
+.restricted-shelves{transition:.25s ease}
+.shelf-label{font-family:var(--carved);letter-spacing:.05em}
+
+/* Museum */
+.museum-axis{display:grid;gap:2rem}
+.gallery-plaque{font-family:var(--book);padding:.8rem 1rem;background:#0d0c0a;border:1px solid #55472f}
+.monumental-frame{min-height:560px;display:grid;place-items:center;padding:clamp(1rem,3vw,2rem);border:22px ridge #755834;background:radial-gradient(circle,#211b13,#0c0b09 68%)}
+.monumental-frame img{max-height:470px;object-fit:contain}
+.hearth-gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+.hearth-piece{min-height:420px;display:grid;place-items:center;text-align:center;padding:2rem;border:16px groove #60492f;background:#15120e}
+.exhibit-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.exhibit-case{padding:1rem;border:1px solid #484238;background:linear-gradient(180deg,rgba(180,157,102,.06),rgba(0,0,0,.34));min-height:180px}
+
+/* Morgue */
+.morgue-bay{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.morgue-drawer{min-height:180px;padding:1rem;border:8px solid #6e7475;background:linear-gradient(145deg,#9ca1a2,#646a6b 48%,#8b9091);color:#111;box-shadow:inset 0 0 0 2px #b8bcbc}
+.morgue-drawer h3{font-family:var(--book)}
+.toe-tag{transform:rotate(-1deg)}
+.ghost-field{min-height:330px;position:relative;overflow:hidden;border:1px solid #4c5354;background:radial-gradient(circle at 50% 35%,rgba(181,211,214,.08),transparent 18rem),#0a0d0e}
+.ghost-card{position:absolute;left:6%;top:20%;width:min(320px,82%);padding:1rem;border:1px solid rgba(187,211,216,.5);background:rgba(196,220,224,.09);box-shadow:0 0 30px rgba(182,214,220,.08);animation:float-dead 6s ease-in-out infinite alternate}
+@keyframes float-dead{from{transform:translate(0,0) rotate(-1deg)}to{transform:translate(45vw,26px) rotate(2deg)}}
+
+/* Crypt */
+.crypt-nave{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.stone-panel{padding:1.2rem;border:10px ridge #4f504b;background:linear-gradient(#363833,#171815);min-height:220px}
+.afterlife-thread{padding:1rem;border-left:4px solid #817454;background:rgba(255,255,255,.025);font-family:var(--book)}
+
+/* Guild Hall */
+.guild-banner{padding:1.1rem;border:1px solid #6c604b;background:linear-gradient(90deg,#241b14,#3b2b1e,#241b14);text-align:center;font-family:var(--carved);letter-spacing:.08em}
+.guild-tables{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.worktable{padding:1rem;border:8px solid #4b321f;background:#20150e;box-shadow:inset 0 0 0 2px #795638;min-height:210px}
+
+/* Curio Shop */
+.shop-map{display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch}
+.shop-counter,.shop-stairs,.back-door{padding:1.2rem;border:1px solid #5b4530;background:#1e160f}
+.shop-counter{grid-row:span 2;min-height:320px}
+.shop-stairs{background:repeating-linear-gradient(0deg,#281a10 0 18px,#4c3624 19px 25px)}
+.back-door{background:linear-gradient(#1d2b1b,#10160f)}
+@media(max-width:760px){.shop-map{grid-template-columns:1fr}.shop-counter{grid-row:auto}}
+
+/* Apothecary */
+.apothecary-shelves{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.apothecary-jar{min-height:190px;padding:1rem;border:1px solid #6b5d43;background:radial-gradient(circle at 50% 20%,rgba(217,196,129,.08),transparent 8rem),#15140f}
+.recipe-preview{display:grid;gap:.65rem;padding:1rem;border:1px solid #655a46;background:#11110d}
+.recipe-preview dt{font-weight:700;font-family:var(--book)}
+.recipe-preview dd{margin:0 0 .35rem}
+
+/* Yard sale */
+.yard-exit{min-height:180px;display:grid;place-items:center;background:linear-gradient(#253320,#10180f);border:1px solid #45583e;margin-bottom:1rem}
+.affiliate-banner{font-size:clamp(1rem,2.7vw,1.45rem)!important;border-width:4px!important;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.yard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.crate{padding:1rem;border:10px ridge #6d4e2f;background:#2d1d12;min-height:180px}
+
+/* Catacombs */
+.descent{display:grid;gap:.8rem;max-width:760px;margin:auto}
+.descent-step{padding:1rem;border:1px solid #4f4b43;background:#181713;transform:translateX(var(--shift,0))}
+.tunnel-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.tunnel-node{min-height:170px;padding:1rem;border:8px solid #383934;border-radius:35% 35% 10px 10px;background:radial-gradient(circle at 50% 25%,#25261f,#0d0e0c 70%)}
+
+/* Build status / future visual-target hooks */
+.art-slot{min-height:240px;display:grid;place-items:center;text-align:center;padding:1rem;border:2px dashed #6b665b;background:repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0 12px,transparent 12px 24px);font-family:var(--book);color:#aaa397}
+.visual-target-note{padding:1rem;border:1px solid #5a5245;background:#12110f;font-family:var(--book)}
+
+@media(max-width:720px){
+  .decon-steps{grid-template-columns:1fr}
+  .monumental-frame{min-height:420px;border-width:14px}
+  .portal{min-height:285px}
+}
