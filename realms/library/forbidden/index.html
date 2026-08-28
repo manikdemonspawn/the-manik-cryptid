@@ -4,45 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="color-scheme" content="dark">
   <title>Forbidden Library Gate | The Manik Cryptid</title>
   <link rel="stylesheet" href="../../../assets/css/site.css">
+  <link rel="stylesheet" href="../../../assets/css/phase2.css">
 </head>
 <body class="forbidden">
   <div class="construction-ribbon">RESTRICTED COLLECTION STRUCTURE • NO ADULT CONTENT LOADED</div>
-  <header class="realm-header site-shell"><nav><a href="../archive/index.html">← Back behind the bookcase</a></nav></header>
+  <header class="realm-header site-shell"><nav><a href="../archive/index.html">← Back behind the bookcase</a><a href="../../../index.html">Nexus</a></nav></header>
 
   <main class="site-shell">
     <section class="hero">
       <div>
+        <p class="status-chip">Restricted Threshold</p>
         <h1>The Forbidden Library</h1>
-        <p>The black door is the access gateway to restricted adult and mature collections.</p>
+        <p>The black door is not decoration. It is the access gateway to mature collections, and direct links must eventually be protected just as strongly as the theatrical entrance.</p>
       </div>
     </section>
 
-    <section class="age-gate">
-      <h2>Adult Access Checkpoint</h2>
-      <p>This construction build contains no restricted material. The controls below are only the interface hook for a future real age-verification / age-assurance provider.</p>
+    <section class="age-gate" aria-labelledby="adult-gate-title">
+      <h2 id="adult-gate-title">Adult Access Checkpoint</h2>
+      <div class="restricted-lock">
+        <strong>Construction safety state:</strong> no restricted material exists behind this gate yet. The buttons are only interface hooks. They intentionally do not unlock the shelf structure below.
+      </div>
       <p><strong>Are you 18 or older?</strong></p>
-      <button type="button" data-age-yes>Yes, I am 18+</button>
-      <button type="button" data-age-no>No / leave closed</button>
+      <button class="btn" type="button" data-age-yes>Yes, I am 18+</button>
+      <button class="btn" type="button" data-age-no>No / leave closed</button>
       <div class="age-status" data-age-status hidden aria-live="polite"></div>
     </section>
 
-    <section class="section">
+    <section class="section restricted-shelves" data-restricted-shelves aria-hidden="true">
       <h2>Restricted Shelf Architecture</h2>
       <div class="red-shelf">
-        <h3>Erotica • Red Shelf</h3>
-        <p>Deep oxblood / wine / crimson visual identity for erotic books and artwork. No restricted material is present in this build.</p>
+        <h3 class="shelf-label">Erotica • The Red Shelf</h3>
+        <p>Deep oxblood, wine, and crimson visual identity for erotic books and artwork. The final collection may include illustrated work created in collaboration with artists. No explicit material is loaded in this build.</p>
       </div>
+
       <div class="grid" style="margin-top:1.25rem">
-        <article class="panel"><h3>Trauma</h3><p>Reserved collection for adult trauma-heavy material.</p></article>
-        <article class="panel"><h3>Graphic Horror</h3><p>Reserved collection for gore, body horror, and disturbing imagery.</p></article>
-        <article class="panel"><h3>Other Mature Collections</h3><p>Restricted material that is not necessarily sexual but is not intended for minors.</p></article>
+        <article class="panel"><h3 class="shelf-label">Trauma</h3><p>Adult trauma-heavy material, autobiographical or fictional, with its own content-warning structure.</p></article>
+        <article class="panel"><h3 class="shelf-label">Graphic Horror</h3><p>Gore, body horror, disturbing imagery, and other content that needs a mature-content barrier even when it is not sexual.</p></article>
+        <article class="panel"><h3 class="shelf-label">Psychological / Extreme</h3><p>Material whose intensity belongs behind the adult gate even when nothing sexual is present.</p></article>
+        <article class="panel"><h3 class="shelf-label">Other Mature Collections</h3><p>Expandable restricted shelves for material that should not be casually surfaced to minors.</p></article>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="visual-target-note"><strong>Before launch:</strong> choose and integrate real age assurance, block direct access to restricted pages/assets, define content advisories, and keep explicit previews out of public Library surfaces and search-engine previews.</div>
     </section>
   </main>
 
-  <footer class="site-shell">Real access control must protect direct links before launch.</footer>
+  <footer class="site-shell">The warning is part of the lore. The lock still has to be real.</footer>
   <script src="../../../assets/js/site.js"></script>
 </body>
 </html>
