@@ -4,28 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="color-scheme" content="dark">
   <title>Library Decontamination | The Manik Cryptid</title>
   <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../../assets/css/phase2.css">
 </head>
 <body class="library">
+  <a class="skip-link" href="#decon">Skip to decontamination controls</a>
   <div class="construction-ribbon">LIBRARY REALM • CONSTRUCTION BUILD</div>
   <header class="realm-header site-shell"><nav><a href="../../index.html">← Return to the Nexus</a></nav></header>
 
   <main class="site-shell">
     <section class="hero">
       <div>
+        <p class="status-chip">Preservation Threshold</p>
         <h1>Decontamination</h1>
-        <p>The Library is an archive first. Preservation begins at the threshold.</p>
+        <p>The Library is an archive first. Nobody wanders directly into a Vatican-scale collection carrying whatever the outside world dragged in on its boots.</p>
       </div>
     </section>
 
-    <section class="decon-chamber">
-      <h2>Archive Intake</h2>
-      <p>Structural placeholder for the future decontamination sequence: sealed doors, preservation protocol, controlled entry, then the archive opens beyond it.</p>
-      <p><a href="archive/index.html">Complete construction-mode decontamination → Enter the Library</a></p>
+    <section class="decon-chamber" id="decon" aria-labelledby="decon-title">
+      <h2 id="decon-title">Archive Intake</h2>
+      <p>The final artwork can turn this into a sealed preservation chamber. The working interaction is already wired so the threshold behaves like a process instead of a decorative link.</p>
+
+      <div class="decon-steps" aria-label="Decontamination stages">
+        <div class="decon-step" data-decon-step data-complete="false"><strong>1. Isolation</strong><br>Outside contamination stays outside.</div>
+        <div class="decon-step" data-decon-step data-complete="false"><strong>2. Preservation Check</strong><br>Archive-safe intake protocol.</div>
+        <div class="decon-step" data-decon-step data-complete="false"><strong>3. Seal Release</strong><br>The inner archive doors unlock.</div>
+      </div>
+
+      <div class="decon-status" data-decon-status aria-live="polite">The chamber is sealed. Begin the preservation cycle when ready.</div>
+      <div class="decon-console">
+        <button class="btn" type="button" data-decon-start>Begin decontamination</button>
+      </div>
+
+      <div class="archive-entry" data-archive-entry hidden>
+        <strong>Archive seal released.</strong>
+        <p><a class="btn" href="archive/index.html">Enter the Library →</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="visual-target-note">
+        <strong>Future visual target:</strong> clinical preservation chamber at the threshold, then a dramatic reveal into an immense old-world archive. The decontamination area should feel controlled and modern enough to protect priceless material without making the Library interior itself look like a laboratory.
+      </div>
     </section>
   </main>
 
   <footer class="site-shell">The Library is designed for Vatican-archive scale.</footer>
+  <script src="../../assets/js/site.js"></script>
 </body>
 </html>
