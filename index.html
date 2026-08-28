@@ -4,30 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="color-scheme" content="dark">
   <title>The Nexus | The Manik Cryptid</title>
   <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/phase2.css">
 </head>
 <body class="nexus">
+  <a class="skip-link" href="#realm-map">Skip to realm thresholds</a>
   <div class="construction-ribbon">CONSTRUCTION BUILD • NOT FOR PUBLIC LAUNCH</div>
 
   <main>
     <section class="hero nexus-hero">
       <div class="nexus-intro site-shell">
+        <p class="status-chip">Central Threshold</p>
         <h1>The Nexus</h1>
-        <p>A fairy forest at the center of the Resurrection Artifact Universe. Every threshold belongs to a different realm. The paths do not promise to obey ordinary geography.</p>
+        <p>A fairy forest at the center of the Resurrection Artifact Universe. Mushrooms, hanging skulls, carved trunks, strange objects in the branches, and paths that refuse to obey ordinary geography. Every threshold belongs to a different realm.</p>
+
+        <div class="nexus-landmarks" aria-label="Nexus worldbuilding notes">
+          <div class="landmark-note"><strong>Forest rule:</strong> the environment carries the brand. Realm labels help with accessibility, but the threshold itself should tell you what kind of place waits beyond it.</div>
+          <div class="landmark-note"><strong>Cultural rule:</strong> influences stay distinct. Verified language and symbolism only. No generic folklore soup.</div>
+          <div class="landmark-note"><strong>Future rule:</strong> the posthumous Mausoleum exists in canon but has no active portal while the creator is alive.</div>
+        </div>
       </div>
     </section>
 
-    <div class="site-shell realm-map">
+    <div class="site-shell realm-map" id="realm-map">
       <section class="zone zone-fae" aria-labelledby="fae-zone-title">
-        <p class="zone-label" id="fae-zone-title">The old fairy path • Irish &amp; Scottish influence • tree-carving layer</p>
-        <div class="portal-grid">
+        <p class="zone-label" id="fae-zone-title">Old Fairy Path • Irish &amp; Scottish influence • carved-trunk layer</p>
+        <div class="forest-carvings" aria-label="Reserved forest details">
+          <span>Mushroom clusters</span><span>Hanging skulls</span><span>Tree carvings</span><span>Mist</span><span>Root-swallowed paths</span>
+        </div>
+
+        <div class="portal-grid" style="margin-top:1.5rem">
           <a class="portal" href="realms/museum/index.html">
             <div class="portal-art" aria-hidden="true">
               <div class="stonehenge"><span class="left"></span><span class="right"></span><span class="lintel"></span></div>
             </div>
             <h2 class="portal-title">The Museum</h2>
-            <p class="portal-sub">Cross the standing stones.</p>
+            <p class="portal-sub">Cross the enormous standing-stone threshold.</p>
           </a>
 
           <a class="portal" href="realms/library/index.html">
@@ -39,10 +53,12 @@
       </section>
 
       <section class="zone zone-healing" aria-labelledby="healing-zone-title">
-        <p class="zone-label" id="healing-zone-title">Living apothecary path • culturally distinct Cherokee / Blackfoot inscription spaces reserved for verified material</p>
+        <p class="zone-label" id="healing-zone-title">Living Apothecary Path • culturally distinct inscription spaces reserved</p>
+        <p class="path-note">Cherokee and Blackfoot writing or symbols are not being fabricated for the construction build. Each tradition will receive its own clearly separated, verified treatment later. A dreamcatcher may appear as a personal-practice detail without being mislabeled as Cherokee or Blackfoot.</p>
         <div class="grove-details" aria-label="Ambient grove details">
-          <span>Rue</span><span>Ginger</span><span>Thyme</span><span>Honey</span><span>Bees / hive</span><span>One dreamcatcher element</span>
+          <span>Rue</span><span>Ginger</span><span>Thyme</span><span>Honey</span><span>Bees / hive</span><span>One prominent dreamcatcher</span>
         </div>
+
         <div class="portal-grid" style="margin-top:1.5rem">
           <a class="portal" href="realms/catacombs/index.html">
             <div class="portal-art" aria-hidden="true"><div class="cellar"></div></div>
@@ -59,8 +75,10 @@
       </section>
 
       <section class="zone zone-norse" aria-labelledby="norse-zone-title">
-        <p class="zone-label" id="norse-zone-title">Death / memory path • Norse influence • Elder Futhark inscription slots reserved with translations</p>
-        <div class="portal-grid">
+        <p class="zone-label" id="norse-zone-title">Death &amp; Memory Path • Norse influence • Elder Futhark + translation slots reserved</p>
+        <p class="path-note">Norse belief and ancestry can shape this region without treating Valhalla as the creator's personal destination or blending separate afterlife traditions into one stew.</p>
+
+        <div class="portal-grid" style="margin-top:1.5rem">
           <a class="portal" href="realms/morgue/index.html">
             <div class="portal-art" aria-hidden="true"><div class="morgue-doors"></div></div>
             <h2 class="portal-title">The Morgue</h2>
@@ -83,6 +101,6 @@
     </div>
   </main>
 
-  <footer class="site-shell">The Manik Cryptid • Resurrection Artifact Universe • Construction skeleton</footer>
+  <footer class="site-shell">The Manik Cryptid • Resurrection Artifact Universe • Construction branch</footer>
 </body>
 </html>
