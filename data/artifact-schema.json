@@ -1,0 +1,30 @@
+{
+  "artifact_id": "unique-slug",
+  "title": "Artifact title",
+  "realm": "museum|library|morgue|crypt|guild-hall|curio-shop|catacombs",
+  "collection": "optional collection/shelf/district",
+  "artifact_type": "writing|image|audio|app|document|credential|product|affiliate|record|other",
+  "status": "active|deceased|resurrected|archived|future",
+  "created_date": null,
+  "death_date": null,
+  "resurrection_date": null,
+  "museum_scale": "normal|ceremonial|hearth|not-applicable",
+  "restricted": false,
+  "content_advisories": [],
+  "summary": "Short public-safe description",
+  "provenance": "Where it came from / why it matters",
+  "platforms": [
+    {
+      "label": "YouTube|Spotify|Patreon|Google Play|Apple App Store|Direct|Other",
+      "url": ""
+    }
+  ],
+  "media": {
+    "hero_image": null,
+    "thumbnail": null,
+    "audio_embed": null,
+    "video_embed": null
+  },
+  "cross_references": [],
+  "notes": "Internal construction notes"
+}
