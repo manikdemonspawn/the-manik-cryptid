@@ -8,9 +8,10 @@
   <title>The Nexus | The Manik Cryptid</title>
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/phase2.css">
+  <link rel="stylesheet" href="assets/css/stage.css">
 </head>
 <body class="nexus">
-  <a class="skip-link" href="#realm-map">Skip to realm thresholds</a>
+  <a class="skip-link" href="#nexus-stage">Skip to realm thresholds</a>
   <div class="construction-ribbon">CONSTRUCTION BUILD • NOT FOR PUBLIC LAUNCH</div>
 
   <main>
@@ -28,6 +29,26 @@
       </div>
     </section>
 
+    <section class="site-shell nexus-stage-wrap" aria-labelledby="stage-title">
+      <h2 id="stage-title" class="realm-title">Explorable Nexus Stage</h2>
+      <p class="realm-subtitle">This is the production layer the final giant Nexus image will sit behind. The clickable realm thresholds are already wired independently from the artwork.</p>
+
+      <div class="nexus-stage" id="nexus-stage" aria-label="Construction map of the Nexus with clickable realm thresholds">
+        <span class="stage-zone-label fae">Irish / Scottish Fae Path</span>
+        <span class="stage-zone-label healing">Living Apothecary / Cultural Path</span>
+        <span class="stage-zone-label norse">Death &amp; Memory / Norse Path</span>
+
+        <a class="nexus-hotspot museum" href="realms/museum/index.html">Museum<small>Stonehenge</small></a>
+        <a class="nexus-hotspot library" href="realms/library/index.html">Library<small>Decontamination</small></a>
+        <a class="nexus-hotspot curio" href="realms/curio-shop/index.html">Curio Shop<small>Round storefront</small></a>
+        <a class="nexus-hotspot catacombs" href="realms/catacombs/index.html">Catacombs<small>Cellar doors</small></a>
+        <a class="nexus-hotspot morgue" href="realms/morgue/index.html">Morgue<small>Clinical doors</small></a>
+        <a class="nexus-hotspot crypt" href="realms/crypt/index.html">Crypt<small>Coffin / sarcophagus</small></a>
+        <a class="nexus-hotspot guild" href="realms/guild-hall/index.html">Guild Hall<small>Castle door</small></a>
+      </div>
+      <p class="stage-legend">The positions are construction coordinates, not sacred geography. The final Nexus visual target can refine exact placement while these semantic links remain intact. No living-site Mausoleum hotspot exists.</p>
+    </section>
+
     <div class="site-shell realm-map" id="realm-map">
       <section class="zone zone-fae" aria-labelledby="fae-zone-title">
         <p class="zone-label" id="fae-zone-title">Old Fairy Path • Irish &amp; Scottish influence • carved-trunk layer</p>
@@ -37,17 +58,12 @@
 
         <div class="portal-grid" style="margin-top:1.5rem">
           <a class="portal" href="realms/museum/index.html">
-            <div class="portal-art" aria-hidden="true">
-              <div class="stonehenge"><span class="left"></span><span class="right"></span><span class="lintel"></span></div>
-            </div>
-            <h2 class="portal-title">The Museum</h2>
-            <p class="portal-sub">Cross the enormous standing-stone threshold.</p>
+            <div class="portal-art" aria-hidden="true"><div class="stonehenge"><span class="left"></span><span class="right"></span><span class="lintel"></span></div></div>
+            <h2 class="portal-title">The Museum</h2><p class="portal-sub">Cross the enormous standing-stone threshold.</p>
           </a>
-
           <a class="portal" href="realms/library/index.html">
             <div class="portal-art" aria-hidden="true"><div class="decon-door"></div></div>
-            <h2 class="portal-title">The Library</h2>
-            <p class="portal-sub">Preservation begins before entry.</p>
+            <h2 class="portal-title">The Library</h2><p class="portal-sub">Preservation begins before entry.</p>
           </a>
         </div>
       </section>
@@ -55,47 +71,20 @@
       <section class="zone zone-healing" aria-labelledby="healing-zone-title">
         <p class="zone-label" id="healing-zone-title">Living Apothecary Path • culturally distinct inscription spaces reserved</p>
         <p class="path-note">Cherokee and Blackfoot writing or symbols are not being fabricated for the construction build. Each tradition will receive its own clearly separated, verified treatment later. A dreamcatcher may appear as a personal-practice detail without being mislabeled as Cherokee or Blackfoot.</p>
-        <div class="grove-details" aria-label="Ambient grove details">
-          <span>Rue</span><span>Ginger</span><span>Thyme</span><span>Honey</span><span>Bees / hive</span><span>One prominent dreamcatcher</span>
-        </div>
-
+        <div class="grove-details" aria-label="Ambient grove details"><span>Rue</span><span>Ginger</span><span>Thyme</span><span>Honey</span><span>Bees / hive</span><span>One prominent dreamcatcher</span></div>
         <div class="portal-grid" style="margin-top:1.5rem">
-          <a class="portal" href="realms/catacombs/index.html">
-            <div class="portal-art" aria-hidden="true"><div class="cellar"></div></div>
-            <h2 class="portal-title">The Catacombs</h2>
-            <p class="portal-sub">Open the cellar doors. Go down.</p>
-          </a>
-
-          <a class="portal" href="realms/curio-shop/index.html">
-            <div class="portal-art" aria-hidden="true"><div class="round-shop"></div></div>
-            <h2 class="portal-title">The Curio Shop</h2>
-            <p class="portal-sub">A round-door storefront full of future trouble.</p>
-          </a>
+          <a class="portal" href="realms/catacombs/index.html"><div class="portal-art" aria-hidden="true"><div class="cellar"></div></div><h2 class="portal-title">The Catacombs</h2><p class="portal-sub">Open the cellar doors. Go down.</p></a>
+          <a class="portal" href="realms/curio-shop/index.html"><div class="portal-art" aria-hidden="true"><div class="round-shop"></div></div><h2 class="portal-title">The Curio Shop</h2><p class="portal-sub">A round-door storefront full of future trouble.</p></a>
         </div>
       </section>
 
       <section class="zone zone-norse" aria-labelledby="norse-zone-title">
         <p class="zone-label" id="norse-zone-title">Death &amp; Memory Path • Norse influence • Elder Futhark + translation slots reserved</p>
         <p class="path-note">Norse belief and ancestry can shape this region without treating Valhalla as the creator's personal destination or blending separate afterlife traditions into one stew.</p>
-
         <div class="portal-grid" style="margin-top:1.5rem">
-          <a class="portal" href="realms/morgue/index.html">
-            <div class="portal-art" aria-hidden="true"><div class="morgue-doors"></div></div>
-            <h2 class="portal-title">The Morgue</h2>
-            <p class="portal-sub">The dead keep records here.</p>
-          </a>
-
-          <a class="portal" href="realms/crypt/index.html">
-            <div class="portal-art" aria-hidden="true"><div class="coffin"></div></div>
-            <h2 class="portal-title">The Crypt</h2>
-            <p class="portal-sub">Stone, memory, and the honored dead.</p>
-          </a>
-
-          <a class="portal" href="realms/guild-hall/index.html">
-            <div class="portal-art" aria-hidden="true"><div class="castle-door"></div></div>
-            <h2 class="portal-title">The Guild Hall</h2>
-            <p class="portal-sub">The castle door does not fuck around.</p>
-          </a>
+          <a class="portal" href="realms/morgue/index.html"><div class="portal-art" aria-hidden="true"><div class="morgue-doors"></div></div><h2 class="portal-title">The Morgue</h2><p class="portal-sub">The dead keep records here.</p></a>
+          <a class="portal" href="realms/crypt/index.html"><div class="portal-art" aria-hidden="true"><div class="coffin"></div></div><h2 class="portal-title">The Crypt</h2><p class="portal-sub">Stone, memory, and the honored dead.</p></a>
+          <a class="portal" href="realms/guild-hall/index.html"><div class="portal-art" aria-hidden="true"><div class="castle-door"></div></div><h2 class="portal-title">The Guild Hall</h2><p class="portal-sub">The castle door does not fuck around.</p></a>
         </div>
       </section>
     </div>
