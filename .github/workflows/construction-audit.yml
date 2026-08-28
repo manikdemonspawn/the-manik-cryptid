@@ -1,0 +1,25 @@
+name: Construction Site Audit
+
+on:
+  push:
+    branches: [construction]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Audit construction site
+        run: python scripts/site_audit.py
