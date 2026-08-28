@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "rule": "Code first. Approved visual targets become lore-bearing artifacts.",
+  "targets": [
+    {
+      "id": "nexus-master",
+      "scope": "nexus",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/nexus/nexus-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "museum-master",
+      "scope": "museum",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/museum/museum-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "library-master",
+      "scope": "library",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/library/library-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "forbidden-library-master",
+      "scope": "forbidden-library",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/forbidden-library/forbidden-library-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "morgue-master",
+      "scope": "morgue",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/morgue/morgue-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "crypt-master",
+      "scope": "crypt",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/crypt/crypt-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "guild-hall-master",
+      "scope": "guild-hall",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/guild-hall/guild-hall-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "curio-shop-master",
+      "scope": "curio-shop",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/curio-shop/curio-shop-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "apothecary-master",
+      "scope": "apothecary",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/apothecary/apothecary-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "yard-sale-master",
+      "scope": "yard-sale",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/yard-sale/yard-sale-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
+      "id": "catacombs-master",
+      "scope": "catacombs",
+      "kind": "canonical-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/catacombs/catacombs-master",
+      "approved": false,
+      "lore_status": "pending"
+    }
+  ],
+  "posthumous": [
+    {
+      "id": "mausoleum-master",
+      "scope": "mausoleum",
+      "status": "inactive-posthumous-only",
+      "approved": false,
+      "lore_status": "not-active"
+    }
+  ]
+}
