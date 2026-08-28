@@ -1,0 +1,80 @@
+{
+  "site": "The Manik Cryptid Resurrection Artifact Universe",
+  "status": "construction",
+  "public_branch": "main",
+  "construction_branch": "construction",
+  "nexus": {
+    "type": "fairy-forest-threshold",
+    "future_mausoleum_visible": false,
+    "zones": ["fae", "living-apothecary-cultural", "death-memory-norse"]
+  },
+  "realms": [
+    {
+      "id": "museum",
+      "name": "The Museum",
+      "threshold": "Stonehenge",
+      "path": "realms/museum/index.html",
+      "purpose": ["history", "lineage", "family lore", "provenance", "credentials", "milestones", "core artifacts"]
+    },
+    {
+      "id": "library",
+      "name": "The Library",
+      "threshold": "decontamination chamber",
+      "path": "realms/library/index.html",
+      "purpose": ["writing", "audio", "soundscapes", "apps", "art", "multimedia", "external gateways", "special collections"],
+      "contains": ["forbidden-library"]
+    },
+    {
+      "id": "forbidden-library",
+      "name": "The Forbidden Library",
+      "threshold": "hidden bookcase then black door",
+      "path": "realms/library/forbidden/index.html",
+      "restricted": true,
+      "launch_blocked_until_real_age_assurance": true
+    },
+    {
+      "id": "morgue",
+      "name": "The Morgue",
+      "threshold": "institutional morgue doors and gurneys",
+      "path": "realms/morgue/index.html",
+      "purpose": ["dead projects", "death dates", "resurrection dates", "toe tags", "ghost artifacts"]
+    },
+    {
+      "id": "crypt",
+      "name": "The Crypt",
+      "threshold": "coffin or sarcophagus",
+      "path": "realms/crypt/index.html",
+      "purpose": ["memory", "honored dead", "afterlife belief threads"]
+    },
+    {
+      "id": "guild-hall",
+      "name": "The Guild Hall",
+      "threshold": "castle door",
+      "path": "realms/guild-hall/index.html",
+      "purpose": ["skills", "capabilities", "crafts", "portfolio", "guild records"]
+    },
+    {
+      "id": "curio-shop",
+      "name": "The Curio Shop",
+      "threshold": "round storybook storefront door",
+      "path": "realms/curio-shop/index.html",
+      "purpose": ["Cryptid-made goods", "Apothecary", "affiliate yard sale"]
+    },
+    {
+      "id": "catacombs",
+      "name": "The Catacombs",
+      "threshold": "cellar doors and downward stairs",
+      "path": "realms/catacombs/index.html",
+      "purpose": ["basement realm", "underground branches", "buried records"]
+    }
+  ],
+  "future": [
+    {
+      "id": "mausoleum",
+      "active": false,
+      "posthumous_only": true,
+      "purpose": "the honest person beneath the mythology",
+      "rules": ["one sarcophagus", "carved stone walls", "interactive inscriptions", "no active Nexus portal while creator is alive"]
+    }
+  ]
+}
