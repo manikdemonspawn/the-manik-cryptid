@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "artifacts": [
+    {
+      "artifact_id": "department-of-cryptid-affairs-certificate",
+      "title": "Department of Cryptid Affairs Certificate",
+      "realm": "museum",
+      "collection": "ceremonial-credentials",
+      "artifact_type": "credential",
+      "status": "active",
+      "created_date": null,
+      "death_date": null,
+      "resurrection_date": null,
+      "museum_scale": "ceremonial",
+      "restricted": false,
+      "content_advisories": [],
+      "summary": "An existing credential artifact preserved in the Museum's ceremonial gallery.",
+      "provenance": "Existing repository artifact retained from the original site build.",
+      "platforms": [],
+      "media": {
+        "hero_image": "Certificate.jpg",
+        "thumbnail": null,
+        "audio_embed": null,
+        "video_embed": null
+      },
+      "cross_references": [],
+      "notes": "This registry entry points to the existing Certificate.jpg file."
+    }
+  ]
+}
