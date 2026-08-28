@@ -5,6 +5,7 @@
   if (!script) return;
 
   const dataUrl = new URL("../../data/artifacts.json", script.src);
+  const siteRoot = new URL("../../", script.src);
 
   const make = (tag, className, text) => {
     const node = document.createElement(tag);
@@ -15,10 +16,37 @@
 
   const formatDate = value => value || "Not recorded";
 
+  const safeSiteAssetUrl = value => {
+    if (!value || typeof value !== "string") return null;
+    try {
+      return new URL(value.replace(/^\/+/, ""), siteRoot).href;
+    } catch {
+      return null;
+    }
+  };
+
+  const renderMedia = artifact => {
+    const hero = artifact.media && artifact.media.hero_image;
+    const src = safeSiteAssetUrl(hero);
+    if (!src) return null;
+
+    const figure = make("figure", "registry-media");
+    const image = make("img", "registry-image");
+    image.src = src;
+    image.alt = artifact.title ? `${artifact.title} artifact image` : "Artifact image";
+    image.loading = "lazy";
+    image.decoding = "async";
+    figure.appendChild(image);
+    return figure;
+  };
+
   const renderArtifact = artifact => {
     const card = make("article", "registry-artifact");
     card.dataset.status = artifact.status || "active";
     card.dataset.realm = artifact.realm || "";
+
+    const media = renderMedia(artifact);
+    if (media) card.appendChild(media);
 
     const title = make("h3", "registry-title", artifact.title || "Untitled artifact");
     card.appendChild(title);
@@ -29,6 +57,7 @@
     if (artifact.museum_scale && artifact.museum_scale !== "not-applicable") {
       meta.appendChild(make("span", "registry-chip", artifact.museum_scale));
     }
+    if (artifact.restricted) meta.appendChild(make("span", "registry-chip", "restricted"));
     card.appendChild(meta);
 
     if (artifact.summary) card.appendChild(make("p", "registry-summary", artifact.summary));
@@ -42,6 +71,13 @@
         dates.appendChild(make("dd", "", formatDate(artifact.resurrection_date)));
       }
       card.appendChild(dates);
+    }
+
+    if (artifact.provenance) {
+      const details = make("details", "registry-provenance");
+      details.appendChild(make("summary", "", "Provenance"));
+      details.appendChild(make("p", "", artifact.provenance));
+      card.appendChild(details);
     }
 
     if (Array.isArray(artifact.platforms) && artifact.platforms.length) {
