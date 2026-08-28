@@ -22,16 +22,36 @@ Current active realm skeletons:
 
 The future Mausoleum is posthumous-only and has no active Nexus portal.
 
+## Construction systems already built
+
+- image-ready Nexus hotspot layer independent of final art;
+- accessible plain Realm Index fallback;
+- interactive Library decontamination sequence;
+- hidden-bookcase / black-door interaction hooks;
+- construction-only Forbidden Library gate with no adult content loaded;
+- reusable artifact schema and canonical artifact registry;
+- reusable artifact-registry renderer for future books, apps, audio, products, museum pieces, Morgue records, and other artifacts;
+- content templates for major artifact types;
+- final-art CSS hooks so approved images can be integrated without rebuilding markup;
+- reduced-motion behavior and keyboard-focus support;
+- launch and cultural-verification safeguards.
+
 ## Construction references
 
 - `docs/CANON.md` — world and realm rules;
 - `docs/STRUCTURE.md` — repository/site structure;
 - `docs/CONTENT_MODEL.md` — how artifacts scale without breaking the architecture;
-- `docs/VISUAL_TARGET_BRIEF.md` — art-direction requirements to use only after the code reaches its practical ceiling;
+- `docs/BUILD_STATUS.md` — code-first build status and known blockers;
+- `docs/VISUAL_TARGET_BRIEF.md` — art-direction requirements after the code ceiling;
+- `docs/ART_ASSET_CONTRACT.md` — how approved visual targets plug into the site;
 - `docs/LAUNCH_CHECKLIST.md` — gates before anything becomes public;
 - `data/realm-manifest.json` — machine-readable realm map;
-- `data/artifact-schema.json` — reusable artifact metadata;
-- `templates/` — construction templates for future content.
+- `data/artifact-schema.json` — reusable artifact metadata shape;
+- `data/artifacts.json` — canonical artifact registry;
+- `assets/images/README.md` — visual asset staging and versioning rules;
+- `templates/` — construction templates for future content;
+- `registry-preview.html` — internal construction test of the artifact renderer;
+- `realm-index.html` — non-visual accessible navigation fallback.
 
 ## Important locks
 
@@ -39,3 +59,4 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 - Do not load adult/restricted content before real access control exists.
 - Do not fabricate Cherokee, Blackfoot, Elder Futhark, or other culturally specific writing.
 - Do not expose the posthumous Mausoleum as an active living-site portal.
+- Approved visual targets become lore-bearing artifacts and are not silently discarded when later versions exist.
