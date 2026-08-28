@@ -37,8 +37,15 @@ def is_external(value: str) -> bool:
 
 def resolve_local(source: Path, value: str) -> Path:
     path_part = urlsplit(value).path
-    candidate = (source.parent / path_part).resolve()
-    return candidate
+    return (source.parent / path_part).resolve()
+
+
+def load_json(path: Path, errors: list[str]):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        errors.append(f"{path.relative_to(ROOT)}: invalid JSON: {exc}")
+        return None
 
 
 def audit_html(errors: list[str]) -> None:
@@ -75,22 +82,79 @@ def audit_html(errors: list[str]) -> None:
 
 def audit_json(errors: list[str]) -> None:
     for file in sorted((ROOT / "data").glob("*.json")):
-        try:
-            json.loads(file.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
-            errors.append(f"{file.relative_to(ROOT)}: invalid JSON: {exc}")
+        load_json(file, errors)
 
     manifest_path = ROOT / "data" / "realm-manifest.json"
     if manifest_path.exists():
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        nexus = manifest.get("nexus", {})
-        if nexus.get("future_mausoleum_visible") is not False:
-            errors.append("realm-manifest.json: future_mausoleum_visible must remain false")
+        manifest = load_json(manifest_path, errors)
+        if isinstance(manifest, dict):
+            nexus = manifest.get("nexus", {})
+            if nexus.get("future_mausoleum_visible") is not False:
+                errors.append("realm-manifest.json: future_mausoleum_visible must remain false")
 
-        future = manifest.get("future", [])
-        mausoleum = next((item for item in future if item.get("id") == "mausoleum"), None)
-        if not mausoleum or mausoleum.get("posthumous_only") is not True or mausoleum.get("active") is not False:
-            errors.append("realm-manifest.json: Mausoleum must remain inactive and posthumous-only")
+            future = manifest.get("future", [])
+            mausoleum = next((item for item in future if item.get("id") == "mausoleum"), None)
+            if not mausoleum or mausoleum.get("posthumous_only") is not True or mausoleum.get("active") is not False:
+                errors.append("realm-manifest.json: Mausoleum must remain inactive and posthumous-only")
+
+
+def audit_artifacts(errors: list[str]) -> None:
+    path = ROOT / "data" / "artifacts.json"
+    if not path.exists():
+        errors.append("data/artifacts.json: canonical artifact registry missing")
+        return
+
+    payload = load_json(path, errors)
+    if not isinstance(payload, dict):
+        return
+
+    seen: set[str] = set()
+    for item in payload.get("artifacts", []):
+        artifact_id = item.get("artifact_id")
+        if not artifact_id:
+            errors.append("artifacts.json: artifact without artifact_id")
+            continue
+        if artifact_id in seen:
+            errors.append(f"artifacts.json: duplicate artifact_id {artifact_id!r}")
+        seen.add(artifact_id)
+
+        media = item.get("media") or {}
+        hero = media.get("hero_image")
+        if hero:
+            candidate = (ROOT / hero.lstrip("/")).resolve()
+            if not candidate.exists():
+                errors.append(f"artifacts.json: {artifact_id} hero_image does not exist: {hero}")
+
+        for platform in item.get("platforms", []):
+            url = (platform or {}).get("url")
+            if url and urlsplit(url).scheme not in {"http", "https"}:
+                errors.append(f"artifacts.json: {artifact_id} platform URL must be http/https: {url}")
+
+
+def audit_visual_targets(errors: list[str]) -> None:
+    path = ROOT / "data" / "visual-targets.json"
+    if not path.exists():
+        errors.append("data/visual-targets.json: visual target manifest missing")
+        return
+
+    payload = load_json(path, errors)
+    if not isinstance(payload, dict):
+        return
+
+    ids = {item.get("id") for item in payload.get("targets", [])}
+    required = {
+        "nexus-master", "museum-master", "library-master", "forbidden-library-master",
+        "morgue-master", "crypt-master", "guild-hall-master", "curio-shop-master",
+        "apothecary-master", "yard-sale-master", "catacombs-master"
+    }
+    missing = required - ids
+    if missing:
+        errors.append(f"visual-targets.json: missing target IDs: {sorted(missing)}")
+
+    posthumous = payload.get("posthumous", [])
+    mausoleum = next((item for item in posthumous if item.get("id") == "mausoleum-master"), None)
+    if not mausoleum or mausoleum.get("status") != "inactive-posthumous-only":
+        errors.append("visual-targets.json: Mausoleum target must remain inactive-posthumous-only")
 
 
 def audit_forbidden_library(errors: list[str]) -> None:
@@ -110,6 +174,8 @@ def main() -> int:
     errors: list[str] = []
     audit_html(errors)
     audit_json(errors)
+    audit_artifacts(errors)
+    audit_visual_targets(errors)
     audit_forbidden_library(errors)
 
     if errors:
@@ -122,6 +188,8 @@ def main() -> int:
     print("- local HTML references resolve")
     print("- construction pages remain noindex")
     print("- JSON data files parse")
+    print("- artifact IDs/media/platform URLs validate")
+    print("- visual-target manifest is complete")
     print("- living-site Mausoleum remains inactive")
     print("- Forbidden Library retains construction safety markers")
     return 0
