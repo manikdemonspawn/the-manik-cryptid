@@ -1,0 +1,106 @@
+/* Final-art integration hooks.
+   These classes let approved visual targets drop into the build without rewriting realm markup. */
+
+.visual-canvas{
+  position:relative;
+  overflow:hidden;
+  min-height:clamp(320px,52vw,760px);
+  border:1px solid rgba(255,255,255,.12);
+  background-color:#0b0d0c;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.visual-canvas::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.45));
+}
+
+.nexus-stage[data-art-ready="true"]{
+  background-image:var(--nexus-hero-image,none);
+  background-size:cover;
+  background-position:center;
+}
+
+.realm-scene{
+  position:relative;
+  isolation:isolate;
+  min-height:clamp(340px,58vw,820px);
+  background-image:var(--realm-scene-image,none);
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
+
+.realm-scene::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5));
+}
+
+.art-hotspot{
+  position:absolute;
+  display:grid;
+  place-items:center;
+  min-width:44px;
+  min-height:44px;
+  border-radius:999px;
+  border:2px solid rgba(255,255,255,.72);
+  background:rgba(0,0,0,.58);
+  color:#fff;
+  text-decoration:none;
+  font:700 .74rem/1.1 Georgia,serif;
+  text-align:center;
+  padding:.45rem;
+  backdrop-filter:blur(3px);
+}
+
+.art-hotspot:focus-visible{
+  outline:3px solid #f0d487;
+  outline-offset:4px;
+}
+
+.art-caption{
+  margin:.75rem 0 0;
+  color:#aaa397;
+  font:italic .88rem/1.5 Georgia,serif;
+}
+
+.registry-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1rem;
+}
+
+.registry-artifact{
+  padding:1rem;
+  border:1px solid #4d493f;
+  background:rgba(0,0,0,.28);
+}
+
+.registry-title{margin-top:0}
+.registry-meta,.registry-platforms{display:flex;flex-wrap:wrap;gap:.45rem}
+.registry-chip,.registry-platform{
+  display:inline-block;
+  padding:.28rem .48rem;
+  border:1px solid #665f51;
+  border-radius:.4rem;
+  font:700 .7rem/1 Georgia,serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.registry-platform{text-decoration:none}
+.registry-summary{font-family:Georgia,serif;color:#c9c1b3}
+.registry-dates{display:grid;grid-template-columns:max-content 1fr;gap:.2rem .7rem;font-family:Georgia,serif}
+.registry-dates dt{font-weight:700}.registry-dates dd{margin:0}
+.registry-empty{font-family:Georgia,serif;color:#9f988b;border:1px dashed #565148;padding:1rem}
+
+@media (prefers-reduced-motion:reduce){
+  .visual-canvas,.realm-scene{scroll-behavior:auto}
+}
