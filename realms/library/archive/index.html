@@ -4,18 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="color-scheme" content="dark">
   <title>The Library | The Manik Cryptid</title>
   <link rel="stylesheet" href="../../../assets/css/site.css">
+  <link rel="stylesheet" href="../../../assets/css/phase2.css">
 </head>
 <body class="library">
+  <a class="skip-link" href="#collections">Skip to collections</a>
   <div class="construction-ribbon">MAIN LIBRARY • CONSTRUCTION BUILD</div>
   <header class="realm-header site-shell"><nav><a href="../index.html">← Decontamination chamber</a><a href="../../../index.html">Nexus</a></nav></header>
 
   <main>
     <section class="hero site-shell">
       <div>
+        <p class="status-chip">Archive Realm</p>
         <h1>The Library</h1>
-        <p>Not a bookshelf. An institution. Writing, audio, soundscapes, apps, art, multimedia, archives, and gateways to the platforms where artifacts live.</p>
+        <p>Not a bookshelf. An institution. Writing, audio, soundscapes, apps, artwork, multimedia, records, and gateways to the platforms where the artifacts actually live.</p>
       </div>
     </section>
 
@@ -23,51 +27,82 @@
       <div class="archive-vista">
         <div>
           <h2>The Archive Continues Beyond Sight</h2>
-          <p>Future art will create balconies, galleries, corridors, stacks, listening chambers, app artifacts, and special collections without changing this underlying structure.</p>
+          <p>The final visual should imply balconies, galleries, old wood, stone, controlled lighting, immense ceilings, corridors vanishing past what the visitor can see, and collection wings that can grow for decades.</p>
+          <p class="small-note">The website structure does not require every digital asset to live in GitHub. The Library is the canonical catalog and gateway.</p>
         </div>
       </div>
     </section>
 
-    <section class="section site-shell">
-      <h2>Primary Collections</h2>
-      <div class="grid">
-        <article class="panel"><h3>Written Works</h3><p>Books, stories, manuscripts, excerpts, and publication gateways.</p></article>
-        <article class="panel"><h3>Soundscapes &amp; Audio</h3><p>Exhibits can embed previews and link to YouTube, Spotify, Patreon, and future platforms.</p></article>
-        <article class="panel"><h3>Apps &amp; Interactive Artifacts</h3><p>Canonical exhibit pages can link to Google Play, Apple, compatible alternate storefronts, direct distribution, or web versions.</p></article>
-        <article class="panel"><h3>Art &amp; Multimedia</h3><p>Images, illustrations, recordings, and mixed-media artifact displays.</p></article>
+    <section class="section site-shell" id="collections">
+      <h2>Collection Districts</h2>
+      <div class="library-districts">
+        <article class="district">
+          <h3>Written Works</h3>
+          <p>Books, stories, manuscripts, excerpts, editions, publication links, and preserved text artifacts.</p>
+          <div class="platform-row"><span class="platform">Patreon</span><span class="platform">Retailers</span><span class="platform">Direct</span></div>
+        </article>
+        <article class="district">
+          <h3>Listening Chambers</h3>
+          <p>Soundscapes, readings, audio experiments, podcasts, and recordings. Exhibits may embed previews while the heavyweight media lives elsewhere.</p>
+          <div class="platform-row"><span class="platform">YouTube</span><span class="platform">Spotify</span><span class="platform">Patreon</span></div>
+        </article>
+        <article class="district">
+          <h3>Interactive Artifacts</h3>
+          <p>Apps and web experiences appear as in-world artifacts, machines, cabinets, books, or displays instead of breaking the environment with generic app-store tiles.</p>
+          <div class="platform-row"><span class="platform">Google Play</span><span class="platform">Apple</span><span class="platform">Alternate Stores</span><span class="platform">Direct</span></div>
+        </article>
+        <article class="district">
+          <h3>Art &amp; Multimedia</h3>
+          <p>Illustrations, cover art, photography, visual accompaniments, mixed-media projects, and future collaborations.</p>
+          <div class="platform-row"><span class="platform">Gallery</span><span class="platform">YouTube</span><span class="platform">Patreon</span></div>
+        </article>
+        <article class="district">
+          <h3>Special Collections</h3>
+          <p>Rare, unusual, restricted-by-context, or lore-heavy material that needs a collection identity of its own.</p>
+        </article>
+        <article class="district">
+          <h3>External Gateways</h3>
+          <p>Every artifact can advertise the destinations that actually carry it. The Library remains the authoritative map even when distribution changes later.</p>
+        </article>
       </div>
     </section>
 
     <section class="section site-shell">
       <h2>Resurrected Holdings</h2>
-      <div class="grid">
-        <article class="zombie-card">
-          <h3>Zombie Artifact Placeholder</h3>
-          <p>A resurrected Library work can eventually wander the stacks instead of sitting politely on a shelf.</p>
+      <p>A resurrected work does not politely become a green status badge. In this realm, it can physically wander the stacks.</p>
+      <div class="zombie-walkway" aria-label="Construction placeholder for a resurrected artifact wandering the Library">
+        <article class="zombie-figure">
+          <span class="status-chip">Resurrected</span>
+          <h3>[ARTIFACT TITLE]</h3>
+          <p>Died: [date] • Resurrected: [date]</p>
+          <p class="small-note">Final character/artifact treatment comes after visual targets.</p>
         </article>
       </div>
     </section>
 
     <section class="section site-shell" aria-labelledby="special-collections">
-      <h2 id="special-collections">Special Collections</h2>
+      <h2 id="special-collections">The Bookcase That Should Be Left Alone</h2>
+      <p class="path-note">The Forbidden Library is not a normal navigation item. Visitors have to deliberately find and open its concealed threshold.</p>
+
       <div class="bookcase" aria-label="Suspicious floor-to-ceiling bookcase">
         <span style="--h:15px"></span><span style="--h:55px"></span><span style="--h:30px"></span>
         <span style="--h:80px"></span><span style="--h:40px"></span><span style="--h:68px"></span><span style="--h:22px"></span>
       </div>
-      <button class="bookcase-trigger" type="button" data-bookcase-trigger aria-expanded="false">Pull the suspicious volume</button>
+      <button class="btn bookcase-trigger" type="button" data-bookcase-trigger aria-expanded="false">Pull the suspicious volume</button>
 
       <div class="black-door-wrap" data-black-door hidden>
         <div class="black-door">
           <div>
             <blockquote>Abandon all hope, ye who enter here.</blockquote>
-            <p><a href="../forbidden/index.html">Approach the black door →</a></p>
+            <p class="black-door-warning">Carved directly into the black door behind the bookcase.</p>
+            <p><a class="btn" href="../forbidden/index.html">Touch the black door →</a></p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-shell">The hidden bookcase guards the Forbidden Library threshold.</footer>
+  <footer class="site-shell">Vatican-scale archive. Hidden door. No polite little bookshelf website.</footer>
   <script src="../../../assets/js/site.js"></script>
 </body>
 </html>
