@@ -84,6 +84,20 @@
   background:rgba(0,0,0,.28);
 }
 
+.registry-media{
+  margin:0 0 1rem;
+  padding:.55rem;
+  border:1px solid #5e5544;
+  background:#0d0c0a;
+}
+
+.registry-image{
+  display:block;
+  width:100%;
+  max-height:360px;
+  object-fit:contain;
+}
+
 .registry-title{margin-top:0}
 .registry-meta,.registry-platforms{display:flex;flex-wrap:wrap;gap:.45rem}
 .registry-chip,.registry-platform{
@@ -99,6 +113,8 @@
 .registry-summary{font-family:Georgia,serif;color:#c9c1b3}
 .registry-dates{display:grid;grid-template-columns:max-content 1fr;gap:.2rem .7rem;font-family:Georgia,serif}
 .registry-dates dt{font-weight:700}.registry-dates dd{margin:0}
+.registry-provenance{margin-top:.8rem;border-top:1px solid #4f493d;padding-top:.7rem;font-family:Georgia,serif;color:#bbb2a3}
+.registry-provenance summary{cursor:pointer;font-weight:700;color:#d4c8b2}
 .registry-empty{font-family:Georgia,serif;color:#9f988b;border:1px dashed #565148;padding:1rem}
 
 @media (prefers-reduced-motion:reduce){
