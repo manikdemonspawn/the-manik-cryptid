@@ -13,12 +13,13 @@ assets/images/
     ├── library/
     ├── forbidden-library/
     ├── morgue/
-    ├── crypt/
-    ├── guild-hall/
-    ├── curio-shop/
+    ├── krypt/
+    ├── guildhall/
+    ├── kurio-shop/
+    ├── forge/
     ├── apothecary/
     ├── yard-sale/
-    └── catacombs/
+    └── katakombs/
 ```
 
 Do not delete an approved earlier visual simply because a newer version exists. Approved development visuals become lore-bearing artifacts and should be archived with versioned filenames when superseded.

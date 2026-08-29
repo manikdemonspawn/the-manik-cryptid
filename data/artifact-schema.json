@@ -1,9 +1,10 @@
 {
   "artifact_id": "unique-slug",
   "title": "Artifact title",
-  "realm": "museum|library|morgue|crypt|guild-hall|curio-shop|catacombs",
+  "realm": "museum|library|krypt|guildhall|morgue|kurio-shop|forge|apothecary|katakombs",
   "collection": "optional collection/shelf/district",
-  "artifact_type": "writing|image|audio|app|document|credential|product|affiliate|record|other",
+  "artifact_type": "writing|image|audio|app|document|credential|sertifikate|coa|product|affiliate|record|other",
+  "document_class": "credential|sertifikate|coa|other",
   "status": "active|deceased|resurrected|archived|future",
   "created_date": null,
   "death_date": null,

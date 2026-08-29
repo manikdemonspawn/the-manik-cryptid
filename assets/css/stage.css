@@ -5,13 +5,14 @@
 .nexus-hotspot{--x:50%;--y:50%;position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:grid;place-items:center;width:clamp(88px,12vw,145px);min-height:clamp(70px,9vw,105px);padding:.55rem;border:1px solid rgba(234,225,203,.55);border-radius:50%;background:rgba(5,8,6,.72);backdrop-filter:blur(3px);text-decoration:none;text-align:center;box-shadow:0 0 0 5px rgba(0,0,0,.25),0 8px 26px rgba(0,0,0,.45);font:700 clamp(.72rem,1.6vw,.98rem)/1.15 Georgia,serif;letter-spacing:.03em;transition:transform .18s ease,background .18s ease,border-color .18s ease}
 .nexus-hotspot:hover,.nexus-hotspot:focus-visible{transform:translate(-50%,-50%) scale(1.08);background:rgba(22,31,24,.94);border-color:#d8c58d;z-index:5}
 .nexus-hotspot small{display:block;margin-top:.25rem;font-size:.68em;font-weight:400;color:#b8b0a3}
-.nexus-hotspot.museum{--x:22%;--y:25%}
-.nexus-hotspot.library{--x:51%;--y:19%}
-.nexus-hotspot.curio{--x:80%;--y:30%}
-.nexus-hotspot.catacombs{--x:18%;--y:72%}
-.nexus-hotspot.morgue{--x:47%;--y:72%}
-.nexus-hotspot.crypt{--x:68%;--y:68%}
-.nexus-hotspot.guild{--x:84%;--y:75%}
+.nexus-hotspot.library{--x:48%;--y:18%}
+.nexus-hotspot.museum{--x:18%;--y:22%}
+.nexus-hotspot.krypt{--x:67%;--y:22%}
+.nexus-hotspot.guildhall{--x:84%;--y:22%}
+.nexus-hotspot.morgue{--x:33%;--y:48%}
+.nexus-hotspot.kurio{--x:64%;--y:48%}
+.nexus-hotspot.forge{--x:23%;--y:73%}
+.nexus-hotspot.apothecary{--x:77%;--y:73%}
 .stage-zone-label{position:absolute;padding:.35rem .55rem;border-radius:.4rem;background:rgba(0,0,0,.58);font:600 .72rem/1.1 Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:#bdb3a2;pointer-events:none}
 .stage-zone-label.fae{left:6%;top:5%}.stage-zone-label.healing{left:5%;bottom:6%}.stage-zone-label.norse{right:5%;bottom:7%}
 .stage-legend{margin-top:1rem;font:400 .9rem/1.5 Georgia,serif;color:#aaa397}
@@ -19,13 +20,14 @@
 @media(max-width:760px){
   .nexus-stage{min-height:760px;border-radius:1rem}
   .nexus-hotspot{width:105px;min-height:78px;font-size:.74rem}
-  .nexus-hotspot.museum{--x:24%;--y:18%}
-  .nexus-hotspot.library{--x:68%;--y:16%}
-  .nexus-hotspot.curio{--x:78%;--y:38%}
-  .nexus-hotspot.catacombs{--x:22%;--y:53%}
-  .nexus-hotspot.morgue{--x:30%;--y:76%}
-  .nexus-hotspot.crypt{--x:58%;--y:68%}
-  .nexus-hotspot.guild{--x:78%;--y:83%}
+  .nexus-hotspot.library{--x:28%;--y:16%}
+  .nexus-hotspot.museum{--x:74%;--y:16%}
+  .nexus-hotspot.krypt{--x:28%;--y:41%}
+  .nexus-hotspot.guildhall{--x:74%;--y:41%}
+  .nexus-hotspot.morgue{--x:28%;--y:66%}
+  .nexus-hotspot.kurio{--x:74%;--y:66%}
+  .nexus-hotspot.forge{--x:28%;--y:87%}
+  .nexus-hotspot.apothecary{--x:74%;--y:87%}
   .stage-zone-label{display:none}
 }
 

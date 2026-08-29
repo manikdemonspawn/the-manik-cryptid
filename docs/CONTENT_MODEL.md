@@ -1,6 +1,6 @@
 # Content Model
 
-The website should grow by adding artifacts to established realms, not by inventing a new top-level realm every time a new project appears.
+The website should grow by adding artifacts to established realms, not by inventing a new top-level realm every time a new project appears. The eight primary realms are Library, Museum, Krypt, Guildhall, Morgue, Kurio Shop, Forge, and Apothecary. The Katakombs is infrastructure, reached through the bottom Nexus portal.
 
 ## Artifact identity
 
@@ -8,7 +8,7 @@ Every meaningful item should eventually have:
 
 - unique ID / slug;
 - title;
-- canonical realm;
+- Kanonikal realm;
 - optional collection / shelf / district;
 - artifact type;
 - status;
@@ -46,7 +46,7 @@ A resurrected work that belongs in the Library may visually wander the archive l
 
 ## External media and distribution
 
-The Library is the canonical catalog even when the actual media is hosted elsewhere.
+The Library is the Kanonikal catalog even when the actual media is hosted elsewhere.
 
 One artifact can have multiple platform destinations, such as:
 
@@ -61,7 +61,7 @@ One artifact can have multiple platform destinations, such as:
 
 Alternative distribution does not require open-source licensing. Licensing, payment, and platform rules are handled per artifact when that product exists.
 
-## Curio Shop
+## Kurio Shop
 
 ### Main floor
 
@@ -69,11 +69,17 @@ Cryptid-made products only.
 
 ### Apothecary
 
-Digital knowledge / instructions are the default product. Free shelf cards can provide synopsis, meaning, context, and partial materials. Paid full products can contain the full guide and sourcing information.
+The Apothecary is physically upstairs inside the Kurio Shop, behind a rope at the bottom of the stairs marked **UNDER KONSTRUCTION**. Its final purpose, products, and content are deliberately deferred; do not infer a product model from the placeholder.
 
 ### Yard sale
 
-Affiliate items remain visually and semantically distinct from Cryptid-made goods. The affiliate disclosure appears before the visitor begins browsing the yard-sale tables.
+Affiliate items remain visually and semantically distinct from Manik-made goods. The affiliate disclosure appears before the visitor begins browsing the yard-sale tables.
+
+## Document classes
+
+- **Credential:** a genuine outside-issued credential.
+- **Sertifikate:** a Universe-issued ceremonial, comedic, lore, or internal document.
+- **COA:** a Certificate of Authenticity tied to one specific artifact.
 
 ## Restricted content
 

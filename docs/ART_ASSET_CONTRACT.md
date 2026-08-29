@@ -9,14 +9,16 @@ Code and interaction structure come first. Approved visual targets come afterwar
 ## Nexus master image
 
 - Purpose: one large environmental image representing the full Fairy Forest Nexus.
-- Must show all seven active realm thresholds in a coherent impossible landscape:
-  - Museum / Stonehenge;
+- Must show the eight primary realm thresholds in a coherent impossible landscape:
   - Library / decontamination entrance;
+  - Museum / Stonehenge;
+  - Krypt / coffin or sarcophagus threshold;
+  - Guildhall / castle door;
   - Morgue / clinical doors and gurney language;
-  - Crypt / coffin or sarcophagus threshold;
-  - Guild Hall / castle door;
-  - Curio Shop / round storybook storefront;
-  - Catacombs / cellar doors descending below ground.
+  - Kurio Shop / round storybook storefront;
+  - Forge / construction threshold, details deferred;
+  - Apothecary / upstairs room inside the Kurio Shop, visibly under construction.
+- The Katakombs / cellar-door legalese infrastructure portal sits at the bottom of the Nexus and may be represented as a separate descent, not as a ninth primary realm.
 - No active Mausoleum while the creator is alive.
 - Must leave visual breathing room around portal areas so accessible HTML hotspots can sit over the image.
 - Cultural-influence zones remain visually distinct. Do not fabricate Cherokee or Blackfoot writing or symbols.
@@ -30,25 +32,26 @@ Expected path after approval:
 
 ## Realm master images
 
-Each realm gets at least one canonical environment view showing what a visitor should plausibly see after crossing its threshold.
+Each realm gets at least one Kanonikal environment view showing what a visitor should plausibly see after crossing its threshold.
 
 Expected paths:
 - `assets/images/realms/museum/museum-master.*`
 - `assets/images/realms/library/library-master.*`
 - `assets/images/realms/forbidden-library/forbidden-library-master.*`
 - `assets/images/realms/morgue/morgue-master.*`
-- `assets/images/realms/crypt/crypt-master.*`
-- `assets/images/realms/guild-hall/guild-hall-master.*`
-- `assets/images/realms/curio-shop/curio-shop-master.*`
+- `assets/images/realms/krypt/krypt-master.*`
+- `assets/images/realms/guildhall/guildhall-master.*`
+- `assets/images/realms/kurio-shop/kurio-shop-master.*`
+- `assets/images/realms/forge/forge-master.*`
 - `assets/images/realms/apothecary/apothecary-master.*`
 - `assets/images/realms/yard-sale/yard-sale-master.*`
-- `assets/images/realms/catacombs/catacombs-master.*`
+- `assets/images/realms/katakombs/katakombs-master.*`
 
 The posthumous Mausoleum gets no active site master until activation is appropriate. Concept/lore art may be archived separately if explicitly approved.
 
 ## Portal crops
 
-The full Nexus image may later need cropped portal assets for responsive layouts and loading performance. Portal crops do not replace the canonical Nexus master.
+The full Nexus image may later need cropped portal assets for responsive layouts and loading performance. Portal crops do not replace the Kanonikal Nexus master.
 
 Expected paths:
 `assets/images/portals/<realm-id>.*`
@@ -67,4 +70,4 @@ When the creator approves a visual target, preserve it. Later visual revisions d
 
 ## Optimization
 
-Keep high-resolution masters outside the performance-critical path when needed. Production copies can be resized/compressed while canonical masters are retained separately.
+Keep high-resolution masters outside the performance-critical path when needed. Production copies can be resized/compressed while Kanonikal masters are retained separately.

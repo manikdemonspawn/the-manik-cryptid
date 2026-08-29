@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -74,6 +75,36 @@ def audit_html(errors: list[str]) -> None:
                 errors.append(f"{rel}: broken local {attr} -> {value}")
 
         if rel.as_posix() == "index.html":
+            root_text = text.lower()
+            required_root_hrefs = {
+                "realms/library/index.html",
+                "realms/museum/index.html",
+                "realms/krypt/index.html",
+                "realms/guildhall/index.html",
+                "realms/morgue/index.html",
+                "realms/kurio-shop/index.html",
+                "realms/forge/index.html",
+                "realms/apothecary/index.html",
+                "realms/katakombs/index.html",
+            }
+            found_root_hrefs = {value for _, value in parser.refs if value in required_root_hrefs}
+            missing_root_hrefs = required_root_hrefs - found_root_hrefs
+            if missing_root_hrefs:
+                errors.append(f"index.html: missing active Nexus links: {sorted(missing_root_hrefs)}")
+
+            stale_root_paths = ("realms/crypt/", "realms/catacombs/", "realms/guild-hall/", "realms/curio-shop/")
+            for stale_path in stale_root_paths:
+                if stale_path in root_text:
+                    errors.append(f"index.html: stale active path remains: {stale_path}")
+
+            if "katakombs-entry" not in root_text:
+                errors.append("index.html: bottom Katakombs portal section is missing")
+            elif root_text.find("katakombs-entry") > root_text.find("realms/katakombs/index.html"):
+                errors.append("index.html: Katakombs portal is not placed inside the bottom entry section")
+
+            if "under konstruction" not in root_text:
+                errors.append("index.html: Forge/Apothecary construction marker is missing")
+
             for attrs in parser.anchors:
                 href = attrs.get("href", "").lower()
                 if "mausoleum" in href:
@@ -92,6 +123,37 @@ def audit_json(errors: list[str]) -> None:
             if nexus.get("future_mausoleum_visible") is not False:
                 errors.append("realm-manifest.json: future_mausoleum_visible must remain false")
 
+            expected_realm_ids = ["library", "museum", "krypt", "guildhall", "morgue", "kurio-shop", "forge", "apothecary"]
+            realms = manifest.get("realms", [])
+            actual_realm_ids = [item.get("id") for item in realms]
+            if actual_realm_ids != expected_realm_ids:
+                errors.append(f"realm-manifest.json: primary realm order mismatch: {actual_realm_ids}")
+            if len(realms) != 8:
+                errors.append("realm-manifest.json: exactly eight primary realms are required")
+
+            for item in realms:
+                path = item.get("path")
+                if path and not (ROOT / path).exists():
+                    errors.append(f"realm-manifest.json: primary realm path does not exist: {path}")
+
+            apothecary = next((item for item in realms if item.get("id") == "apothecary"), None)
+            if not apothecary or apothecary.get("physical_parent") != "kurio-shop" or apothecary.get("status") != "under-konstruction":
+                errors.append("realm-manifest.json: Apothecary must be upstairs in Kurio Shop and under-konstruction")
+
+            forge = next((item for item in realms if item.get("id") == "forge"), None)
+            if not forge or forge.get("status") != "under-konstruction":
+                errors.append("realm-manifest.json: Forge must remain an under-konstruction primary realm")
+
+            subrealms = manifest.get("subrealms", [])
+            forbidden = next((item for item in subrealms if item.get("id") == "forbidden-library"), None)
+            if not forbidden or forbidden.get("parent_id") != "library":
+                errors.append("realm-manifest.json: Forbidden Library must remain inside Library")
+
+            infrastructure = manifest.get("infrastructure", [])
+            katakombs = next((item for item in infrastructure if item.get("id") == "katakombs"), None)
+            if not katakombs or katakombs.get("public_nexus_portal") is not True or katakombs.get("nexus_position") != "bottom-infrastructure":
+                errors.append("realm-manifest.json: Katakombs must be a bottom Nexus infrastructure portal")
+
             future = manifest.get("future", [])
             mausoleum = next((item for item in future if item.get("id") == "mausoleum"), None)
             if not mausoleum or mausoleum.get("posthumous_only") is not True or mausoleum.get("active") is not False:
@@ -101,7 +163,7 @@ def audit_json(errors: list[str]) -> None:
 def audit_artifacts(errors: list[str]) -> None:
     path = ROOT / "data" / "artifacts.json"
     if not path.exists():
-        errors.append("data/artifacts.json: canonical artifact registry missing")
+        errors.append("data/artifacts.json: Kanonikal artifact registry missing")
         return
 
     payload = load_json(path, errors)
@@ -144,12 +206,17 @@ def audit_visual_targets(errors: list[str]) -> None:
     ids = {item.get("id") for item in payload.get("targets", [])}
     required = {
         "nexus-master", "museum-master", "library-master", "forbidden-library-master",
-        "morgue-master", "crypt-master", "guild-hall-master", "curio-shop-master",
-        "apothecary-master", "yard-sale-master", "catacombs-master"
+        "morgue-master", "krypt-master", "guildhall-master", "kurio-shop-master",
+        "forge-master", "apothecary-master", "yard-sale-master", "katakombs-master"
     }
     missing = required - ids
     if missing:
         errors.append(f"visual-targets.json: missing target IDs: {sorted(missing)}")
+
+    stale_ids = {"crypt-master", "guild-hall-master", "curio-shop-master", "catacombs-master"}
+    stale_present = stale_ids & ids
+    if stale_present:
+        errors.append(f"visual-targets.json: stale target IDs remain: {sorted(stale_present)}")
 
     posthumous = payload.get("posthumous", [])
     mausoleum = next((item for item in posthumous if item.get("id") == "mausoleum-master"), None)
@@ -170,6 +237,49 @@ def audit_forbidden_library(errors: list[str]) -> None:
             errors.append(f"Forbidden Library gate missing construction safety marker: {phrase!r}")
 
 
+def audit_museum_keeper_artifact(errors: list[str]) -> None:
+    museum = ROOT / "realms" / "museum" / "index.html"
+    if not museum.exists():
+        errors.append("Museum page missing")
+        return
+
+    text = museum.read_text(encoding="utf-8")
+    required = [
+        "RAU-EFI-2026-0828-001",
+        "Sertifikate of Ecosystem-First Inquiry",
+        "KANON Keeper Edition",
+        "Permanent Museum wall artifact",
+    ]
+    for phrase in required:
+        if phrase not in text:
+            errors.append(f"Museum keeper Sertifikate missing required marker: {phrase!r}")
+
+
+def audit_active_naming(errors: list[str]) -> None:
+    """Catch stale architecture in active source while allowing retired path notices."""
+    excluded = {"realms/crypt", "realms/catacombs", "realms/guild-hall", "realms/curio-shop"}
+    files = [ROOT / "README.md", ROOT / "index.html", ROOT / "realm-index.html"]
+    files += sorted((ROOT / "docs").glob("*.md"))
+    files += sorted((ROOT / "data").glob("*.json"))
+    files += sorted((ROOT / "templates").glob("*.html"))
+    files += sorted((ROOT / "realms").rglob("*.html"))
+
+    stale_terms = {
+        "The Crypt": "The Krypt",
+        "The Catacombs": "The Katakombs",
+        "The Curio Shop": "The Kurio Shop",
+        "The Guild Hall": "The Guildhall",
+    }
+    for file in files:
+        rel = file.relative_to(ROOT).as_posix()
+        if any(rel == path or rel.startswith(path + "/") for path in excluded):
+            continue
+        text = file.read_text(encoding="utf-8")
+        for stale, current in stale_terms.items():
+            if re.search(rf"\b{re.escape(stale)}\b", text, flags=re.IGNORECASE):
+                errors.append(f"{rel}: stale active naming {stale!r}; use {current!r}")
+
+
 def main() -> int:
     errors: list[str] = []
     audit_html(errors)
@@ -177,6 +287,8 @@ def main() -> int:
     audit_artifacts(errors)
     audit_visual_targets(errors)
     audit_forbidden_library(errors)
+    audit_museum_keeper_artifact(errors)
+    audit_active_naming(errors)
 
     if errors:
         print("CONSTRUCTION AUDIT FAILED\n")
@@ -189,6 +301,7 @@ def main() -> int:
     print("- construction pages remain noindex")
     print("- JSON data files parse")
     print("- artifact IDs/media/platform URLs validate")
+    print("- primary realm order, bottom Katakombs portal, and naming locks validate")
     print("- visual-target manifest is complete")
     print("- living-site Mausoleum remains inactive")
     print("- Forbidden Library retains construction safety markers")

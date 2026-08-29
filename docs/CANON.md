@@ -1,10 +1,10 @@
-# Resurrection Artifact Universe — Website Canon (Construction)
+# Resurrection Artifact Universe — Website Kanon (Construction)
 
 This file records structural rules so future additions do not quietly mutate the universe.
 
 ## Core rule
 
-These are **realms**, not rooms and not ordinary navigation pages. Each realm has its own threshold, atmosphere, font identity, and internal logic. The Nexus connects them.
+These are **realms**, not ordinary website sections. The Nexus connects eight primary realms. The Katakombs is a separate infrastructure realm entered through a bottom-of-page portal.
 
 The threshold should communicate the realm before the visitor reads the label. Text labels remain for accessibility and orientation.
 
@@ -14,13 +14,19 @@ The threshold should communicate the realm before the visitor reads the label. T
 - Manik Cryptid visual branding throughout: mushrooms, skulls, hanging curiosities, strange forest objects, carved trunks, roots, mist, etc.
 - Cultural zones remain distinct rather than becoming a generic folklore blend.
 - Irish / Scottish fairy influence is strongest around the Stonehenge Museum threshold.
-- A separate healing / living-apothecary path can sit around the Catacomb area.
+- The Apothecary is physically upstairs inside the Kurio Shop. Its top-level Nexus destination is visibly under construction; the Kurio Shop stairs have a rope at the bottom.
 - Cherokee and Blackfoot inscriptions or writing must be sourced carefully, verified, and kept distinct from each other.
 - Dreamcatcher presence is personal/ambient, not presented as Cherokee or Blackfoot iconography. One medium-to-large piece is preferable to turning the whole zone into the brand motif.
 - The living-apothecary forest area may include rue, ginger, thyme, honey, bees/hive imagery, and other botanical details.
-- Norse influence sits around the Morgue / Crypt death-memory zone.
+- Norse influence sits around the Morgue / Krypt death-memory zone.
 - Elder Futhark inscriptions use sound-based transliteration and carry readable translations underneath.
 - No active Mausoleum threshold appears while the creator is alive.
+
+## Primary realm order
+
+The Nexus presents these eight primary portals in this order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shop, Forge, Apothecary. The Forge and Apothecary remain visibly **UNDER KONSTRUCTION** until their unresolved purpose/content are verified.
+
+The Katakombs portal is placed at the bottom of the Nexus. It leads only to legalese, administration, permissions, and infrastructure; it is not counted among the eight primary realms.
 
 ## Museum
 
@@ -37,6 +43,14 @@ Display hierarchy:
 - ordinary important artifacts = normal exhibit scale.
 
 The Museum remembers where the Cryptid came from and what made her.
+
+### Document terms
+
+- **Credential:** a genuine outside-issued credential.
+- **Sertifikate:** a Universe-issued ceremonial, comedic, lore, or internal document.
+- **COA:** a Certificate of Authenticity tied to one specific artifact.
+
+The permanent Museum Certificate Exhibit retains `RAU-EFI-2026-0828-001`, **Sertifikate of Ecosystem-First Inquiry — KANON Keeper Edition**.
 
 ## Library
 
@@ -56,7 +70,7 @@ Collections can include:
 - special collections;
 - platform gateways such as Spotify, YouTube, Patreon, app stores, direct distribution, and future storefronts.
 
-The Library is the canonical catalog even when heavyweight media or software lives elsewhere.
+The Library is the Kanonikal catalog even when heavyweight media or software lives elsewhere.
 
 Resurrected Library works may wander the stacks like zombies while retaining death and resurrection metadata.
 
@@ -96,7 +110,7 @@ Resurrected Morgue artifacts may float around like ghosts. Toe-tag history remai
 
 Norse death-memory influence can exist around the Morgue without turning the clinical interior into theme-park Viking décor.
 
-## Crypt
+## Krypt
 
 Threshold: **coffin / sarcophagus**.
 
@@ -108,7 +122,7 @@ Valhalla may exist as a belief thread but is not framed as the creator's persona
 
 Other afterlife concepts such as Summerland remain clearly separate traditions.
 
-## Guild Hall
+## Guildhall
 
 Threshold: **castle door. Full stop.**
 
@@ -116,31 +130,19 @@ Purpose: disciplines, capabilities, crafts, portfolio, skills, worktables, and g
 
 Credentials can cross-reference Museum artifacts instead of being duplicated.
 
-## Curio Shop
+## Kurio Shop
 
 Threshold: **round storybook / Hobbit-ish storefront door**, without direct Tolkien imitation.
 
 Main floor: things made by The Manik Cryptid.
 
-Upstairs: Apothecary.
+Upstairs: the Apothecary, physically inside the Kurio Shop. A rope at the bottom of the stairs is marked **UNDER KONSTRUCTION** while the room's purpose and content remain deferred.
 
 Back door: affiliate yard sale.
 
-### Apothecary
+### Apothecary content boundary
 
-Voice: **The Manik Cryptid herself**, not an abstract universe narrator.
-
-Product model:
-
-- free synopsis / shelf card;
-- purpose / meaning;
-- context;
-- partial ingredients/materials;
-- paid full ritual/practice with complete instructions, full list, meanings, preparation/context, and sourcing guidance.
-
-Physical kits are not required. Digital knowledge is the default product.
-
-Herbal / healing / spiritual copy should remain honest about tradition, ritual, symbolism, personal practice, or wellness use and should not promise guaranteed treatment for disease.
+The Apothecary is a confirmed top-level destination and physical upstairs room, but its final purpose, voice, products, and content are intentionally deferred. Do not invent a product model or health-adjacent claims to fill the empty room.
 
 ### Affiliate Yard Sale
 
@@ -150,13 +152,17 @@ Affiliate finds remain visibly distinct from Cryptid-made goods.
 
 The yard can use folding tables, crates, mismatched objects, lanterns, fences, and a deliberately more lawless visual style than the shop interior.
 
-## Catacombs
+## Katakombs
 
-Threshold: **cellar doors**.
+Threshold: **cellar doors at the bottom of the Nexus**.
 
-The Catacombs are the basement realm. Entry is a descent. Roots and forest give way to stone, tunnels, gates, and low light.
+The Katakombs are the legalese-only infrastructure realm: policies, permissions, administration, and site machinery. It has a real portal entry, but it is not one of the eight primary creative realms. Do not add unrelated creative subrealms here without new Kanon.
 
-The culturally influenced forest zone belongs around the Catacomb threshold in the Nexus. It is not automatically pasted into the underground interior.
+The culturally influenced forest zone is not being pasted into the legalese interior.
+
+## Forge
+
+The Forge is a confirmed top-level realm and remains **UNDER KONSTRUCTION**. Its final purpose, threshold, visual language, and content are deliberately unresolved.
 
 ## Future Mausoleum
 

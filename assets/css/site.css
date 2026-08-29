@@ -124,18 +124,18 @@ footer { padding: 4rem 0 2rem; color: #8d887e; font-family: var(--font-reading);
 .ghost { padding: 1.2rem; border: 1px solid rgba(218,225,226,.35); border-radius: 45% 45% 18% 18%; background: rgba(215,225,225,.06); animation: haunt 4s ease-in-out infinite; }
 @keyframes haunt { 0%,100% { transform: translateY(0); opacity: .68; } 50% { transform: translateY(-12px); opacity: .9; } }
 
-/* CRYPT / NORSE ZONE */
-.crypt { background: linear-gradient(#0b0b0a,#171714 60%,#080808); }
+/* KRYPT / NORSE ZONE */
+.krypt { background: linear-gradient(#0b0b0a,#171714 60%,#080808); }
 .runestone-slot { padding: 1.5rem; border: 1px solid #6d736c; background: linear-gradient(125deg,#3a3e39,#1d201d); font-family: var(--font-carved); }
 .rune-line { font-size: 1.6rem; letter-spacing: .12em; }
 .translation { color: #c7c2b6; font-family: var(--font-reading); }
 
-/* GUILD */
-.guild { background: linear-gradient(#11100e,#1b1712); }
-.guild .hero { background: radial-gradient(circle at center, rgba(126,88,46,.18), transparent 30rem); }
+/* GUILDHALL */
+.guildhall { background: linear-gradient(#11100e,#1b1712); }
+.guildhall .hero { background: radial-gradient(circle at center, rgba(126,88,46,.18), transparent 30rem); }
 
-/* CURIO */
-.curio { background: linear-gradient(#15110d,#20170f 60%,#0e0b09); }
+/* KURIO */
+.kurio { background: linear-gradient(#15110d,#20170f 60%,#0e0b09); }
 .shop-floor { border: 1px solid #60462d; background: rgba(55,36,21,.22); }
 
 /* APOTHECARY */
@@ -147,8 +147,8 @@ footer { padding: 4rem 0 2rem; color: #8d887e; font-family: var(--font-reading);
 .affiliate-banner { margin: 1rem 0 2rem; padding: 1.5rem; border: 4px dashed #d1b879; background: #2b2417; text-align: center; font-family: var(--font-reading); font-size: 1.05rem; }
 .yard-table { min-height: 190px; padding: 1rem; border: 8px solid #4b3524; border-top-width: 18px; background: rgba(46,36,24,.35); }
 
-/* CATACOMBS */
-.catacombs { background: linear-gradient(rgba(8,8,7,.5),rgba(8,8,7,.75)), repeating-linear-gradient(90deg,#39352f 0 56px,#28251f 56px 60px); }
+/* KATAKOMBS */
+.katakombs { background: linear-gradient(rgba(8,8,7,.5),rgba(8,8,7,.75)), repeating-linear-gradient(90deg,#39352f 0 56px,#28251f 56px 60px); }
 .tunnel { min-height: 320px; border: 16px solid #47433b; border-radius: 160px 160px 8px 8px; padding: 3rem 2rem; background: #0b0b09; box-shadow: inset 0 0 70px #000; }
 
 @media (max-width: 650px) { .site-shell { width: min(100% - 1rem, 1180px); } .portal { min-height: 270px; } .hero { min-height: 40vh; } }

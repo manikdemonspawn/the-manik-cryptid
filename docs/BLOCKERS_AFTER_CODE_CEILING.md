@@ -31,11 +31,11 @@ The structural/code pass has reached the point where further progress depends on
 - Museum artifacts / family lore / core photographs.
 - Library works and artifact metadata.
 - Morgue dead/resurrected project records and dates.
-- Guild Hall portfolio/capability entries.
-- Curio Shop products.
+- Guildhall portfolio/capability entries.
+- Kurio Shop products.
 - Apothecary ritual/practice products.
 - Yard-sale affiliate finds.
-- Catacomb subrealm purposes if/when canon establishes them.
+- Katakombs infrastructure details beyond legalese, administration, and site machinery if/when Kanon establishes them.
 
 ## Posthumous Mausoleum
 

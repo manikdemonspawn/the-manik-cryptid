@@ -57,7 +57,7 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 - resurrected artifacts float like ghosts with death/resurrection tags still attached;
 - Norse death-memory influence can appear around or near the realm without turning the clinical Morgue into a Viking theme park.
 
-### Crypt
+### Krypt
 
 - coffin / sarcophagus threshold;
 - stone, burial, memory, honored dead;
@@ -65,40 +65,49 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 - ravens / afterlife atmosphere where appropriate;
 - visually distinct from the clinical Morgue.
 
-### Guild Hall
+### Guildhall
 
 - castle door threshold, unequivocal;
 - medieval / guild architecture;
 - banners, worktables, records, skill displays;
 - should feel like capabilities are practiced here, not like a résumé exhibit.
 
-### Curio Shop
+### Kurio Shop
 
 - round storybook door incorporated into a crooked storefront;
 - cozy/weird shop interior;
 - main floor for Cryptid-made goods;
-- visible stair route upward to Apothecary;
+- visible upstairs stair route to the Apothecary with a rope at the bottom marked `UNDER KONSTRUCTION`;
 - visible back door toward Yard Sale;
 - not direct Tolkien imitation.
 
+### Forge
+
+- confirmed top-level realm portal;
+- visibly marked `UNDER KONSTRUCTION`;
+- final purpose, threshold, visual language, and content are deliberately deferred;
+- do not invent symbolic details merely to fill the visual target.
+
 ### Apothecary
 
-- upstairs room above Curio Shop;
+- upstairs room physically inside the Kurio Shop;
+- rope at the bottom of the stairs marked `UNDER KONSTRUCTION`;
 - jars, drawers, herbs, handwritten labels, reference books, old wood, glass, honey / botanical details;
 - voice feels personal to The Manik Cryptid rather than generic universe narration;
 - digital guides should appear as tactile in-world objects / shelf cards.
 
 ### Affiliate Yard Sale
 
-- clearly outside behind the Curio Shop;
+- clearly outside behind the Kurio Shop;
 - huge hand-painted affiliate-disclosure banner visible immediately on exit;
 - folding tables, crates, fence, lanterns, weird finds;
 - more lawless / informal than the main shop;
 - still unmistakably part of the same universe.
 
-### Catacombs
+### Katakombs
 
-- cellar doors at ground level;
+- cellar-door portal at the bottom of the Nexus;
+- legalese-only infrastructure realm: policies, permissions, administration, and site machinery;
 - physical downward descent;
 - roots transition into stone;
 - tunnels, iron gates, low light, depth;
@@ -120,7 +129,7 @@ Strongest around the Stonehenge / Museum region. Use verified/traditional-inspir
 
 ### Norse zone
 
-- strongest around Morgue / Crypt region;
+- strongest around Morgue / Krypt region;
 - Elder Futhark text must be verified separately before it becomes legible final signage;
 - death, memory, ancestry, runestone, raven atmosphere;
 - no extremist/political iconography.

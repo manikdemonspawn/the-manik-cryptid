@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "rule": "Code first. Approved visual targets become lore-bearing artifacts.",
   "targets": [
     {
       "id": "nexus-master",
       "scope": "nexus",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/nexus/nexus-master",
@@ -15,7 +15,7 @@
     {
       "id": "museum-master",
       "scope": "museum",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/realms/museum/museum-master",
@@ -25,7 +25,7 @@
     {
       "id": "library-master",
       "scope": "library",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/realms/library/library-master",
@@ -35,7 +35,7 @@
     {
       "id": "forbidden-library-master",
       "scope": "forbidden-library",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/realms/forbidden-library/forbidden-library-master",
@@ -45,7 +45,7 @@
     {
       "id": "morgue-master",
       "scope": "morgue",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/realms/morgue/morgue-master",
@@ -53,39 +53,39 @@
       "lore_status": "pending"
     },
     {
-      "id": "crypt-master",
-      "scope": "crypt",
-      "kind": "canonical-environment",
+      "id": "krypt-master",
+      "scope": "krypt",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/crypt/crypt-master",
+      "expected_path": "assets/images/realms/krypt/krypt-master",
       "approved": false,
       "lore_status": "pending"
     },
     {
-      "id": "guild-hall-master",
-      "scope": "guild-hall",
-      "kind": "canonical-environment",
+      "id": "guildhall-master",
+      "scope": "guildhall",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/guild-hall/guild-hall-master",
+      "expected_path": "assets/images/realms/guildhall/guildhall-master",
       "approved": false,
       "lore_status": "pending"
     },
     {
-      "id": "curio-shop-master",
-      "scope": "curio-shop",
-      "kind": "canonical-environment",
+      "id": "kurio-shop-master",
+      "scope": "kurio-shop",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/curio-shop/curio-shop-master",
+      "expected_path": "assets/images/realms/kurio-shop/kurio-shop-master",
       "approved": false,
       "lore_status": "pending"
     },
     {
       "id": "apothecary-master",
       "scope": "apothecary",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/realms/apothecary/apothecary-master",
@@ -93,9 +93,19 @@
       "lore_status": "pending"
     },
     {
+      "id": "forge-master",
+      "scope": "forge",
+      "kind": "kanonikal-environment",
+      "status": "pending-generation",
+      "recommended_aspect_ratio": "16:9",
+      "expected_path": "assets/images/realms/forge/forge-master",
+      "approved": false,
+      "lore_status": "pending"
+    },
+    {
       "id": "yard-sale-master",
       "scope": "yard-sale",
-      "kind": "canonical-environment",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
       "expected_path": "assets/images/realms/yard-sale/yard-sale-master",
@@ -103,12 +113,12 @@
       "lore_status": "pending"
     },
     {
-      "id": "catacombs-master",
-      "scope": "catacombs",
-      "kind": "canonical-environment",
+      "id": "katakombs-master",
+      "scope": "katakombs",
+      "kind": "kanonikal-environment",
       "status": "pending-generation",
       "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/catacombs/catacombs-master",
+      "expected_path": "assets/images/realms/katakombs/katakombs-master",
       "approved": false,
       "lore_status": "pending"
     }

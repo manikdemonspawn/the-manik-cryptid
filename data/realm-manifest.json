@@ -1,21 +1,16 @@
 {
   "site": "The Manik Cryptid Resurrection Artifact Universe",
+  "kanon_version": 2,
   "status": "construction",
   "public_branch": "main",
   "construction_branch": "construction",
   "nexus": {
     "type": "fairy-forest-threshold",
     "future_mausoleum_visible": false,
+    "active_top_level_realm_count": 8,
     "zones": ["fae", "living-apothecary-cultural", "death-memory-norse"]
   },
   "realms": [
-    {
-      "id": "museum",
-      "name": "The Museum",
-      "threshold": "Stonehenge",
-      "path": "realms/museum/index.html",
-      "purpose": ["history", "lineage", "family lore", "provenance", "credentials", "milestones", "core artifacts"]
-    },
     {
       "id": "library",
       "name": "The Library",
@@ -25,12 +20,25 @@
       "contains": ["forbidden-library"]
     },
     {
-      "id": "forbidden-library",
-      "name": "The Forbidden Library",
-      "threshold": "hidden bookcase then black door",
-      "path": "realms/library/forbidden/index.html",
-      "restricted": true,
-      "launch_blocked_until_real_age_assurance": true
+      "id": "museum",
+      "name": "The Museum",
+      "threshold": "Stonehenge",
+      "path": "realms/museum/index.html",
+      "purpose": ["history", "lineage", "family lore", "provenance", "credentials", "milestones", "core artifacts"]
+    },
+    {
+      "id": "krypt",
+      "name": "The Krypt",
+      "threshold": "coffin or sarcophagus",
+      "path": "realms/krypt/index.html",
+      "purpose": ["memory", "honored dead", "afterlife belief threads"]
+    },
+    {
+      "id": "guildhall",
+      "name": "The Guildhall",
+      "threshold": "castle door",
+      "path": "realms/guildhall/index.html",
+      "purpose": ["skills", "capabilities", "crafts", "portfolio", "guild records"]
     },
     {
       "id": "morgue",
@@ -40,32 +48,55 @@
       "purpose": ["dead projects", "death dates", "resurrection dates", "toe tags", "ghost artifacts"]
     },
     {
-      "id": "crypt",
-      "name": "The Crypt",
-      "threshold": "coffin or sarcophagus",
-      "path": "realms/crypt/index.html",
-      "purpose": ["memory", "honored dead", "afterlife belief threads"]
-    },
-    {
-      "id": "guild-hall",
-      "name": "The Guild Hall",
-      "threshold": "castle door",
-      "path": "realms/guild-hall/index.html",
-      "purpose": ["skills", "capabilities", "crafts", "portfolio", "guild records"]
-    },
-    {
-      "id": "curio-shop",
-      "name": "The Curio Shop",
+      "id": "kurio-shop",
+      "name": "The Kurio Shop",
       "threshold": "round storybook storefront door",
-      "path": "realms/curio-shop/index.html",
-      "purpose": ["Cryptid-made goods", "Apothecary", "affiliate yard sale"]
+      "path": "realms/kurio-shop/index.html",
+      "purpose": ["Manik-made goods", "affiliate yard sale"]
     },
     {
-      "id": "catacombs",
-      "name": "The Catacombs",
-      "threshold": "cellar doors and downward stairs",
-      "path": "realms/catacombs/index.html",
-      "purpose": ["basement realm", "underground branches", "buried records"]
+      "id": "forge",
+      "name": "The Forge",
+      "path": "realms/forge/index.html",
+      "status": "under-konstruction",
+      "purpose_status": "intentionally-deferred"
+    },
+    {
+      "id": "apothecary",
+      "name": "The Apothecary",
+      "path": "realms/apothecary/index.html",
+      "status": "under-konstruction",
+      "purpose_status": "intentionally-deferred",
+      "physical_parent": "kurio-shop",
+      "construction_gate": "rope at the bottom of the upstairs stairs"
+    }
+  ],
+  "subrealms": [
+    {
+      "id": "forbidden-library",
+      "name": "The Forbidden Library",
+      "parent_id": "library",
+      "threshold": "hidden bookcase then black door",
+      "path": "realms/library/forbidden/index.html",
+      "restricted": true,
+      "launch_blocked_until_real_age_assurance": true
+    },
+    {
+      "id": "yard-sale",
+      "name": "Affiliate Yard Sale",
+      "parent_id": "kurio-shop",
+      "path": "realms/kurio-shop/yard-sale/index.html"
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "katakombs",
+      "name": "The Katakombs",
+      "path": "realms/katakombs/index.html",
+      "active_top_level_realm": false,
+      "public_nexus_portal": true,
+      "nexus_position": "bottom-infrastructure",
+      "purpose": ["legal", "administration", "infrastructure"]
     }
   ],
   "future": [

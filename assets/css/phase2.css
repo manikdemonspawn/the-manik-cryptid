@@ -67,17 +67,17 @@
 .ghost-card{position:absolute;left:6%;top:20%;width:min(320px,82%);padding:1rem;border:1px solid rgba(187,211,216,.5);background:rgba(196,220,224,.09);box-shadow:0 0 30px rgba(182,214,220,.08);animation:float-dead 6s ease-in-out infinite alternate}
 @keyframes float-dead{from{transform:translate(0,0) rotate(-1deg)}to{transform:translate(45vw,26px) rotate(2deg)}}
 
-/* Crypt */
-.crypt-nave{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+/* Krypt */
+.krypt-nave{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 .stone-panel{padding:1.2rem;border:10px ridge #4f504b;background:linear-gradient(#363833,#171815);min-height:220px}
 .afterlife-thread{padding:1rem;border-left:4px solid #817454;background:rgba(255,255,255,.025);font-family:var(--book)}
 
-/* Guild Hall */
+/* Guildhall */
 .guild-banner{padding:1.1rem;border:1px solid #6c604b;background:linear-gradient(90deg,#241b14,#3b2b1e,#241b14);text-align:center;font-family:var(--carved);letter-spacing:.08em}
 .guild-tables{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 .worktable{padding:1rem;border:8px solid #4b321f;background:#20150e;box-shadow:inset 0 0 0 2px #795638;min-height:210px}
 
-/* Curio Shop */
+/* Kurio Shop */
 .shop-map{display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch}
 .shop-counter,.shop-stairs,.back-door{padding:1.2rem;border:1px solid #5b4530;background:#1e160f}
 .shop-counter{grid-row:span 2;min-height:320px}
@@ -98,7 +98,27 @@
 .yard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
 .crate{padding:1rem;border:10px ridge #6d4e2f;background:#2d1d12;min-height:180px}
 
-/* Catacombs */
+/* Upstairs construction gate */
+.stair-rope{display:grid;gap:.35rem;max-width:34rem;margin-top:1rem;padding:1rem;border:3px solid #8d6a3e;border-radius:.4rem;background:repeating-linear-gradient(0deg,#261b12 0 14px,#3c2819 14px 20px);font-family:var(--book);text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.stair-rope strong{font-family:var(--carved);letter-spacing:.12em;color:#f0d487}
+.stair-rope span{color:#c8bda9;font-size:.9rem}
+.apothecary-rope{margin:0 auto;max-width:42rem}
+.apothecary-mark{width:150px;height:145px;border:8px solid #65734d;border-top:0;background:repeating-linear-gradient(0deg,#222a18 0 14px,#3b4925 14px 18px);box-shadow:inset 0 0 0 4px #11160e}
+.apothecary-mark::after{content:"ROPE";display:block;margin-top:54px;text-align:center;font:700 .75rem/1 var(--book);letter-spacing:.16em;color:#d8c98b}
+
+/* Forge intentionally remains a neutral, unclaimed construction marker. */
+.forge-mark{width:150px;height:150px;border:8px solid #6a655a;background:linear-gradient(145deg,#332d26,#11100e);box-shadow:inset 0 0 0 5px #1c1814}
+.forge-mark::after{content:"?";display:grid;place-items:center;height:100%;font:700 4rem/1 var(--carved);color:#9b8f79}
+
+/* Bottom Nexus infrastructure portal */
+.katakombs-entry{padding:0 0 4rem}
+.katakombs-gate{padding:clamp(1.25rem,3vw,2.5rem);border:2px solid #514d44;border-radius:1.25rem;background:linear-gradient(#1b1916,#0c0d0c);box-shadow:inset 0 0 0 7px rgba(59,56,50,.35),0 18px 35px rgba(0,0,0,.28)}
+.katakombs-gate h2{margin:.5rem 0;font-family:var(--carved);letter-spacing:.08em;text-transform:uppercase}
+.katakombs-gate p{max-width:68rem;font-family:var(--book);color:#b9b1a4}
+.legalese-gate{padding:1rem;border:1px solid #514d44;background:rgba(0,0,0,.2)}
+.zone-construction{border:1px dashed rgba(180,165,133,.22);background:rgba(0,0,0,.12)}
+
+/* Katakombs */
 .descent{display:grid;gap:.8rem;max-width:760px;margin:auto}
 .descent-step{padding:1rem;border:1px solid #4f4b43;background:#181713;transform:translateX(var(--shift,0))}
 .tunnel-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}

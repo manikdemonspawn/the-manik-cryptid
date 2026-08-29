@@ -7,6 +7,7 @@
       "realm": "museum",
       "collection": "ceremonial-credentials",
       "artifact_type": "credential",
+      "document_class": "credential",
       "status": "active",
       "created_date": null,
       "death_date": null,
@@ -25,6 +26,34 @@
       },
       "cross_references": [],
       "notes": "This registry entry points to the existing Certificate.jpg file."
+    },
+    {
+      "artifact_id": "rau-efi-2026-0828-001",
+      "title": "Sertifikate of Ecosystem-First Inquiry",
+      "realm": "museum",
+      "collection": "permanent-certificate-exhibit",
+      "artifact_type": "sertifikate",
+      "document_class": "sertifikate",
+      "status": "active",
+      "created_date": "2026-08-28",
+      "death_date": null,
+      "resurrection_date": null,
+      "museum_scale": "ceremonial",
+      "restricted": false,
+      "permanent_display": true,
+      "registry_number": "RAU-EFI-2026-0828-001",
+      "content_advisories": [],
+      "summary": "Universe-issued Sertifikate preserved in the permanent Museum Certificate Exhibit.",
+      "provenance": "KANON Keeper Edition; existing approved keeper artifact retained without replacement.",
+      "platforms": [],
+      "media": {
+        "hero_image": "assets/images/museum/RAU-EFI-2026-0828-001-keeper-01.webp",
+        "thumbnail": null,
+        "audio_embed": null,
+        "video_embed": null
+      },
+      "cross_references": [],
+      "notes": "The permanent exhibit remains rendered from the existing keeper image sequence in realms/museum/index.html. Do not substitute generated art."
     }
   ]
 }
