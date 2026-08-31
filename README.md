@@ -1,4 +1,4 @@
-# The Manik Cryptid — Resurrection Artifact Universe
+# The Manik Cryptid’s Resurrection Artifact Universe
 
 ## Current state
 
@@ -14,7 +14,7 @@ Current top-level realm skeletons, in Kanon order:
 
 1. Library — decontamination chamber, massive archive, hidden Forbidden Library;
 2. Museum — Stonehenge threshold;
-3. Krypt — coffin/sarcophagus threshold, memory and afterlife threads;
+3. Krypt — coffin/sarcophagus threshold, protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records;
 4. Guildhall — castle door, capabilities and worktables;
 5. Morgue — clinical doors, gurneys, toe tags, ghost-resurrection logic;
 6. Kurio Shop — round storefront door, Manik-made goods, and affiliate Yard Sale out back;
@@ -58,6 +58,9 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 
 ## Important locks
 
+- The full Universe name is **The Manik Cryptid’s Resurrection Artifact Universe**.
+- **Kurio Shop** is the locked Kanon spelling.
+- The Krypt is the protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records.
 - Do not merge to `main` without explicit creator approval.
 - Do not load adult/restricted content before real access control exists.
 - Do not fabricate Cherokee, Blackfoot, Elder Futhark, or other culturally specific writing.
