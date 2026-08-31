@@ -1,10 +1,12 @@
-# Resurrection Artifact Universe — Website Kanon (Construction)
+# The Manik Cryptid’s Resurrection Artifact Universe — Website Kanon (Construction)
 
 This file records structural rules so future additions do not quietly mutate the universe.
 
 ## Core rule
 
 These are **realms**, not ordinary website sections. The Nexus connects eight primary realms. The Katakombs is a separate infrastructure realm entered through a bottom-of-page portal.
+
+The full Universe name is **The Manik Cryptid’s Resurrection Artifact Universe**. Use the possessive form in site-facing text, docs, manifests, and metadata unless preserving a historical quote or older artifact title.
 
 The threshold should communicate the realm before the visitor reads the label. Text labels remain for accessibility and orientation.
 
@@ -25,6 +27,8 @@ The threshold should communicate the realm before the visitor reads the label. T
 ## Primary realm order
 
 The Nexus presents these eight primary portals in this order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shop, Forge, Apothecary. The Forge and Apothecary remain visibly **UNDER KONSTRUCTION** until their unresolved purpose/content are verified.
+
+**Kurio Shop** is the locked Kanon spelling. Do not revert to Curio Shop except when preserving a historical quote, older artifact title, or explicitly identified legacy path notice.
 
 The Katakombs portal is placed at the bottom of the Nexus. It leads only to legalese, administration, permissions, and infrastructure; it is not counted among the eight primary realms.
 
@@ -114,7 +118,11 @@ Norse death-memory influence can exist around the Morgue without turning the cli
 
 Threshold: **coffin / sarcophagus**.
 
-Part of the death-memory region. Stone, burial, memory, the honored dead, and afterlife belief threads belong here.
+The Krypt is the protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records.
+
+Part of the death-memory region. Stone, burial, memory, protected truth, restricted indexes, the honored dead, and afterlife belief threads belong here.
+
+Not every Krypt record is public-facing. Some Krypt entries may act as indexes or placeholders for protected/offline-only material rather than exposing the underlying sensitive records online.
 
 Norse influences can be present without treating multiple afterlife traditions as interchangeable.
 
