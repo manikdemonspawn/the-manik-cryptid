@@ -1,6 +1,6 @@
 # Content Model
 
-The website should grow by adding artifacts to established realms, not by inventing a new top-level realm every time a new project appears. The eight primary realms are Library, Museum, Krypt, Guildhall, Morgue, Kurio Shop, Forge, and Apothecary. The Katakombs is infrastructure, reached through the bottom Nexus portal.
+The Manik Cryptid’s Resurrection Artifact Universe should grow by adding artifacts to established realms, not by inventing a new top-level realm every time a new project appears. The eight primary realms are Library, Museum, Krypt, Guildhall, Morgue, Kurio Shop, Forge, and Apothecary. The Katakombs is infrastructure, reached through the bottom Nexus portal.
 
 ## Artifact identity
 
@@ -34,6 +34,12 @@ The death record is never erased.
 ### Library
 
 A resurrected work that belongs in the Library may visually wander the archive like a zombie. The underlying metadata still carries death and resurrection dates.
+
+### Krypt
+
+The Krypt is the protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records.
+
+Krypt entries may be public summaries, protected indexes, or offline-only references. The public site should never expose sensitive underlying material simply because a Krypt record exists.
 
 ## Museum display hierarchy
 
