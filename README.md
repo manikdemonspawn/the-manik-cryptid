@@ -4,7 +4,7 @@
 
 **Construction branch only. Not approved for public launch.**
 
-The public `main` branch intentionally contains no website HTML while reconstruction is underway. Active website development happens on the `construction` branch.
+The public `main` branch intentionally contains no website HTML while reconstruction is underway. Active website development happens on the `construction` branch. Universe-facing visible labels should use **Konstruction** where appropriate; the technical branch name remains `construction`.
 
 ## What this repository is becoming
 
@@ -37,7 +37,9 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 - content templates for major artifact types;
 - final-art CSS hooks so approved images can be integrated without rebuilding markup;
 - reduced-motion behavior and keyboard-focus support;
-- launch and cultural-verification safeguards.
+- launch and cultural-verification safeguards;
+- Cloudflare Pages preview handoff documentation;
+- root `_headers` safety file for preview noindex and basic hardening headers.
 
 ## Construction references
 
@@ -45,6 +47,7 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 - `docs/STRUCTURE.md` — repository/site structure;
 - `docs/CONTENT_MODEL.md` — how artifacts scale without breaking the architecture;
 - `docs/BUILD_STATUS.md` — code-first build status and known blockers;
+- `docs/CLOUDFLARE_PAGES_PREVIEW_HANDOFF.md` — PC handoff for Cloudflare Pages preview setup;
 - `docs/VISUAL_TARGET_BRIEF.md` — art-direction requirements after the code ceiling;
 - `docs/ART_ASSET_CONTRACT.md` — how approved visual targets plug into the site;
 - `docs/LAUNCH_CHECKLIST.md` — gates before anything becomes public;
@@ -52,6 +55,7 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 - `data/artifact-schema.json` — reusable artifact metadata shape;
 - `data/artifacts.json` — Kanonikal artifact registry;
 - `assets/images/README.md` — visual asset staging and versioning rules;
+- `_headers` — Cloudflare Pages preview safety headers;
 - `templates/` — construction templates for future content;
 - `registry-preview.html` — internal construction test of the artifact renderer;
 - `realm-index.html` — non-visual accessible navigation fallback.
@@ -67,3 +71,4 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 - Do not expose the posthumous Mausoleum as an active living-site portal.
 - Do not treat a genuine outside-issued Credential, a Universe-issued Sertifikate, and an artifact-specific COA as the same document type.
 - Approved visual targets become lore-bearing artifacts and are not silently discarded when later versions exist.
+- A Cloudflare preview deployment is not public launch approval.
