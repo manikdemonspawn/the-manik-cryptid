@@ -1,5 +1,5 @@
 {
-  "site": "The Manik Cryptid Resurrection Artifact Universe",
+  "site": "The Manik Cryptid’s Resurrection Artifact Universe",
   "kanon_version": 2,
   "status": "construction",
   "public_branch": "main",
@@ -31,7 +31,7 @@
       "name": "The Krypt",
       "threshold": "coffin or sarcophagus",
       "path": "realms/krypt/index.html",
-      "purpose": ["memory", "honored dead", "afterlife belief threads"]
+      "purpose": ["protected truth", "guarded memory", "honored dead", "afterlife belief threads", "restricted indexes", "offline-only records"]
     },
     {
       "id": "guildhall",
