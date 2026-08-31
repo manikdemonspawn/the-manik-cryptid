@@ -1,5 +1,13 @@
 # Construction Build Status
 
+## Current branch state
+
+- The `construction` branch remains the only active technical build branch.
+- Public `main` remains untouched for launch purposes.
+- The current work is preview preparation, not public launch.
+- Cloudflare Pages preview setup is prepared in `docs/CLOUDFLARE_PAGES_PREVIEW_HANDOFF.md`.
+- Root `_headers` has been added for Pages preview safety headers, including `X-Robots-Tag: noindex, nofollow, noarchive`.
+
 ## Built in this reconciliation pass
 
 - The `construction` branch remains the only active build; public `main` remains untouched.
@@ -12,6 +20,7 @@
 - Permanent Museum Certificate Exhibit placement remains intact for `RAU-EFI-2026-0828-001`, **Sertifikate of Ecosystem-First Inquiry — KANON Keeper Edition**.
 - Retired legacy paths (`crypt/`, `catacombs/`, `guild-hall/`, `curio-shop/`, and nested `apothecary/`) are preserved as noindex notices pointing to current Kanonikal paths; they are not active navigation.
 - Realm manifest, page paths, CSS hooks, visual-target scopes, artifact schema, and documentation use current Kanon spellings.
+- Visitor-facing construction labels have been polished to Universe-facing **Konstruction** wording where appropriate.
 
 ## Existing construction systems retained
 
@@ -37,4 +46,9 @@ These remain intentionally unfilled until verified or supplied:
 - final Forge purpose, contents, threshold, and visual language;
 - Cherokee, Blackfoot, Elder Futhark, or other culturally specific writing/symbols;
 - actual adult/restricted content;
-- store/payment providers, affiliate links, and external destinations.
+- store/payment providers, affiliate links, and external destinations;
+- Cloudflare dashboard connection and first preview URL verification.
+
+## Next milestone
+
+Create the Cloudflare Pages project from the PC dashboard and verify the `construction` branch preview URL without attaching a custom domain or treating the preview as public launch.
