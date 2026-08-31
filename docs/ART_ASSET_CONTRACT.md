@@ -12,7 +12,7 @@ Code and interaction structure come first. Approved visual targets come afterwar
 - Must show the eight primary realm thresholds in a coherent impossible landscape:
   - Library / decontamination entrance;
   - Museum / Stonehenge;
-  - Krypt / coffin or sarcophagus threshold;
+  - Krypt / coffin or sarcophagus threshold, protected vault, guarded memory, and afterlife-thread language;
   - Guildhall / castle door;
   - Morgue / clinical doors and gurney language;
   - Kurio Shop / round storybook storefront;
