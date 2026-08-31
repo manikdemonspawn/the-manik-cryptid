@@ -60,7 +60,8 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 ### Krypt
 
 - coffin / sarcophagus threshold;
-- stone, burial, memory, honored dead;
+- protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records;
+- stone, burial, guarded archive, sealed indexes, and protected record symbolism;
 - Norse / Elder Futhark layer with room for translations;
 - ravens / afterlife atmosphere where appropriate;
 - visually distinct from the clinical Morgue.
