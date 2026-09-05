@@ -1,0 +1,276 @@
+/* Nexus reconstruction: image-led portal wall with semantic, keyboard-safe thresholds. */
+.nexus-rebuild{
+  background:#08090d;
+  color:#eee7dc;
+}
+
+.nexus-rebuild-layout{
+  padding:0 0 4rem;
+}
+
+.nexus-masthead{
+  padding:clamp(2.5rem,7vw,6rem) 0 clamp(1.5rem,4vw,3rem);
+  border-bottom:1px solid rgba(198,175,136,.28);
+  background:#110f1b;
+  text-align:center;
+}
+
+.nexus-masthead .status-chip{
+  color:#dfc98f;
+}
+
+.nexus-masthead h1{
+  margin:.65rem 0 0;
+  font-family:var(--font-carved,Georgia,serif);
+  font-size:clamp(3.1rem,9vw,7.2rem);
+  line-height:.92;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+
+.nexus-kicker{
+  max-width:760px;
+  margin:1rem auto 0;
+  color:#c8beaf;
+  font-family:var(--font-reading,Georgia,serif);
+  font-size:clamp(1rem,2vw,1.18rem);
+  line-height:1.6;
+}
+
+.nexus-quicklinks{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.65rem;
+  margin:1.5rem auto 0;
+}
+
+.nexus-quicklinks a,
+.threshold-card,
+.katakombs-gate .btn{
+  border:1px solid rgba(225,211,181,.48);
+  color:#f3eadb;
+  text-decoration:none;
+}
+
+.nexus-quicklinks a{
+  padding:.65rem .85rem;
+  background:#171421;
+  font-family:var(--font-reading,Georgia,serif);
+}
+
+.nexus-quicklinks a:hover,
+.nexus-quicklinks a:focus-visible,
+.threshold-card:hover,
+.threshold-card:focus-visible{
+  border-color:#e5c96f;
+  background:#262032;
+}
+
+.portal-wall-section{
+  padding:clamp(1.75rem,4vw,3.5rem) 0 0;
+}
+
+.portal-wall-heading{
+  max-width:820px;
+  margin:0 auto 1.25rem;
+  text-align:center;
+}
+
+.portal-wall-heading h2,
+.directory-heading h2{
+  margin:0;
+  font-family:var(--font-carved,Georgia,serif);
+  font-size:clamp(1.8rem,4vw,3rem);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+
+.portal-wall-heading p,
+.directory-heading p{
+  margin:.65rem auto 0;
+  max-width:760px;
+  color:#bbb0a2;
+  font-family:var(--font-reading,Georgia,serif);
+  line-height:1.55;
+}
+
+.nexus-portal-wall{
+  position:relative;
+  min-height:clamp(570px,62vw,900px);
+  overflow:hidden;
+  border:1px solid rgba(220,194,145,.42);
+  border-radius:1.35rem;
+  background-color:#15111e;
+  background-image:var(--nexus-hero-image);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  box-shadow:0 22px 58px rgba(0,0,0,.48);
+}
+
+.portal-wall-instruction{
+  position:absolute;
+  z-index:2;
+  left:50%;
+  top:1.25rem;
+  width:min(88%,42rem);
+  margin:0;
+  padding:.6rem .8rem;
+  transform:translateX(-50%);
+  border:1px solid rgba(232,218,190,.36);
+  background:rgba(8,7,12,.78);
+  color:#e8dfd3;
+  font:600 clamp(.72rem,1.45vw,.9rem)/1.35 var(--font-reading,Georgia,serif);
+  letter-spacing:.04em;
+  text-align:center;
+}
+
+.realm-threshold{
+  --x:50%;
+  --y:50%;
+  position:absolute;
+  z-index:3;
+  left:var(--x);
+  top:var(--y);
+  display:block;
+  width:clamp(110px,13vw,168px);
+  padding:.5rem .55rem .58rem;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(244,230,202,.7);
+  border-radius:.72rem;
+  background:rgba(10,8,15,.84);
+  box-shadow:0 8px 20px rgba(0,0,0,.48);
+  color:#fff8ee;
+  font-family:var(--font-carved,Georgia,serif);
+  text-align:center;
+  text-decoration:none;
+  transition:transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.realm-threshold strong{
+  display:block;
+  font-size:clamp(.74rem,1.55vw,1rem);
+  letter-spacing:.035em;
+}
+
+.realm-threshold small{
+  display:block;
+  margin-top:.18rem;
+  color:#d0c4b4;
+  font-family:var(--font-reading,Georgia,serif);
+  font-size:clamp(.6rem,1.15vw,.75rem);
+  line-height:1.2;
+}
+
+.realm-threshold:hover,
+.realm-threshold:focus-visible{
+  z-index:4;
+  transform:translate(-50%,-50%) scale(1.07);
+  border-color:#efd47d;
+  background:rgba(35,25,46,.94);
+}
+
+.realm-threshold.museum{--x:17%;--y:42%}
+.realm-threshold.library{--x:34%;--y:33%}
+.realm-threshold.morgue{--x:50%;--y:41%}
+.realm-threshold.krypt{--x:66%;--y:33%}
+.realm-threshold.guildhall{--x:84%;--y:42%}
+.realm-threshold.kurio{--x:30%;--y:72%}
+.realm-threshold.forge{--x:52%;--y:74%}
+.realm-threshold.apothekary{--x:74%;--y:72%}
+
+.portal-wall-caption{
+  margin:1rem 0 0;
+  color:#aaa093;
+  font:italic .9rem/1.5 var(--font-reading,Georgia,serif);
+  text-align:center;
+}
+
+.realm-directory-section{
+  padding:clamp(2.75rem,6vw,5rem) 0 0;
+}
+
+.directory-heading{
+  margin:0 auto 1.5rem;
+  text-align:center;
+}
+
+.threshold-directory{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.85rem;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.threshold-card{
+  display:block;
+  min-height:145px;
+  padding:1rem;
+  background:#131218;
+  font-family:var(--font-reading,Georgia,serif);
+}
+
+.threshold-card h3{
+  margin:0;
+  color:#f1dfae;
+  font-family:var(--font-carved,Georgia,serif);
+  font-size:1.12rem;
+  letter-spacing:.03em;
+}
+
+.threshold-card p{
+  margin:.55rem 0 0;
+  color:#c2b8aa;
+  font-size:.88rem;
+  line-height:1.4;
+}
+
+.threshold-card .construction-note{
+  display:inline-block;
+  margin-top:.65rem;
+  color:#d8bd78;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.threshold-card.is-construction{
+  border-style:dashed;
+}
+
+.nexus-rebuild .katakombs-entry{
+  padding:clamp(2.75rem,6vw,5rem) 0 0;
+}
+
+.nexus-rebuild .katakombs-gate{
+  border-radius:1rem;
+  background:#151412;
+}
+
+@media(max-width:920px){
+  .threshold-directory{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:680px){
+  .nexus-masthead{padding-top:2.5rem}
+  .nexus-portal-wall{min-height:710px;border-radius:.8rem;background-position:center top}
+  .portal-wall-instruction{top:.8rem}
+  .realm-threshold{width:clamp(112px,37vw,150px)}
+  .realm-threshold.museum{--x:27%;--y:25%}
+  .realm-threshold.library{--x:73%;--y:25%}
+  .realm-threshold.morgue{--x:27%;--y:43%}
+  .realm-threshold.krypt{--x:73%;--y:43%}
+  .realm-threshold.guildhall{--x:27%;--y:61%}
+  .realm-threshold.kurio{--x:73%;--y:61%}
+  .realm-threshold.forge{--x:27%;--y:80%}
+  .realm-threshold.apothekary{--x:73%;--y:80%}
+  .threshold-directory{grid-template-columns:1fr}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .realm-threshold{transition:none}
+}

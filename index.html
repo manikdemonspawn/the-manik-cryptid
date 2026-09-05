@@ -8,15 +8,77 @@
   <title>The Nexus | The Manik Cryptid</title>
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/phase2.css">
-  <link rel="stylesheet" href="assets/css/stage.css">
   <link rel="stylesheet" href="assets/css/art-hooks.css">
+  <link rel="stylesheet" href="assets/css/nexus-rebuild.css">
 </head>
 <body class="nexus">
-  <a class="skip-link" href="#nexus-stage">Skip to realm thresholds</a>
+  <a class="skip-link" href="#nexus-portal-wall">Skip to realm thresholds</a>
   <div class="construction-ribbon">KONSTRUCTION BUILD • NOT FOR PUBLIC LAUNCH</div>
 
   <main>
-    <section class="hero nexus-hero">
+    <section class="nexus-rebuild-layout" aria-labelledby="nexus-title">
+      <header class="nexus-masthead">
+        <div class="site-shell">
+          <p class="status-chip">Central Threshold</p>
+          <h1 id="nexus-title">The Nexus</h1>
+          <p class="nexus-kicker">The fairy forest at the center of The Manik Cryptid&rsquo;s Resurrection Artifact Universe. Every threshold is a different kind of trouble, and the forest is doing most of the talking.</p>
+          <nav class="nexus-quicklinks" aria-label="Nexus navigation">
+            <a href="#nexus-portal-wall">Enter the forest</a>
+            <a href="#threshold-directory">Realm directory</a>
+            <a href="realms/katakombs/index.html">The Katakombs</a>
+            <a href="realm-index.html">Plain Realm Index</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="portal-wall-section site-shell" aria-labelledby="portal-wall-title">
+        <div class="portal-wall-heading">
+          <h2 id="portal-wall-title">Choose a threshold</h2>
+          <p>Eight primary realms are live in the map. Their links remain ordinary HTML on purpose: the magic gets to be weird; the navigation does not get to be useless.</p>
+        </div>
+
+        <div class="nexus-portal-wall" id="nexus-portal-wall" style="--nexus-hero-image:url('assets/images/nexus/nexus-master-v1.png')" aria-label="Illustrated Fairy Forest Nexus with eight realm thresholds">
+          <p class="portal-wall-instruction">Every marked threshold is keyboard-accessible. The Mausoleum is not here; it remains posthumous-only.</p>
+          <a class="realm-threshold museum" href="realms/museum/index.html"><strong>The Museum</strong><small>Standing-stone threshold</small></a>
+          <a class="realm-threshold library" href="realms/library/index.html"><strong>The Library</strong><small>Decontamination before entry</small></a>
+          <a class="realm-threshold morgue" href="realms/morgue/index.html"><strong>The Morgue</strong><small>Clinical doors &amp; records</small></a>
+          <a class="realm-threshold krypt" href="realms/krypt/index.html"><strong>The Krypt</strong><small>Protected vault</small></a>
+          <a class="realm-threshold guildhall" href="realms/guildhall/index.html"><strong>The Guildhall</strong><small>Castle-gate threshold</small></a>
+          <a class="realm-threshold kurio" href="realms/kurio-shop/index.html"><strong>The Kurio Shop</strong><small>Round storefront door</small></a>
+          <a class="realm-threshold forge" href="realms/forge/index.html"><strong>The Forge</strong><small>Under Konstruction</small></a>
+          <a class="realm-threshold apothekary" href="realms/apothecary/index.html"><strong>The Apothekary</strong><small>Upstairs, rope-gated</small></a>
+        </div>
+        <p class="portal-wall-caption">The placement is a visual map, not sacred geography. The paths remain direct, the labels stay readable, and no fake cultural symbols have been smuggled into the woods.</p>
+      </section>
+
+      <section class="realm-directory-section site-shell" id="threshold-directory" aria-labelledby="directory-title">
+        <div class="directory-heading">
+          <h2 id="directory-title">Threshold directory</h2>
+          <p>For people who prefer a door list to wandering off into enchanted shrubbery.</p>
+        </div>
+        <ol class="threshold-directory">
+          <li><a class="threshold-card" href="realms/library/index.html"><h3>The Library</h3><p>Decontamination, preservation, writing, sound, art, and special collections.</p></a></li>
+          <li><a class="threshold-card" href="realms/museum/index.html"><h3>The Museum</h3><p>History, lineage, provenance, credentials, milestones, and core artifacts.</p></a></li>
+          <li><a class="threshold-card" href="realms/krypt/index.html"><h3>The Krypt</h3><p>Protected truth, guarded memory, honored dead, and offline-only records.</p></a></li>
+          <li><a class="threshold-card" href="realms/guildhall/index.html"><h3>The Guildhall</h3><p>Skills, capabilities, craft, portfolio work, and guild records.</p></a></li>
+          <li><a class="threshold-card" href="realms/morgue/index.html"><h3>The Morgue</h3><p>Dead projects, resurrection dates, toe tags, and ghost artifacts.</p></a></li>
+          <li><a class="threshold-card" href="realms/kurio-shop/index.html"><h3>The Kurio Shop</h3><p>Manik-made goods, oddities, and the affiliate yard sale.</p></a></li>
+          <li><a class="threshold-card is-construction" href="realms/forge/index.html"><h3>The Forge</h3><p>Its final purpose is deliberately deferred.</p><span class="construction-note">Under Konstruction</span></a></li>
+          <li><a class="threshold-card is-construction" href="realms/apothecary/index.html"><h3>The Apothekary</h3><p>Physically upstairs inside the Kurio Shop, behind the rope.</p><span class="construction-note">Under Konstruction</span></a></li>
+        </ol>
+      </section>
+
+      <section class="site-shell katakombs-entry" aria-labelledby="katakombs-portal-title">
+        <div class="katakombs-gate">
+          <p class="status-chip">Basement / Infrastructure</p>
+          <h2 id="katakombs-portal-title">The Katakombs</h2>
+          <p>The cellar-door descent into the legalese realm: policies, permissions, administration, and infrastructure. It is a real portal, just not one of the eight primary realm thresholds.</p>
+          <a class="btn" href="realms/katakombs/index.html">Enter the Katakombs &rarr;</a>
+        </div>
+      </section>
+    </section>
+
+    <section hidden class="hero nexus-hero">
       <div class="nexus-intro site-shell">
         <p class="status-chip">Central Threshold</p>
         <h1>The Nexus</h1>
@@ -30,7 +92,7 @@
       </div>
     </section>
 
-    <section class="site-shell nexus-stage-wrap" aria-labelledby="stage-title">
+    <section hidden class="site-shell nexus-stage-wrap" aria-labelledby="stage-title">
       <h2 id="stage-title" class="realm-title">Explorable Nexus Stage</h2>
       <p class="realm-subtitle">The eight primary realm thresholds are visible here. The clickable links are wired independently from final artwork, so the visual target can change without breaking navigation.</p>
 
@@ -46,13 +108,13 @@
         <a class="nexus-hotspot morgue" href="realms/morgue/index.html">Morgue<small>Clinical doors</small></a>
         <a class="nexus-hotspot kurio" href="realms/kurio-shop/index.html">Kurio Shop<small>Round storefront</small></a>
         <a class="nexus-hotspot forge" href="realms/forge/index.html">Forge<small>Under Konstruction</small></a>
-        <a class="nexus-hotspot apothecary" href="realms/apothecary/index.html">Apothecary<small>Under Konstruction</small></a>
+        <a class="nexus-hotspot apothecary" href="realms/apothecary/index.html">Apothekary<small>Under Konstruction</small></a>
       </div>
       <p class="stage-legend">The positions are Konstruction coordinates, not sacred geography. The final Nexus visual target can refine exact placement while these semantic links remain intact. No living-site Mausoleum hotspot exists.</p>
       <p class="stage-legend"><a href="realm-index.html">Use the plain Realm Index instead</a> if you want direct non-visual navigation.</p>
     </section>
 
-    <div class="site-shell realm-map" id="realm-map">
+    <div hidden class="site-shell realm-map" id="realm-map">
       <section class="zone zone-fae" aria-labelledby="fae-zone-title">
         <p class="zone-label" id="fae-zone-title">Old Fairy Path • Irish &amp; Scottish influence • carved-trunk layer</p>
         <div class="forest-carvings" aria-label="Reserved forest details">
@@ -99,7 +161,7 @@
       </section>
     </div>
 
-    <section class="site-shell katakombs-entry" aria-labelledby="katakombs-entry-title">
+    <section hidden class="site-shell katakombs-entry" aria-labelledby="katakombs-entry-title">
       <div class="katakombs-gate">
         <p class="status-chip">Basement / Infrastructure</p>
         <h2 id="katakombs-entry-title">The Katakombs</h2>

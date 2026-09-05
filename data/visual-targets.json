@@ -6,11 +6,11 @@
       "id": "nexus-master",
       "scope": "nexus",
       "kind": "kanonikal-environment",
-      "status": "pending-generation",
+      "status": "generated-local-review",
       "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/nexus/nexus-master",
+      "expected_path": "assets/images/nexus/nexus-master-v1.png",
       "approved": false,
-      "lore_status": "pending"
+      "lore_status": "implementation-candidate-pending-creator-approval"
     },
     {
       "id": "museum-master",
