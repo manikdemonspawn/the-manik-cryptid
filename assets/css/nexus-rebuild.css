@@ -8,6 +8,12 @@
   padding:0 0 4rem;
 }
 
+/* The legacy construction sheet assigns display values to old sections.
+   Keep those retained fallback blocks out of the rebuilt Nexus. */
+.nexus-rebuild-layout ~ [hidden]{
+  display:none !important;
+}
+
 .nexus-masthead{
   padding:clamp(2.5rem,7vw,6rem) 0 clamp(1.5rem,4vw,3rem);
   border-bottom:1px solid rgba(198,175,136,.28);
