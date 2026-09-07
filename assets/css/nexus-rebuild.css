@@ -254,11 +254,11 @@
   border-style:dashed;
 }
 
-.nexus-rebuild .katakombs-entry{
+.nexus-rebuild-layout .katakombs-entry{
   padding:clamp(2.75rem,6vw,5rem) 0 0;
 }
 
-.nexus-rebuild .katakombs-gate{
+.nexus-rebuild-layout .katakombs-gate{
   min-height:clamp(360px,37vw,520px);
   border-radius:1rem;
   background-color:#151412;
