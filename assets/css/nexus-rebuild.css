@@ -17,7 +17,13 @@
 .nexus-masthead{
   padding:clamp(2.5rem,7vw,6rem) 0 clamp(1.5rem,4vw,3rem);
   border-bottom:1px solid rgba(198,175,136,.28);
-  background:#110f1b;
+  background-color:#110f1b;
+  background-image:
+    linear-gradient(180deg,rgba(9,6,19,.20),rgba(9,6,19,.62)),
+    var(--nexus-hero-image,none);
+  background-position:center 40%;
+  background-repeat:no-repeat;
+  background-size:cover;
   text-align:center;
 }
 
@@ -280,3 +286,4 @@
 @media(prefers-reduced-motion:reduce){
   .realm-threshold{transition:none}
 }
+
