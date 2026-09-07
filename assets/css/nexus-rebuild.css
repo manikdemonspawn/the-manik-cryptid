@@ -259,8 +259,17 @@
 }
 
 .nexus-rebuild .katakombs-gate{
+  min-height:clamp(360px,37vw,520px);
   border-radius:1rem;
-  background:#151412;
+  background-color:#151412;
+  background-image:
+    linear-gradient(90deg,rgba(7,9,8,.82) 0%,rgba(7,9,8,.56) 50%,rgba(7,9,8,.30) 100%),
+    var(--katakombs-image,none);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:#eee7dc;
+  text-shadow:0 2px 12px rgba(0,0,0,.9);
 }
 
 @media(max-width:920px){
