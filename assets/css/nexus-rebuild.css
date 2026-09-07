@@ -296,3 +296,33 @@
   .realm-threshold{transition:none}
 }
 
+
+
+/* The Apothekary is an upstairs, rope-gated threshold inside the Kurio Shop. */
+.threshold-card.apothekary-card{
+  min-height:clamp(250px,27vw,360px);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background-color:#16100f;
+  background-image:
+    linear-gradient(180deg,rgba(10,7,11,.12) 0%,rgba(10,7,11,.42) 42%,rgba(10,7,11,.92) 100%),
+    var(--apothekary-image,none);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:#f5ecdf;
+  text-shadow:0 2px 12px rgba(0,0,0,.92);
+}
+.threshold-card.apothekary-card h3,
+.threshold-card.apothekary-card p,
+.threshold-card.apothekary-card .construction-note{
+  position:relative;
+  z-index:1;
+}
+.threshold-card.apothekary-card:hover,
+.threshold-card.apothekary-card:focus-visible{
+  background-image:
+    linear-gradient(180deg,rgba(10,7,11,.06) 0%,rgba(10,7,11,.25) 42%,rgba(10,7,11,.78) 100%),
+    var(--apothekary-image,none);
+}
