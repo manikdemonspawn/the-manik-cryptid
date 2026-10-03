@@ -175,3 +175,7 @@ footer { padding: 4rem 0 2rem; color: #8d887e; font-family: var(--font-reading);
 .portal-region > h3 { font-family: var(--font-carved); font-size: 1.25rem; letter-spacing: .05em; margin: 0 0 1rem; color: var(--bone); }
 .portal-region .nexus-portal-wall { display: flex; flex-wrap: wrap; gap: 1rem; }
 .forest-path-note { font-family: var(--font-reading); color: var(--muted); font-size: .95rem; border-left: 3px solid var(--moss); padding-left: 1rem; margin: 1.5rem 0; }
+/* Kreator-supplied Forest imagery (Milestone 1). */
+.region-feature { margin: 0 0 1.25rem; }
+.region-feature img { display: block; width: 100%; border-radius: 1rem; border: 1px solid #343634; }
+.region-feature figcaption { font-family: var(--font-reading); color: var(--muted); font-size: .88rem; margin-top: .5rem; }
