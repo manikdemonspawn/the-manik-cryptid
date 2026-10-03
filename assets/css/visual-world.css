@@ -1,0 +1,482 @@
+/* ============================================================
+   VISUAL WORLD — Milestone 3
+   Realm visual identities + Forest Path transition + Semmaterry™ /
+   Artifact Zomby™ component language.
+
+   Presentation layer only. No Kanon is invented here: every visual
+   treatment below is the safest reasonable implementation of the
+   blueprint spec, and the FINAL visual treatment of each Realm
+   remains PENDING KREATOR APPROVAL (§19.8).
+
+   Constraints honored:
+   • §14.9 DARK ≠ UNREADABLE — body text stays high-contrast.
+   • §10.10/10.11 accessibility overrides decoration; every animated
+     effect has a static fallback under prefers-reduced-motion.
+   • §17.4 no fabricated tribal imagery on the Native-inspired edge
+     — natural materials only (wood, moss, stone, water).
+   • §10.14 no generic zombie imagery — Artifact Zomby™ is
+     identity-preserving damage, not rotting corpses.
+   • §10.5/10.6 binary-as-blood uses GENERATED decorative binary
+     only. Never secrets.
+   ============================================================ */
+
+/* ---------- Shared realm accent tokens ----------
+   Each body.<realm> sets --realm-accent / --realm-accent-soft /
+   --realm-ground so components can pick up the local palette
+   without restyling per page. */
+body.museum, body.library {
+  --realm-accent: #d8b56b;        /* lantern gold — Fairy-Tale region */
+  --realm-accent-soft: rgba(216,181,107,.14);
+  --realm-ground: #d8ceb8;       /* parchment */
+  --realm-stone: #6f746c;
+}
+body.kurio, body.apothecary, body.yard {
+  --realm-accent: #8aa864;        /* moss — Native-inspired edge */
+  --realm-accent-soft: rgba(138,168,100,.13);
+  --realm-ground: #5a4028;       /* bark */
+  --realm-stone: #8a8f88;        /* river stone */
+}
+body.krypt {
+  --realm-accent: #9a86b8;       /* sealed violet — protected/mysterious */
+  --realm-accent-soft: rgba(154,134,184,.13);
+  --realm-ground: #3a3348;
+  --realm-stone: #5c5568;
+}
+body.morgue {
+  --realm-accent: #9fb2b8;       /* clinical steel — archival */
+  --realm-accent-soft: rgba(159,178,184,.12);
+  --realm-ground: #d8cda8;       /* ledger paper */
+  --realm-stone: #656d70;
+}
+body.semmaterry {
+  --realm-accent: #b9c0c4;       /* moonlit stone — graveyard */
+  --realm-accent-soft: rgba(185,192,196,.12);
+  --realm-ground: #4a3524;       /* turned earth */
+  --realm-stone: #6e7478;
+}
+body.mausoleum {
+  --realm-accent: #7d7d7a;       /* dormant — muted, quiet */
+  --realm-accent-soft: rgba(125,125,122,.10);
+  --realm-ground: #3a3a38;
+  --realm-stone: #55554f;
+}
+body.forge {
+  --realm-accent: #c96a2e;       /* ember — iron work */
+  --realm-accent-soft: rgba(201,106,46,.13);
+  --realm-ground: #2c1a10;
+  --realm-stone: #55524e;
+}
+body.guildhall {
+  --realm-accent: #b3813f;       /* hearth wood */
+  --realm-accent-soft: rgba(179,129,63,.13);
+  --realm-ground: #241b14;
+  --realm-stone: #6c604b;
+}
+body.katakombs {
+  --realm-accent: #8d8578;       /* tunnel stone */
+  --realm-accent-soft: rgba(141,133,120,.12);
+  --realm-ground: #28251f;
+  --realm-stone: #47433b;
+}
+
+/* ---------- Realm hero treatments ----------
+   Every Realm reads as its own place; all stay in the same
+   gothic/dark-luxury Universe (black, burgundy, plum, crimson). */
+.hero h1 {
+  text-shadow: 0 2px 24px rgba(0,0,0,.7);
+}
+body.museum .hero h1, body.library .hero h1 {
+  /* Fairy-Tale: carved inscription under lantern light */
+  color: #f2e4c2;
+  text-shadow: 0 0 34px rgba(216,181,107,.28), 0 2px 24px rgba(0,0,0,.7);
+}
+body.museum .status-chip, body.library .status-chip { border-color: #d8b56b; color: #e8d5a2; }
+body.kurio .hero h1, body.apothecary .hero h1, body.yard .hero h1 {
+  /* Native-inspired edge: moss-lit, earthen */
+  color: #eef0df;
+  text-shadow: 0 0 30px rgba(138,168,100,.30), 0 2px 24px rgba(0,0,0,.7);
+}
+body.kurio .status-chip, body.apothecary .status-chip, body.yard .status-chip { border-color: #8aa864; color: #cfe0b4; }
+body.krypt .hero h1 {
+  color: #ded3f2;
+  text-shadow: 0 0 34px rgba(154,134,184,.32), 0 2px 24px rgba(0,0,0,.75);
+}
+body.krypt .status-chip { border-color: #9a86b8; color: #cdbde8; }
+body.morgue .hero h1 { color: #e2eaec; }
+body.morgue .status-chip { border-color: #9fb2b8; color: #c3d2d7; }
+body.semmaterry .hero h1 {
+  /* Graveyard: moonlit stone */
+  color: #e8ecee;
+  text-shadow: 0 0 40px rgba(185,192,196,.22), 0 2px 24px rgba(0,0,0,.8);
+}
+body.semmaterry .status-chip { border-color: #b9c0c4; color: #d5dbde; }
+body.mausoleum .hero,
+body.mausoleum .section {
+  /* DORMANT: muted, quiet, veiled. The Kreator is alive — this is
+     not a memorial, so no warm or celebratory accents. */
+  filter: saturate(.55);
+}
+body.mausoleum .hero h1 { color: #b9b9b4; text-shadow: 0 2px 18px rgba(0,0,0,.8); }
+body.mausoleum .status-chip { border-color: #7d7d7a; color: #a9a9a4; }
+body.forge .hero h1 {
+  color: #f4ddc2;
+  text-shadow: 0 0 34px rgba(201,106,46,.35), 0 2px 24px rgba(0,0,0,.7);
+}
+body.forge .status-chip { border-color: #c96a2e; color: #eec39a; }
+
+/* Realm section headings pick up the local accent. */
+.section h2 { border-bottom: 1px solid var(--realm-stone, #343634); padding-bottom: .5rem; }
+body.museum .section h2, body.library .section h2 { border-bottom-color: rgba(216,181,107,.35); }
+body.kurio .section h2, body.apothecary .section h2, body.yard .section h2 { border-bottom-color: rgba(138,168,100,.35); }
+body.krypt .section h2 { border-bottom-color: rgba(154,134,184,.35); }
+body.morgue .section h2 { border-bottom-color: rgba(159,178,184,.35); }
+body.semmaterry .section h2 { border-bottom-color: rgba(185,192,196,.35); }
+
+/* Realm-flavored panels: same component, local materials. */
+body.museum .panel, body.library .panel {
+  border-color: rgba(216,181,107,.28);
+  background: linear-gradient(180deg, rgba(216,181,107,.06), rgba(0,0,0,.30));
+}
+body.kurio .panel, body.apothecary .panel, body.yard .panel {
+  border-color: rgba(138,168,100,.30);
+  background:
+    repeating-linear-gradient(93deg, rgba(90,64,40,.16) 0 14px, transparent 14px 26px),
+    linear-gradient(180deg, rgba(138,168,100,.05), rgba(0,0,0,.30));
+}
+body.krypt .panel { border-color: rgba(154,134,184,.30); background: linear-gradient(180deg, rgba(154,134,184,.06), rgba(0,0,0,.32)); }
+body.morgue .panel { border-color: rgba(159,178,184,.30); }
+body.semmaterry .panel {
+  border-color: rgba(185,192,196,.28);
+  background: linear-gradient(180deg, rgba(185,192,196,.05), rgba(0,0,0,.32));
+}
+
+/* ============================================================
+   FOREST PATH TRANSITION (§11.6)
+   Moving between the Fairy-Tale region and the Native-inspired
+   edge should feel like a change of environment: vegetation,
+   lighting, and typography accents shift across the crossing.
+   CSS only. Decorative — screen readers get the adjacent text.
+   ============================================================ */
+.forest-path {
+  position: relative;
+  min-height: 150px;
+  margin: 2rem 0;
+  border-radius: 1.25rem;
+  border: 1px solid #343634;
+  overflow: hidden;
+  background:
+    /* fog bank — Fairy-Tale side (left) */
+    radial-gradient(ellipse 60% 90% at 12% 50%, rgba(150,140,200,.20), transparent 70%),
+    radial-gradient(ellipse 45% 70% at 30% 40%, rgba(120,150,190,.14), transparent 70%),
+    /* moss + bark — Native-inspired edge (right) */
+    radial-gradient(ellipse 55% 85% at 88% 55%, rgba(138,168,100,.20), transparent 70%),
+    radial-gradient(ellipse 40% 60% at 70% 60%, rgba(90,64,40,.22), transparent 70%),
+    /* the crossing: fog thins into woodland */
+    linear-gradient(90deg, #141a26 0%, #1a1c22 38%, #20241c 62%, #1c2115 100%);
+}
+.forest-path::before {
+  /* drifting mist wisps */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(100deg,
+    transparent 0 46px,
+    rgba(200,200,215,.05) 46px 58px,
+    transparent 58px 110px);
+}
+.forest-path::after {
+  /* the crossing marker */
+  content: "THE FOREST PATH — THE WOODS CHANGE THEIR MOOD";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .78rem;
+  letter-spacing: .22em;
+  color: #cfc6b2;
+  background: rgba(5,7,6,.66);
+  border: 1px solid rgba(207,198,178,.35);
+  border-radius: 999px;
+  padding: .5rem 1.1rem;
+}
+@media (max-width: 650px) {
+  .forest-path::after { white-space: normal; text-align: center; font-size: .68rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .forest-path::before { animation: mist-drift 26s linear infinite; }
+  @keyframes mist-drift {
+    from { transform: translateX(0); }
+    to { transform: translateX(110px); }
+  }
+}
+
+/* ============================================================
+   SEMMATERRY™ + ARTIFACT ZOMBY™ VISUAL LANGUAGE (§10)
+   "It died, was buried, and somehow came back." — not designed
+   to look spooky. Original identity stays recognizable UNDER the
+   damage. (§10.13)
+   ============================================================ */
+
+/* --- Tombstone card: grave + archive index + genealogical node --- */
+.tombstone-card {
+  position: relative;
+  padding: 2.2rem 1.4rem 1.4rem;
+  border: 1px solid var(--realm-stone, #6e7478);
+  border-radius: 5rem 5rem .8rem .8rem;   /* arched headstone silhouette */
+  background:
+    radial-gradient(ellipse 80% 30% at 50% 0%, rgba(185,192,196,.14), transparent 70%),
+    linear-gradient(180deg, #2b2e30, #17191a 70%, #101112);
+  box-shadow: 0 18px 40px rgba(0,0,0,.55), inset 0 0 0 3px rgba(0,0,0,.35);
+  font-family: Georgia, "Times New Roman", serif;
+}
+.tombstone-card h3 {
+  margin: 0 0 .4rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #e6e9ea;
+  text-align: center;
+}
+.tombstone-card .carved-dates {
+  text-align: center;
+  color: #a9b0b3;
+  font-size: .88rem;
+  letter-spacing: .06em;
+}
+.tombstone-card .grave-meta {
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px solid rgba(185,192,196,.25);
+  font-size: .9rem;
+  color: #c6cbcd;
+}
+.tombstone-card .grave-meta dt { color: #8f979a; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.tombstone-card .grave-meta dd { margin: 0 0 .6rem; }
+/* The grave does not move for the resurrected — the stone tips. (§10.2) */
+.tombstone-card.is-tipped {
+  transform: rotate(-7deg) translateY(10px);
+  transform-origin: 30% 100%;
+  box-shadow: 14px 22px 44px rgba(0,0,0,.6), inset 0 0 0 3px rgba(0,0,0,.35);
+}
+.tombstone-card.is-tipped::after {
+  /* disturbed ground the stone sank into */
+  content: "";
+  position: absolute;
+  left: -12%; right: -12%; bottom: -14px;
+  height: 34px;
+  background:
+    radial-gradient(ellipse 30% 90% at 20% 40%, #3a2a1c 0 40%, transparent 41%),
+    radial-gradient(ellipse 26% 80% at 55% 55%, #43301e 0 42%, transparent 43%),
+    radial-gradient(ellipse 32% 95% at 82% 35%, #352818 0 40%, transparent 41%),
+    linear-gradient(180deg, transparent, rgba(58,42,28,.55));
+  border-radius: 50%;
+  z-index: -1;
+}
+/* Empty grounds: no burials invented. (§17 UNKNOWN ≠ INVENTED) */
+.tombstone-card.is-empty {
+  border-style: dashed;
+  background: linear-gradient(180deg, rgba(185,192,196,.05), rgba(0,0,0,.30));
+}
+.tombstone-card.is-empty h3 { color: #9aa1a4; }
+
+/* --- Disturbed ground / grave dirt accents (§10.2–10.3) --- */
+.grave-disturbed {
+  position: relative;
+  border: 1px solid rgba(90,64,40,.5);
+  border-radius: 1rem;
+  background:
+    radial-gradient(ellipse 34% 60% at 18% 60%, rgba(74,53,36,.5) 0 55%, transparent 56%),
+    radial-gradient(ellipse 28% 55% at 52% 40%, rgba(90,64,40,.45) 0 55%, transparent 56%),
+    radial-gradient(ellipse 36% 62% at 84% 62%, rgba(64,46,30,.5) 0 55%, transparent 56%),
+    linear-gradient(#12100c, #0b0a08);
+  box-shadow: inset 0 0 60px rgba(0,0,0,.7);
+}
+
+/* --- Binary as blood (§10.5–10.6): decorative generated binary ---
+   The binary below is FIXED decorative text, not data. It never
+   carries secrets, keys, or credentials. */
+.binary-blood {
+  position: relative;
+  font-family: "Courier New", monospace;
+  color: #b03a48;
+  letter-spacing: .1em;
+}
+.binary-blood[data-bleed]::after {
+  content: attr(data-bleed);
+  display: block;
+  margin-top: .35rem;
+  font-size: .8rem;
+  color: #8e2f3a;
+  opacity: .85;
+  word-break: break-all;
+}
+/* pooling beneath the leak */
+.binary-blood[data-bleed]::before {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -10px;
+  width: 64%;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(142,47,58,.5), transparent 70%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* ANIMATED BINARY LEAK — motion only when the visitor allows it */
+  .binary-blood.is-leaking[data-bleed]::after { animation: blood-drip 7s ease-in-out infinite; }
+  @keyframes blood-drip {
+    0%, 100% { transform: translateY(0); opacity: .85; }
+    50% { transform: translateY(5px); opacity: 1; }
+  }
+}
+/* REDUCED MOTION: static binary residue instead of animated leak. (§10.11) */
+@media (prefers-reduced-motion: reduce) {
+  .binary-blood.is-leaking[data-bleed]::after { animation: none; }
+}
+
+/* --- Corruption / glitch accents (§10.4) ---
+   Damage from resurrection. Never at the cost of usability. */
+.corrupt {
+  /* STATIC CORRUPTION — the default, always safe. (§10.11) */
+  text-shadow: -1px 0 rgba(176,58,72,.55), 1px 0 rgba(70,140,150,.45);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .glitch { position: relative; }
+  .glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  .glitch::before { color: #b03a48; animation: glitch-slice 4.2s steps(2) infinite; clip-path: inset(12% 0 62% 0); }
+  .glitch::after { color: #4a8a94; animation: glitch-slice 3.7s steps(2) infinite reverse; clip-path: inset(58% 0 18% 0); }
+  @keyframes glitch-slice {
+    0%, 88%, 100% { transform: translateX(0); opacity: 0; }
+    90% { transform: translateX(-3px); opacity: .8; }
+    94% { transform: translateX(3px); opacity: .8; }
+    98% { transform: translateX(-1px); opacity: .5; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* ANIMATED GLITCH → STATIC CORRUPTION (§10.11) */
+  .glitch::before, .glitch::after { content: none; }
+  .glitch { text-shadow: -1px 0 rgba(176,58,72,.55), 1px 0 rgba(70,140,150,.45); }
+}
+
+/* --- Zomby™ status indicator (§10.7): the lifecycle stays visible --- */
+.zomby-status {
+  border: 1px solid rgba(176,58,72,.45);
+  border-left-width: 5px;
+  border-radius: .6rem;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(180deg, rgba(176,58,72,.07), rgba(0,0,0,.30));
+  font-family: Georgia, "Times New Roman", serif;
+}
+.zomby-status .status-flag {
+  display: inline-block;
+  margin-bottom: .6rem;
+  padding: .3rem .7rem;
+  border: 1px solid #b03a48;
+  border-radius: 999px;
+  color: #e89aa2;
+  font-size: .75rem;
+  letter-spacing: .18em;
+}
+.zomby-status dl { display: grid; grid-template-columns: auto 1fr; gap: .3rem .9rem; margin: 0; font-size: .92rem; }
+.zomby-status dt { color: #8f979a; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.zomby-status dd { margin: 0; color: #dfe3e4; }
+
+/* --- Zomby™ family tree: the tree survives resurrection (§10.9) --- */
+.family-tree { list-style: none; margin: 1rem 0; padding: 0; }
+.family-tree li { position: relative; padding: .55rem 0 .55rem 2rem; }
+.family-tree li::before {
+  content: "";
+  position: absolute;
+  left: .6rem; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--realm-stone, #6e7478), transparent);
+}
+.family-tree li:last-child::before { bottom: 50%; }
+.family-tree li::after {
+  content: "";
+  position: absolute;
+  left: .6rem; top: 50%;
+  width: 1rem; height: 2px;
+  background: var(--realm-stone, #6e7478);
+  transform: translateY(-50%);
+}
+.family-tree .ft-node {
+  display: inline-block;
+  padding: .4rem .8rem;
+  border: 1px solid var(--realm-stone, #6e7478);
+  border-radius: .5rem;
+  background: rgba(0,0,0,.4);
+  font-family: Georgia, serif;
+}
+.family-tree .ft-node.is-resurrected {
+  border-color: #b03a48;
+  transform: rotate(-1.5deg);
+  box-shadow: 3px 5px 14px rgba(0,0,0,.5);
+}
+.family-tree .ft-node.is-resurrected::after {
+  content: "ZOMBY™";
+  margin-left: .6rem;
+  font-size: .68rem;
+  letter-spacing: .16em;
+  color: #e89aa2;
+}
+
+/* --- Mausoleum dormant veil: quiet, not a memorial ---
+   (Scoped to the Mausoleum so the rope-gate styling used by other
+   Realms is untouched.) */
+body.mausoleum main { position: relative; }
+body.mausoleum main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(125,125,122,.06), transparent 30%);
+}
+body.mausoleum .stair-rope {
+  padding: 1.1rem 1.3rem;
+  border: 1px dashed #6a6a66;
+  border-radius: .8rem;
+  background: rgba(0,0,0,.35);
+  font-family: Georgia, serif;
+  color: #b9b9b4;
+  box-shadow: none;
+}
+body.mausoleum .stair-rope strong { letter-spacing: .14em; color: #d6d6d1; }
+body.mausoleum .visual-target-note {
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(125,125,122,.35);
+  border-radius: .8rem;
+  background: rgba(0,0,0,.28);
+  font-family: Georgia, serif;
+  color: #a9a9a4;
+}
+
+/* --- Construction marker: handmade, not broken (§14.10) --- */
+.construction-note {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .25rem .6rem;
+  border: 1px dashed #d1b879;
+  border-radius: .4rem;
+  font-family: Georgia, serif;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  color: #d1b879;
+  background: rgba(0,0,0,.4);
+}
+
+/* Decorative binary strings must never intercept interaction or
+   be announced as content. Authors: add aria-hidden="true". */
+.binary-blood[aria-hidden="true"] { user-select: none; }
+
+/* DARK ≠ UNREADABLE guardrail (§14.9): long-form text never drops
+   below the readable floor, whatever the Realm accent. */
+body.mausoleum p, body.mausoleum li { color: #c9c9c4; }
+.section p, .section li { color: #ddd6c6; }
+.small-note { color: #b5ad9c; }
