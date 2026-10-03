@@ -153,3 +153,25 @@ footer { padding: 4rem 0 2rem; color: #8d887e; font-family: var(--font-reading);
 
 @media (max-width: 650px) { .site-shell { width: min(100% - 1rem, 1180px); } .portal { min-height: 270px; } .hero { min-height: 40vh; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; } }
+
+/* MILESTONE 1 — wayfinding: breadcrumbs + safety-net navigation.
+   Kanon-neutral structural layer. Visual treatment stays realm-owned. */
+.breadcrumbs { padding: 1rem 0 0; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .55rem; list-style: none; margin: 0; padding: 0; font-family: var(--font-reading); font-size: .85rem; color: var(--muted); }
+.breadcrumbs li { display: flex; align-items: center; gap: .55rem; }
+.breadcrumbs li + li::before { content: "→"; opacity: .55; }
+.breadcrumbs a { color: var(--bone); text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumbs [aria-current="page"] { color: var(--ink); }
+.wayfinding { border-top: 1px solid #343634; margin-top: 3rem; padding-top: 1.25rem; }
+.wayfinding nav { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; justify-content: center; margin-bottom: .8rem; }
+.wayfinding nav a { font-family: var(--font-reading); font-size: .92rem; color: var(--bone); text-decoration: none; border: 1px solid #4a4a44; border-radius: 999px; padding: .35rem .9rem; }
+.wayfinding-note { text-align: center; }
+/* Realm Index region groups (Milestone 1: Forest two-region geography). */
+.region-block { margin-bottom: 2.5rem; }
+.region-block > h2 { font-family: var(--font-carved); font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: .4rem; }
+.region-path-note { font-family: var(--font-reading); color: var(--muted); font-size: .95rem; margin: 0 0 1.2rem; }
+/* Nexus portal-wall region grouping (Milestone 1). */
+.portal-region { margin-bottom: 2rem; }
+.portal-region > h3 { font-family: var(--font-carved); font-size: 1.25rem; letter-spacing: .05em; margin: 0 0 1rem; color: var(--bone); }
+.portal-region .nexus-portal-wall { display: flex; flex-wrap: wrap; gap: 1rem; }
+.forest-path-note { font-family: var(--font-reading); color: var(--muted); font-size: .95rem; border-left: 3px solid var(--moss); padding-left: 1rem; margin: 1.5rem 0; }

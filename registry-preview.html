@@ -13,7 +13,11 @@
 <body class="museum">
   <a class="skip-link" href="#registry">Skip to registry preview</a>
   <div class="construction-ribbon">INTERNAL KONSTRUCTION PREVIEW • NOT A PUBLIC REALM</div>
-  <header class="realm-header site-shell"><nav><a href="index.html">← Nexus</a><a href="realm-index.html">Realm Index</a></nav></header>
+  <header class="realm-header site-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+<li><a href="index.html">Forest</a></li>
+<li aria-current="page">Artifact Registry</li>
+</ol></nav><nav><a href="index.html">← Nexus</a><a href="realm-index.html">Realm Index</a></nav></header>
   <main class="site-shell" id="registry">
     <section class="hero">
       <div><p class="status-chip">Data System Test</p><h1>Artifact Registry</h1><p>This page proves that future artifacts can be loaded from structured data instead of hand-coded into every realm page.</p></div>
@@ -31,7 +35,14 @@
       </div>
     </section>
   </main>
-  <footer class="site-shell">Konstruction-only diagnostic page. It does not belong to the lore-facing navigation.</footer>
+  <footer class="site-shell wayfinding">
+<nav aria-label="Way out">
+<a href="index.html">Forest Home</a>
+<a href="realm-index.html">Realm Map</a>
+<a href="realms/library/index.html">Library</a>
+</nav>
+<p class="wayfinding-note">Konstruction-only diagnostic page. It does not belong to the lore-facing navigation.</p>
+</footer>
   <script src="assets/js/artifact-registry.js"></script>
 </body>
 </html>

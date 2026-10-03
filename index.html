@@ -38,14 +38,30 @@
 
         <div class="nexus-portal-wall" id="nexus-portal-wall" aria-label="Illustrated Fairy Forest Nexus with eight realm thresholds">
           <p class="portal-wall-instruction">Every marked threshold is keyboard-accessible. The Mausoleum is not here; it remains posthumous-only.</p>
-          <a class="realm-threshold museum" href="realms/museum/index.html"><strong>The Museum</strong><small>Standing-stone threshold</small></a>
-          <a class="realm-threshold library" href="realms/library/index.html"><strong>The Library</strong><small>Decontamination before entry</small></a>
-          <a class="realm-threshold morgue" href="realms/morgue/index.html"><strong>The Morgue</strong><small>Clinical doors &amp; records</small></a>
-          <a class="realm-threshold krypt" href="realms/krypt/index.html"><strong>The Krypt</strong><small>Protected vault</small></a>
-          <a class="realm-threshold guildhall" href="realms/guildhall/index.html"><strong>The Guildhall</strong><small>Castle-gate threshold</small></a>
-          <a class="realm-threshold kurio" href="realms/kurio-shop/index.html"><strong>The Kurio Shoppe</strong><small>Round storefront door</small></a>
-          <a class="realm-threshold forge" href="realms/forge/index.html"><strong>The Forge</strong><small>Under Konstruction</small></a>
-          <a class="realm-threshold apothekary" href="realms/apothecary/index.html"><strong>The Apothekary</strong><small>Upstairs, rope-gated</small></a>
+          <div class="portal-region">
+            <h3>Fairy-Tale / Fantasy Region</h3>
+            <div class="nexus-portal-wall">
+              <a class="realm-threshold library" href="realms/library/index.html"><strong>The Library</strong><small>Decontamination before entry</small></a>
+              <a class="realm-threshold museum" href="realms/museum/index.html"><strong>The Museum</strong><small>Standing-stone threshold</small></a>
+            </div>
+          </div>
+          <p class="forest-path-note">The Forest Path runs from the fairy-tale side through the central transition to the native-inspired edge, where the Kurio Shoppe sits. Follow it across and the woods change their mood.</p>
+          <div class="portal-region">
+            <h3>Native-Inspired Edge</h3>
+            <div class="nexus-portal-wall">
+              <a class="realm-threshold kurio" href="realms/kurio-shop/index.html"><strong>The Kurio Shoppe</strong><small>Round storefront door</small></a>
+              <a class="realm-threshold apothekary" href="realms/apothecary/index.html"><strong>The Apothekary</strong><small>Upstairs, rope-gated</small></a>
+            </div>
+          </div>
+          <div class="portal-region">
+            <h3>Elsewhere in the Forest</h3>
+            <div class="nexus-portal-wall">
+              <a class="realm-threshold krypt" href="realms/krypt/index.html"><strong>The Krypt</strong><small>Protected vault</small></a>
+              <a class="realm-threshold guildhall" href="realms/guildhall/index.html"><strong>The Guildhall</strong><small>Castle-gate threshold</small></a>
+              <a class="realm-threshold morgue" href="realms/morgue/index.html"><strong>The Morgue</strong><small>Clinical doors &amp; records</small></a>
+              <a class="realm-threshold forge" href="realms/forge/index.html"><strong>The Forge</strong><small>Under Konstruction</small></a>
+            </div>
+          </div>
         </div>
         <p class="portal-wall-caption">The placement is a visual map, not sacred geography. The paths remain direct, the labels stay readable, and no fake cultural symbols have been smuggled into the woods.</p>
       </section>
@@ -56,14 +72,26 @@
           <p>For people who prefer a door list to wandering off into enchanted shrubbery.</p>
         </div>
         <ol class="threshold-directory">
-          <li><a class="threshold-card" href="realms/library/index.html"><h3>The Library</h3><p>Decontamination, preservation, writing, sound, art, and special collections.</p></a></li>
-          <li><a class="threshold-card" href="realms/museum/index.html"><h3>The Museum</h3><p>History, lineage, provenance, credentials, milestones, and core artifacts.</p></a></li>
-          <li><a class="threshold-card" href="realms/krypt/index.html"><h3>The Krypt</h3><p>Protected truth, guarded memory, honored dead, and offline-only records.</p></a></li>
-          <li><a class="threshold-card" href="realms/guildhall/index.html"><h3>The Guildhall</h3><p>Skills, capabilities, craft, portfolio work, and guild records.</p></a></li>
-          <li><a class="threshold-card" href="realms/morgue/index.html"><h3>The Morgue</h3><p>Dead projects, resurrection dates, toe tags, and ghost artifacts.</p></a></li>
-          <li><a class="threshold-card" href="realms/kurio-shop/index.html"><h3>The Kurio Shoppe</h3><p>Manik-made goods, oddities, and the affiliate yard sale.</p></a></li>
-          <li><a class="threshold-card is-construction" href="realms/forge/index.html"><h3>The Forge</h3><p>Its final purpose is deliberately deferred.</p><span class="construction-note">Under Konstruction</span></a></li>
-          <li><a class="threshold-card is-construction apothekary-card" href="realms/apothecary/index.html" style="--apothekary-image:url(/assets/images/apothecary/apothekary-shelf-v1.jpg)"><h3>The Apothekary</h3><p>Physically upstairs inside the Kurio Shoppe, behind the rope.</p><span class="construction-note">Under Konstruction</span></a></li>
+          <li class="portal-region"><h3>Fairy-Tale / Fantasy Region</h3>
+            <ol class="threshold-directory">
+              <li><a class="threshold-card" href="realms/library/index.html"><h3>The Library</h3><p>Decontamination, preservation, writing, sound, art, and special collections.</p></a></li>
+              <li><a class="threshold-card" href="realms/museum/index.html"><h3>The Museum</h3><p>History, lineage, provenance, credentials, milestones, and core artifacts.</p></a></li>
+            </ol>
+          </li>
+          <li class="portal-region"><h3>Native-Inspired Edge</h3>
+            <ol class="threshold-directory">
+              <li><a class="threshold-card" href="realms/kurio-shop/index.html"><h3>The Kurio Shoppe</h3><p>Manik-made goods, oddities, and the affiliate yard sale.</p></a></li>
+              <li><a class="threshold-card is-construction apothekary-card" href="realms/apothecary/index.html" style="--apothekary-image:url(/assets/images/apothecary/apothekary-shelf-v1.jpg)"><h3>The Apothekary</h3><p>Physically upstairs inside the Kurio Shoppe, behind the rope.</p><span class="construction-note">Under Konstruction</span></a></li>
+            </ol>
+          </li>
+          <li class="portal-region"><h3>Elsewhere in the Forest</h3>
+            <ol class="threshold-directory">
+              <li><a class="threshold-card" href="realms/krypt/index.html"><h3>The Krypt</h3><p>Protected truth, guarded memory, honored dead, and offline-only records.</p></a></li>
+              <li><a class="threshold-card" href="realms/guildhall/index.html"><h3>The Guildhall</h3><p>Skills, capabilities, craft, portfolio work, and guild records.</p></a></li>
+              <li><a class="threshold-card" href="realms/morgue/index.html"><h3>The Morgue</h3><p>Dead projects, resurrection dates, toe tags, and ghost artifacts.</p></a></li>
+              <li><a class="threshold-card is-construction" href="realms/forge/index.html"><h3>The Forge</h3><p>Its final purpose is deliberately deferred.</p><span class="construction-note">Under Konstruction</span></a></li>
+            </ol>
+          </li>
         </ol>
       </section>
 
@@ -170,7 +198,7 @@
     </section>
   </main>
 
-  <footer class="site-shell">The Manik Cryptid’s Resurrection Artifact Universe • Konstruction build • <a href="realm-index.html">Realm Index</a></footer>
+  <footer class="site-shell wayfinding"><nav aria-label="Way out"><a href="index.html">Forest Home</a><a href="realm-index.html">Realm Map</a><a href="realms/library/index.html">Library</a></nav><p class="wayfinding-note">The Manik Cryptid’s Resurrection Artifact Universe • Konstruction build</p></footer>
 </body>
 </html>
 
