@@ -480,3 +480,350 @@ body.mausoleum .visual-target-note {
 body.mausoleum p, body.mausoleum li { color: #c9c9c4; }
 .section p, .section li { color: #ddd6c6; }
 .small-note { color: #b5ad9c; }
+
+/* --- Library card catalog + visual shelves (Kreator decision 3, 2026-10-03) ---
+   The Library shelves like a real library: each category gets a wooden
+   bookcase, artifacts sit on the planks as objects, alphabetical left to
+   right, top shelf to bottom. Lantern gold / parchment / carved stone. */
+
+body.library .card-catalog {
+  margin: 1.25rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(216,181,107,.4);
+  border-radius: .8rem;
+  background: linear-gradient(180deg, rgba(216,181,107,.10), rgba(0,0,0,.25));
+}
+body.library .card-catalog label {
+  display: block;
+  font-family: Georgia, serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: #e8d5a2;
+  margin-bottom: .5rem;
+}
+body.library .card-catalog input[type="search"] {
+  width: 100%;
+  max-width: 34rem;
+  padding: .7rem 1rem;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: #f2e4c2;
+  background: rgba(0,0,0,.5);
+  border: 1px solid rgba(216,181,107,.5);
+  border-radius: .5rem;
+}
+body.library .card-catalog input[type="search"]:focus {
+  outline: 2px solid #d8b56b;
+  outline-offset: 2px;
+}
+body.library .card-catalog input[type="search"]::placeholder { color: #8d8471; }
+
+body.library .catalog-shelf { margin: 0 0 2.5rem; }
+body.library .catalog-shelf-title {
+  font-family: Georgia, serif;
+  color: #f2e4c2;
+  margin-bottom: .25rem;
+}
+body.library .catalog-shelf-desc { color: #b5ad9c; margin: 0 0 1rem; }
+
+body.library .bookshelf {
+  border: 1px solid #4a3a26;
+  border-radius: .6rem;
+  background: linear-gradient(180deg, #241a10 0%, #1a120a 100%);
+  box-shadow: inset 0 0 40px rgba(0,0,0,.6), 0 4px 18px rgba(0,0,0,.5);
+  padding: .5rem .5rem 1rem;
+}
+body.library .shelf-row {
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+  overflow-x: auto;
+  padding: 1.1rem 1rem 0;
+  min-height: 120px;
+}
+body.library .shelf-plank {
+  height: 14px;
+  margin: 0 .25rem;
+  border-radius: 0 0 .3rem .3rem;
+  background: linear-gradient(180deg, #6b4f2e 0%, #4a3520 55%, #2e2114 100%);
+  box-shadow: 0 6px 12px rgba(0,0,0,.65), inset 0 1px 0 rgba(216,181,107,.25);
+}
+body.library .shelf-plaque {
+  margin: auto;
+  padding: .45rem 1.1rem;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: .85rem;
+  color: #3a2c18;
+  background: linear-gradient(180deg, #d8b56b, #a8874a);
+  border-radius: .3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,244,214,.6);
+  white-space: nowrap;
+}
+
+/* Shelf objects: plain buttons, keyboard-focusable. */
+body.library .shelf-object {
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  font-family: Georgia, serif;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease, filter .18s ease;
+}
+body.library .shelf-object:hover { transform: translateY(-4px); }
+body.library .shelf-object:focus-visible {
+  outline: 2px solid #d8b56b;
+  outline-offset: 3px;
+}
+body.library .obj-with-caption {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  flex: 0 0 auto;
+}
+body.library .obj-caption {
+  font-size: .7rem;
+  color: #b5ad9c;
+  max-width: 96px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Fiction: book spines, spine-out, title running down the spine. */
+body.library .obj-book {
+  width: var(--obj-w, 34px);
+  height: var(--obj-h, 175px);
+  background: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(255,255,255,.08) 18%, rgba(0,0,0,0) 50%, rgba(0,0,0,.45) 100%), var(--obj-bg, #5a3f28);
+  border-radius: 3px 6px 6px 3px;
+  box-shadow: inset 0 0 0 1px rgba(216,181,107,.35), 2px 2px 6px rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body.library .obj-spine-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  color: #f2e4c2;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8);
+  max-height: 92%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Audio: discs with a center hole. */
+body.library .obj-disc {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #4a4a52 0%, #232328 55%, #101014 100%);
+  box-shadow: inset 0 0 0 2px rgba(216,181,107,.4), 2px 3px 8px rgba(0,0,0,.6);
+  position: relative;
+  flex: 0 0 auto;
+}
+body.library .obj-disc-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #0b0918;
+  box-shadow: inset 0 0 0 3px #d8b56b;
+}
+
+/* Fiction: rolled scrolls lying on the shelf, tied with a ribbon. */
+body.library .obj-scroll {
+  width: 118px;
+  height: 44px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #efe6d2 0%, #d8ceb8 55%, #b5a888 100%);
+  box-shadow: inset 0 0 0 1px rgba(90,63,40,.4), 2px 3px 8px rgba(0,0,0,.6);
+  position: relative;
+  flex: 0 0 auto;
+}
+body.library .obj-scroll::before,
+body.library .obj-scroll::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #6b4f2e, #3a2a16);
+  box-shadow: inset 0 0 0 2px rgba(216,181,107,.5);
+}
+body.library .obj-scroll::before { left: 3px; }
+body.library .obj-scroll::after { right: 3px; }
+body.library .obj-scroll-ribbon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #6b2737, #4a1a26);
+  box-shadow: 0 0 4px rgba(0,0,0,.5);
+}
+
+/* Audio: vinyl records alongside the discs. */
+body.library .obj-vinyl {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle at 50% 50%, #0c0c10 0 3px, #16161c 3px 5px);
+  box-shadow: 2px 3px 10px rgba(0,0,0,.7);
+  position: relative;
+  flex: 0 0 auto;
+}
+body.library .obj-vinyl-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--obj-bg, #6b2737);
+  box-shadow: inset 0 0 0 2px rgba(216,181,107,.55);
+}
+body.library .obj-vinyl .obj-disc-hole { box-shadow: inset 0 0 0 2px #d8b56b; }
+
+/* Photos: framed prints. */
+body.library .obj-photo {
+  width: var(--obj-w, 84px);
+  height: var(--obj-h, 84px);
+  background: #d8b56b;
+  padding: 6px;
+  border-radius: 2px;
+  box-shadow: 2px 3px 8px rgba(0,0,0,.6), inset 0 0 0 1px #7a5f30;
+  flex: 0 0 auto;
+}
+body.library .obj-photo-print {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 70% 25%, #e8d5a2 0 8%, transparent 9%),
+    linear-gradient(180deg, #3a4a6b 0%, #2a3a55 55%, #4a5a3a 56%, #2f4028 100%);
+}
+
+/* Memes: small pinned note cards, slightly tilted. */
+body.library .obj-meme {
+  width: 92px;
+  min-height: 92px;
+  padding: .6rem .5rem;
+  background: linear-gradient(180deg, #efe6d2, #d8ceb8);
+  border-radius: 2px;
+  transform: rotate(var(--obj-tilt, 0deg));
+  box-shadow: 2px 3px 8px rgba(0,0,0,.55);
+  flex: 0 0 auto;
+}
+body.library .obj-meme-text {
+  font-size: .68rem;
+  line-height: 1.25;
+  color: #3a2c18;
+  word-break: break-word;
+}
+
+/* Search states: matches glow, the rest recede. */
+body.library .is-dim { opacity: .22; filter: saturate(.4); }
+body.library .is-match {
+  box-shadow: 0 0 0 2px #d8b56b, 0 0 22px rgba(216,181,107,.55);
+  border-radius: 6px;
+}
+body.library .catalog-empty { color: #b5ad9c; font-style: italic; }
+
+/* Record detail modal. */
+body.library .catalog-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(5,3,10,.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+body.library .catalog-modal[hidden] { display: none; }
+body.library .catalog-modal-card {
+  position: relative;
+  max-width: 32rem;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #241c14, #171008);
+  border: 1px solid rgba(216,181,107,.55);
+  border-radius: .8rem;
+  padding: 1.75rem;
+  box-shadow: 0 12px 48px rgba(0,0,0,.8), 0 0 40px rgba(216,181,107,.12);
+}
+body.library .catalog-modal-close {
+  position: absolute;
+  top: .6rem;
+  right: .8rem;
+  appearance: none;
+  border: 1px solid rgba(216,181,107,.5);
+  background: none;
+  color: #e8d5a2;
+  font-size: 1.4rem;
+  line-height: 1;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body.library .catalog-modal-title {
+  font-family: Georgia, serif;
+  color: #f2e4c2;
+  margin: 0 2.5rem 1rem 0;
+}
+body.library .catalog-modal-field { color: #ddd6c6; margin: 0 0 .5rem; }
+body.library .catalog-modal-field strong { color: #e8d5a2; }
+
+@media (prefers-reduced-motion: reduce) {
+  body.library .shelf-object { transition: none; }
+  body.library .shelf-object:hover { transform: none; }
+}
+
+/* Apps: floppy disks — software you can hold. */
+body.library .obj-floppy {
+  width: 78px;
+  height: 82px;
+  background: linear-gradient(145deg, #2b2f3a, #171a22);
+  clip-path: polygon(0 0, 78% 0, 100% 14%, 100% 100%, 0 100%);
+  box-shadow: 2px 3px 8px rgba(0,0,0,.6);
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 3px;
+}
+body.library .obj-floppy-shutter {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 26px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #c9c9c4, #8a8f88);
+  box-shadow: inset 0 0 0 1px #5a5e59;
+}
+body.library .obj-floppy-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  height: 30px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #efe6d2, #d8ceb8);
+  box-shadow: inset 0 0 0 1px rgba(90,63,40,.35);
+}

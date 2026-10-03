@@ -41,36 +41,15 @@
     </section>
 
     <section class="section site-shell" id="collections">
-      <h2>Collection Districts</h2>
-      <div class="library-districts">
-        <article class="district">
-          <h3>Written Works</h3>
-          <p>Books, stories, manuscripts, excerpts, editions, publication links, and preserved text artifacts.</p>
-          <div class="platform-row"><span class="platform">Patreon</span><span class="platform">Retailers</span><span class="platform">Direct</span></div>
-        </article>
-        <article class="district">
-          <h3>Listening Chambers</h3>
-          <p>Soundscapes, readings, audio experiments, podcasts, and recordings. Exhibits may embed previews while the heavyweight media lives elsewhere.</p>
-          <div class="platform-row"><span class="platform">YouTube</span><span class="platform">Spotify</span><span class="platform">Patreon</span></div>
-        </article>
-        <article class="district">
-          <h3>Interactive Artifacts</h3>
-          <p>Apps and web experiences appear as in-world artifacts, machines, cabinets, books, or displays instead of breaking the environment with generic app-store tiles.</p>
-          <div class="platform-row"><span class="platform">Google Play</span><span class="platform">Apple</span><span class="platform">Alternate Stores</span><span class="platform">Direct</span></div>
-        </article>
-        <article class="district">
-          <h3>Art &amp; Multimedia</h3>
-          <p>Illustrations, cover art, photography, visual accompaniments, mixed-media projects, and future collaborations.</p>
-          <div class="platform-row"><span class="platform">Gallery</span><span class="platform">YouTube</span><span class="platform">Patreon</span></div>
-        </article>
-        <article class="district">
-          <h3>Special Collections</h3>
-          <p>Rare, unusual, restricted-by-context, or lore-heavy material that needs a collection identity of its own.</p>
-        </article>
-        <article class="district">
-          <h3>External Gateways</h3>
-          <p>Every artifact can advertise the destinations that actually carry it. The Library remains the authoritative map even when distribution changes later.</p>
-        </article>
+      <h2>Card Catalog</h2>
+      <p class="path-note">The Library shelves like a real library — Fiction, Audio, Apps, Photos, Memes, and whatever the Kreator adds next. Search the catalog or browse the shelves; every shelf files alphabetically.</p>
+      <div class="card-catalog" role="search">
+        <label for="catalog-search">Search the catalog</label>
+        <input type="search" id="catalog-search" data-catalog-search placeholder="Title, creator, or category…" autocomplete="off">
+        <p class="small-note" data-catalog-status aria-live="polite"></p>
+      </div>
+      <div data-catalog-shelves>
+        <p class="small-note">Loading the shelves…</p>
       </div>
     </section>
 
@@ -118,5 +97,6 @@
 <p class="wayfinding-note">Vatican-scale archive. Hidden door. No polite little bookshelf website.</p>
 </footer>
   <script src="../../../assets/js/site.js"></script>
+  <script src="../../../assets/js/library-catalog.js"></script>
 </body>
 </html>
