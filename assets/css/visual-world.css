@@ -1041,3 +1041,180 @@ body.krypt .vault-note {
   font-size: .9rem;
   margin: 0;
 }
+
+/* ============================================================
+   FORBIDDEN LIBRARY — RED VELVET CHAMBER
+   Kreator art direction 2026-10-03: red velvet, deep reds, dim red
+   lamplight. Red-light-district atmosphere, literary and gothic,
+   never cheap. No animation — the room is still by design.
+   ============================================================ */
+
+/* Carved Dante warning on the black door's outside face (archive page).
+   Carved by another hand — chiseled, incised, not the Kreator's signage. */
+.carved-warning {
+  font-family: var(--font-carved, "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif);
+  font-size: clamp(1.4rem, 3.6vw, 2.4rem);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0 0 .6rem;
+  color: #cfc4b4;
+  /* incised-stone effect: dark cut below, faint light above */
+  text-shadow: 0 -2px 1px rgba(0,0,0,.95), 0 1px 0 rgba(255,244,230,.10);
+}
+.carved-translation {
+  font-family: var(--font-carved, "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif);
+  font-style: italic;
+  font-size: clamp(.95rem, 2.4vw, 1.25rem);
+  letter-spacing: .04em;
+  color: #a89a86;
+  text-shadow: 0 -1px 1px rgba(0,0,0,.9), 0 1px 0 rgba(255,244,230,.08);
+  margin: 0 0 1.25rem;
+}
+
+/* The birthdate gate: the inside face of the black door. */
+.birthdate-gate {
+  max-width: 560px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: linear-gradient(160deg, #101010, #050505 75%);
+  border: 8px solid #080808;
+  box-shadow: 0 0 0 2px #2a2a2a, 0 18px 50px #000, inset 0 0 60px rgba(0,0,0,.8);
+  color: #d9cfc2;
+}
+.birthdate-gate h2 {
+  font-family: var(--font-carved, Georgia, serif);
+  letter-spacing: .05em;
+  margin-top: 0;
+  color: #e8dcc8;
+}
+.gate-note {
+  font-size: .9rem;
+  color: #a99b93;
+  max-width: 40ch;
+  margin: 0 auto 1.5rem;
+}
+.birthdate-gate label {
+  display: block;
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #8f8078;
+  margin-bottom: .5rem;
+}
+.birthdate-gate input[type="date"] {
+  font-size: 1.05rem;
+  padding: .6rem .8rem;
+  background: #1a1512;
+  border: 1px solid #4a3d33;
+  color: #e8dcc8;
+  border-radius: 4px;
+  color-scheme: dark;
+}
+.birthdate-gate input[type="date"]:focus {
+  outline: 2px solid #8f1a1a;
+  outline-offset: 2px;
+}
+.gate-error {
+  color: #e07878;
+  font-size: .9rem;
+  margin: .9rem 0 0;
+}
+.gate-refusal {
+  padding: 1rem 0 .25rem;
+  color: #c9bba8;
+}
+.gate-refusal p { margin: .6rem 0; }
+
+/* The chamber itself: red velvet, low lamplight. */
+.forbidden-chamber {
+  position: relative;
+  margin: 2rem 0 3rem;
+  padding: 3rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(143,26,26,.28), transparent 60%),
+    radial-gradient(ellipse at 15% 100%, rgba(90,10,10,.35), transparent 55%),
+    radial-gradient(ellipse at 85% 100%, rgba(90,10,10,.35), transparent 55%),
+    linear-gradient(175deg, #2a0606 0%, #1c0404 45%, #120202 100%);
+  border: 1px solid #5c1414;
+  box-shadow: inset 0 0 120px rgba(0,0,0,.75), 0 10px 40px rgba(0,0,0,.6);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.chamber-lamplight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(255,150,90,.10), transparent 45%),
+    radial-gradient(circle at 50% 88%, rgba(255,110,70,.07), transparent 40%);
+}
+.forbidden-chamber h2 {
+  position: relative;
+  text-align: center;
+  font-family: var(--font-carved, Georgia, serif);
+  letter-spacing: .08em;
+  color: #f0d9d9;
+  text-shadow: 0 2px 12px rgba(143,26,26,.8);
+  margin-top: 0;
+}
+.forbidden-chamber h2:focus { outline: none; }
+.chamber-intro {
+  position: relative;
+  text-align: center;
+  color: #c99a9a;
+  font-style: italic;
+  max-width: 52ch;
+  margin: 0 auto 2.5rem;
+}
+.velvet-shelves {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.velvet-shelf {
+  background: linear-gradient(170deg, #3d0b0b, #260606);
+  border: 1px solid #6b1a1a;
+  border-radius: 4px;
+  padding: 1.25rem 1rem 1rem;
+  box-shadow: inset 0 2px 18px rgba(0,0,0,.6);
+}
+.velvet-shelf .shelf-label {
+  font-family: var(--font-carved, Georgia, serif);
+  font-size: 1rem;
+  letter-spacing: .05em;
+  color: #e8b4b4;
+  margin: 0 0 .9rem;
+  text-align: center;
+}
+.bare-shelf {
+  height: 64px;
+  border-radius: 3px;
+  background:
+    linear-gradient(180deg, transparent 62%, rgba(20,4,4,.9) 62%, rgba(20,4,4,.9) 72%, transparent 72%),
+    repeating-linear-gradient(90deg, rgba(120,30,30,.25) 0 14px, rgba(70,14,14,.25) 14px 28px);
+  border: 1px solid rgba(120,30,30,.4);
+  box-shadow: inset 0 6px 14px rgba(0,0,0,.55);
+}
+.shelf-empty-note {
+  text-align: center;
+  font-size: .8rem;
+  font-style: italic;
+  color: #8f5f5f;
+  margin: .7rem 0 0;
+}
+.brass-plaque {
+  position: relative;
+  max-width: 480px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  font-family: var(--font-carved, Georgia, serif);
+  font-size: .95rem;
+  letter-spacing: .04em;
+  color: #2a1c08;
+  background: linear-gradient(165deg, #d9b45c, #a8823a 60%, #c9a24e);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,240,200,.5);
+}

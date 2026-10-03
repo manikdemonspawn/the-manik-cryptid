@@ -25,38 +25,63 @@
       <div>
         <p class="status-chip">Restricted Threshold</p>
         <h1>The Forbidden Library</h1>
-        <p>The black door is not decoration. It is the access gateway to mature collections, and direct links must eventually be protected just as strongly as the theatrical entrance.</p>
+        <p>The black door is not decoration. It is the access gateway to mature collections, and direct links are held by the same birthdate gate as the theatrical entrance.</p>
       </div>
     </section>
 
-    <section class="age-gate" aria-labelledby="adult-gate-title">
-      <h2 id="adult-gate-title">Adult Access Checkpoint</h2>
-      <div class="restricted-lock">
-        <strong>Konstruction safety state:</strong> no restricted material exists behind this gate yet. The buttons are only interface hooks. They intentionally do not unlock the shelf structure below.
+    <section class="birthdate-gate" aria-labelledby="gate-title" data-gate>
+      <h2 id="gate-title">The Door Asks Your Years</h2>
+      <p class="gate-note">The black door does not take your word for it. Give your date of birth — it never leaves this browser. It is not stored, sent, or logged anywhere.</p>
+      <form data-dob-form novalidate>
+        <label for="dob-input">Date of birth</label>
+        <input type="date" id="dob-input" name="dob" autocomplete="bday">
+        <p class="gate-error" data-gate-error hidden role="alert"></p>
+        <p><button class="btn" type="submit">Open the door</button></p>
+      </form>
+      <div class="gate-refusal" data-gate-refusal hidden>
+        <p><strong>The door does not open for you.</strong></p>
+        <p>This room is for adults. The door stays shut.</p>
+        <p><a class="btn" href="../archive/index.html">← Back to the Library proper</a></p>
       </div>
-      <p><strong>Are you 18 or older?</strong></p>
-      <button class="btn" type="button" data-age-yes>Yes, I am 18+</button>
-      <button class="btn" type="button" data-age-no>No / leave closed</button>
-      <div class="age-status" data-age-status hidden aria-live="polite"></div>
     </section>
 
-    <section class="section restricted-shelves" data-restricted-shelves aria-hidden="true">
-      <h2>Restricted Shelf Architecture</h2>
-      <div class="red-shelf">
-        <h3 class="shelf-label">Erotica • The Red Shelf</h3>
-        <p>Deep oxblood, wine, and crimson visual identity for erotic books and artwork. The final collection may include illustrated work created in collaboration with artists. No explicit material is loaded in this build.</p>
-      </div>
+    <section class="forbidden-chamber" data-chamber hidden aria-labelledby="chamber-title">
+      <div class="chamber-lamplight" aria-hidden="true"></div>
+      <h2 id="chamber-title" tabindex="-1">The Red Velvet Chamber</h2>
+      <p class="chamber-intro">Past the black door, the Library's lantern-gold gives way to red velvet and low lamplight. A small room, kept deliberately bare.</p>
 
-      <div class="grid" style="margin-top:1.25rem">
-        <article class="panel"><h3 class="shelf-label">Trauma</h3><p>Adult trauma-heavy material, autobiographical or fictional, with its own content-warning structure.</p></article>
-        <article class="panel"><h3 class="shelf-label">Graphic Horror</h3><p>Gore, body horror, disturbing imagery, and other content that needs a mature-content barrier even when it is not sexual.</p></article>
-        <article class="panel"><h3 class="shelf-label">Psychological / Extreme</h3><p>Material whose intensity belongs behind the adult gate even when nothing sexual is present.</p></article>
-        <article class="panel"><h3 class="shelf-label">Other Mature Collections</h3><p>Expandable restricted shelves for material that should not be casually surfaced to minors.</p></article>
+      <div class="velvet-shelves">
+        <article class="velvet-shelf">
+          <h3 class="shelf-label">Erotica • The Red Shelf</h3>
+          <div class="bare-shelf" role="img" aria-label="Empty red velvet shelf"></div>
+          <p class="shelf-empty-note">Nothing filed here yet.</p>
+        </article>
+        <article class="velvet-shelf">
+          <h3 class="shelf-label">Trauma</h3>
+          <div class="bare-shelf" role="img" aria-label="Empty red velvet shelf"></div>
+          <p class="shelf-empty-note">Nothing filed here yet.</p>
+        </article>
+        <article class="velvet-shelf">
+          <h3 class="shelf-label">Graphic Horror</h3>
+          <div class="bare-shelf" role="img" aria-label="Empty red velvet shelf"></div>
+          <p class="shelf-empty-note">Nothing filed here yet.</p>
+        </article>
+        <article class="velvet-shelf">
+          <h3 class="shelf-label">Psychological / Extreme</h3>
+          <div class="bare-shelf" role="img" aria-label="Empty red velvet shelf"></div>
+          <p class="shelf-empty-note">Nothing filed here yet.</p>
+        </article>
+        <article class="velvet-shelf">
+          <h3 class="shelf-label">Other Mature Collections</h3>
+          <div class="bare-shelf" role="img" aria-label="Empty red velvet shelf"></div>
+          <p class="shelf-empty-note">Nothing filed here yet.</p>
+        </article>
       </div>
+      <p class="brass-plaque">No artifacts filed here yet — the Kreator has not placed anything behind this door.</p>
     </section>
 
     <section class="section">
-      <div class="visual-target-note"><strong>Before launch:</strong> choose and integrate real age assurance, block direct access to restricted pages/assets, define content advisories, and keep explicit previews out of public Library surfaces and search-engine previews.</div>
+      <div class="visual-target-note"><strong>Kreator's decision 2026-10-03:</strong> self-reported birthdate gate, remembered for the browser session only — the strongest gate a static site can offer. It is not real age ID verification, which would require a paid third-party verifier and is out of scope for a static build. Keep explicit previews out of public Library surfaces and search-engine previews.</div>
     </section>
   </main>
 
@@ -69,5 +94,76 @@
 <p class="wayfinding-note">The warning is part of the lore. The lock still has to be real.</p>
 </footer>
   <script src="../../../assets/js/site.js"></script>
+  <script>
+  (function () {
+    // FORBIDDEN LIBRARY BIRTHDATE GATE — Kreator's decision 2026-10-03.
+    // Self-reported birthdate only. This is NOT ID verification: a visitor
+    // can lie about their date of birth. It is the strongest age gate a
+    // purely static site can offer without paid third-party age-verification
+    // services. The birthdate never leaves this browser: it is read from the
+    // form, checked once, and discarded. Nothing is stored, transmitted, or
+    // logged. A pass is remembered for this browser session only via
+    // sessionStorage, and the door re-locks when the browser closes.
+    var PASS_KEY = "tmc-forbidden-pass";
+    var gate = document.querySelector("[data-gate]");
+    var chamber = document.querySelector("[data-chamber]");
+    var form = document.querySelector("[data-dob-form]");
+    var input = document.getElementById("dob-input");
+    var error = document.querySelector("[data-gate-error]");
+    var refusal = document.querySelector("[data-gate-refusal]");
+    if (!gate || !chamber || !form || !input) return;
+
+    var sessionPassed = false;
+    try { sessionPassed = window.sessionStorage.getItem(PASS_KEY) === "1"; } catch (e) { sessionPassed = false; }
+
+    function openChamber() {
+      gate.hidden = true;
+      chamber.hidden = false;
+      try { window.sessionStorage.setItem(PASS_KEY, "1"); } catch (e) { /* pass holds for this page view only */ }
+      var title = document.getElementById("chamber-title");
+      if (title && title.focus) title.focus();
+    }
+
+    function showError(msg) {
+      error.textContent = msg;
+      error.hidden = false;
+      input.focus();
+    }
+
+    function fullYearsSince(dob) {
+      var now = new Date();
+      var age = now.getFullYear() - dob.getFullYear();
+      var m = now.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && now.getDate() < dob.getDate())) age--;
+      return age;
+    }
+
+    if (sessionPassed) { openChamber(); return; }
+
+    var t = new Date();
+    var mm = String(t.getMonth() + 1).padStart(2, "0");
+    var dd = String(t.getDate()).padStart(2, "0");
+    input.max = t.getFullYear() + "-" + mm + "-" + dd;
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      error.hidden = true;
+      var val = input.value;
+      if (!val) { showError("Enter your date of birth to try the door."); return; }
+      var parts = val.split("-");
+      var dob = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+      if (isNaN(dob.getTime())) { showError("That date doesn't look right. Try again."); return; }
+      if (dob > new Date()) { showError("That date is in the future. Try again."); return; }
+      if (fullYearsSince(dob) >= 18) {
+        openChamber();
+      } else {
+        form.hidden = true;
+        refusal.hidden = false;
+        var back = refusal.querySelector("a");
+        if (back && back.focus) back.focus();
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
