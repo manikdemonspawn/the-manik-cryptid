@@ -827,3 +827,217 @@ body.library .obj-floppy-label {
   background: linear-gradient(180deg, #efe6d2, #d8ceb8);
   box-shadow: inset 0 0 0 1px rgba(90,63,40,.35);
 }
+
+/* --- Krypt sealed-vessel vault (Kreator decision 4, 2026-10-03) ---
+   The vault interior: stone niches holding SEALED vessels — locked
+   boxes, wax-sealed scrolls, bound volumes, sealed jars. The visitor
+   sees THAT something is held, never WHAT. Vessels are unlabeled;
+   only the Kreator's seal mark. No opening mechanism exists — the
+   release mechanism is a pending Kreator decision, so the vessels
+   stay shut. Sealed violet stone throughout.
+   NOTE: vessel count is presentational, not an inventory of records. */
+
+body.krypt .vault-wall {
+  border: 1px solid rgba(154,134,184,.35);
+  border-radius: .8rem;
+  background: linear-gradient(180deg, #221c33 0%, #141020 60%, #0d0a16 100%);
+  box-shadow: inset 0 0 60px rgba(0,0,0,.7), 0 4px 18px rgba(0,0,0,.5);
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+body.krypt .vault-plaque {
+  max-width: 38rem;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(154,134,184,.5);
+  border-radius: .5rem;
+  background: linear-gradient(180deg, rgba(154,134,184,.12), rgba(0,0,0,.35));
+  box-shadow: inset 0 1px 0 rgba(222,211,242,.15), 0 4px 14px rgba(0,0,0,.5);
+}
+body.krypt .vault-plaque h3 {
+  font-family: Georgia, serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: #ded3f2;
+  margin: 0 0 .75rem;
+}
+body.krypt .vault-plaque p {
+  color: #ddd6c6;
+  margin: 0 0 .75rem;
+  line-height: 1.6;
+}
+body.krypt .vault-plaque .kreator-sign {
+  margin: .5rem 0 0;
+  font-family: Georgia, serif;
+  letter-spacing: .2em;
+  color: #9a86b8;
+  font-size: .85rem;
+}
+body.krypt .niche-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 560px) {
+  body.krypt .niche-grid { grid-template-columns: 1fr; }
+}
+body.krypt .niche {
+  min-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem .5rem 1.25rem;
+  border-radius: .6rem;
+  background: radial-gradient(ellipse at 50% 100%, rgba(154,134,184,.10) 0%, rgba(0,0,0,.55) 70%);
+  border: 1px solid rgba(92,85,104,.8);
+  box-shadow: inset 0 8px 24px rgba(0,0,0,.65);
+}
+/* Vessels are inert: shown, never opened. Not focusable, not buttons. */
+body.krypt .vessel-box,
+body.krypt .vessel-scroll,
+body.krypt .vessel-volume,
+body.krypt .vessel-jar {
+  position: relative;
+  flex: 0 0 auto;
+}
+/* Locked box: chest with lid seam and lock plate. */
+body.krypt .vessel-box {
+  width: 96px;
+  height: 64px;
+  background: linear-gradient(180deg, #3a2f52 0%, #241d38 60%, #171226 100%);
+  border: 1px solid rgba(154,134,184,.5);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.4), 3px 4px 10px rgba(0,0,0,.6);
+}
+body.krypt .vessel-box::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(0,0,0,.55);
+  box-shadow: 0 1px 0 rgba(154,134,184,.25);
+}
+body.krypt .vessel-lock {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 28px;
+  background: linear-gradient(180deg, #6e5f8c, #453a5e);
+  border: 1px solid rgba(154,134,184,.6);
+  border-radius: 3px;
+}
+body.krypt .vessel-lock::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0d0a16;
+  box-shadow: 0 9px 0 -1px #0d0a16;
+}
+/* Wax-sealed scroll: rolled, violet wax seal. */
+body.krypt .vessel-scroll {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #4a3f63 0%, #332b4a 55%, #211b33 100%);
+  box-shadow: inset 0 0 0 1px rgba(154,134,184,.35), 2px 3px 8px rgba(0,0,0,.6);
+}
+body.krypt .vessel-scroll::before,
+body.krypt .vessel-scroll::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #4a3f63, #211b33);
+  box-shadow: inset 0 0 0 2px rgba(154,134,184,.45);
+}
+body.krypt .vessel-scroll::before { left: 3px; }
+body.krypt .vessel-scroll::after { right: 3px; }
+/* Bound volume: thick book with a seal band across it. */
+body.krypt .vessel-volume {
+  width: 56px;
+  height: 84px;
+  background: linear-gradient(90deg, rgba(0,0,0,.4) 0%, rgba(255,255,255,.06) 20%, rgba(0,0,0,0) 50%, rgba(0,0,0,.5) 100%), #3a2f52;
+  border-radius: 2px 5px 5px 2px;
+  box-shadow: inset 0 0 0 1px rgba(154,134,184,.4), 2px 3px 8px rgba(0,0,0,.6);
+}
+body.krypt .vessel-volume::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 14px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #5a4480, #3d2f58);
+  box-shadow: 0 0 4px rgba(0,0,0,.5);
+}
+/* Sealed jar: urn with a sealed lid. */
+body.krypt .vessel-jar {
+  width: 64px;
+  height: 78px;
+  background: linear-gradient(180deg, #453a5e 0%, #2c2340 55%, #1a1428 100%);
+  border: 1px solid rgba(154,134,184,.45);
+  border-radius: 12px 12px 26px 26px / 10px 10px 30px 30px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.35), 2px 4px 10px rgba(0,0,0,.6);
+}
+body.krypt .vessel-jar::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #6e5f8c, #453a5e);
+  border: 1px solid rgba(154,134,184,.6);
+}
+/* The Kreator's seal mark: violet wax stamped "M". A seal, not a label. */
+body.krypt .wax-seal {
+  position: absolute;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #8a6fb8, #5a4480 60%, #3d2f58);
+  box-shadow: 0 1px 3px rgba(0,0,0,.6), inset 0 0 0 2px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #241d38;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: .8rem;
+}
+body.krypt .vessel-scroll .wax-seal,
+body.krypt .vessel-volume .wax-seal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body.krypt .vessel-jar .wax-seal {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body.krypt .vault-note {
+  text-align: center;
+  color: #b5ad9c;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: .9rem;
+  margin: 0;
+}
