@@ -7,7 +7,7 @@ Reference: user-supplied Fairy Forest Nexus screenshot (`1000016424.png`), with 
 - Replaced the construction-stage placeholder with `assets/images/nexus/nexus-master-v1.png`.
 - Added eight semantic, keyboard-focusable HTML realm links over the image.
 - Added a non-visual realm directory, separate Katakombs descent, and a clear posthumous-only Mausoleum note.
-- Preserved all eight primary realm destinations and the Apothekary's physical nesting under the Kurio Shop.
+- Preserved all eight primary realm destinations and the Apothekary's physical nesting under the Kurio Shoppe.
 
 ## Static checks
 

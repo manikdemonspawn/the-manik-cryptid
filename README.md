@@ -17,9 +17,9 @@ Current top-level realm skeletons, in Kanon order:
 3. Krypt — coffin/sarcophagus threshold, protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records;
 4. Guildhall — castle door, capabilities and worktables;
 5. Morgue — clinical doors, gurneys, toe tags, ghost-resurrection logic;
-6. Kurio Shop — round storefront door, Manik-made goods, and affiliate Yard Sale out back;
+6. Kurio Shoppe — round storefront door, Manik-made goods, and affiliate Yard Sale out back;
 7. Forge — top-level realm, UNDER KONSTRUCTION; purpose/content deliberately deferred;
-8. Apothecary — top-level realm, physically upstairs in the Kurio Shop, UNDER KONSTRUCTION.
+8. Apothecary — top-level realm, physically upstairs in the Kurio Shoppe, UNDER KONSTRUCTION.
 
 The Forbidden Library lives inside the Library. The Katakombs are the legalese-only infrastructure realm, entered through a separate portal at the bottom of the Nexus rather than counted among the eight primary realms.
 
@@ -63,7 +63,7 @@ The future Mausoleum is posthumous-only and has no active Nexus portal.
 ## Important locks
 
 - The full Universe name is **The Manik Cryptid’s Resurrection Artifact Universe**.
-- **Kurio Shop** is the locked Kanon spelling.
+- **Kurio Shoppe** is the locked Kanon spelling.
 - The Krypt is the protected vault of memory, guarded truth, honored dead, afterlife belief threads, and restricted/offline-only records.
 - Do not merge to `main` without explicit creator approval.
 - Do not load adult/restricted content before real access control exists.

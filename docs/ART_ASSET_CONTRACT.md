@@ -15,9 +15,9 @@ Code and interaction structure come first. Approved visual targets come afterwar
   - Krypt / coffin or sarcophagus threshold, protected vault, guarded memory, and afterlife-thread language;
   - Guildhall / castle door;
   - Morgue / clinical doors and gurney language;
-  - Kurio Shop / round storybook storefront;
+  - Kurio Shoppe / round storybook storefront;
   - Forge / construction threshold, details deferred;
-  - Apothekary / upstairs room inside the Kurio Shop, visibly under construction.
+  - Apothekary / upstairs room inside the Kurio Shoppe, visibly under construction.
 - The Katakombs / cellar-door legalese infrastructure portal sits at the bottom of the Nexus and may be represented as a separate descent, not as a ninth primary realm.
 - No active Mausoleum while the creator is alive.
 - Must leave visual breathing room around portal areas so accessible HTML hotspots can sit over the image.

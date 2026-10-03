@@ -73,7 +73,7 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 - banners, worktables, records, skill displays;
 - should feel like capabilities are practiced here, not like a résumé exhibit.
 
-### Kurio Shop
+### Kurio Shoppe
 
 - round storybook door incorporated into a crooked storefront;
 - cozy/weird shop interior;
@@ -91,7 +91,7 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 
 ### Apothecary
 
-- upstairs room physically inside the Kurio Shop;
+- upstairs room physically inside the Kurio Shoppe;
 - rope at the bottom of the stairs marked `UNDER KONSTRUCTION`;
 - jars, drawers, herbs, handwritten labels, reference books, old wood, glass, honey / botanical details;
 - voice feels personal to The Manik Cryptid rather than generic universe narration;
@@ -99,7 +99,7 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 
 ### Affiliate Yard Sale
 
-- clearly outside behind the Kurio Shop;
+- clearly outside behind the Kurio Shoppe;
 - huge hand-painted affiliate-disclosure banner visible immediately on exit;
 - folding tables, crates, fence, lanterns, weird finds;
 - more lawless / informal than the main shop;

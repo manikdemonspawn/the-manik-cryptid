@@ -49,7 +49,7 @@
     },
     {
       "id": "kurio-shop",
-      "name": "The Kurio Shop",
+      "name": "The Kurio Shoppe",
       "threshold": "round storybook storefront door",
       "path": "realms/kurio-shop/index.html",
       "purpose": ["Manik-made goods", "affiliate yard sale"]

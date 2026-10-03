@@ -32,7 +32,7 @@ The structural/code pass has reached the point where further progress depends on
 - Library works and artifact metadata.
 - Morgue dead/resurrected project records and dates.
 - Guildhall portfolio/capability entries.
-- Kurio Shop products.
+- Kurio Shoppe products.
 - Apothecary ritual/practice products.
 - Yard-sale affiliate finds.
 - Katakombs infrastructure details beyond legalese, administration, and site machinery if/when Kanon establishes them.
