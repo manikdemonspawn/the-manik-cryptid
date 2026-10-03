@@ -11,10 +11,10 @@
 ## Built in this reconciliation pass
 
 - The `construction` branch remains the only active build; public `main` remains untouched.
-- Nexus navigation now exposes eight primary portals in Kanon order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, and Apothecary.
+- Nexus navigation now exposes eight primary portals in Kanon order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, and Apothekary.
 - The accessible Realm Index matches those eight primary portals.
 - The Katakombs has a real bottom-of-Nexus portal into the legalese-only legal/admin/infrastructure realm and is not counted as a ninth primary realm.
-- Apothecary remains physically upstairs inside the Kurio Shoppe; the stairs are represented with a rope marked **UNDER KONSTRUCTION**.
+- Apothekary remains physically upstairs inside the Kurio Shoppe; the stairs are represented with a rope marked **UNDER KONSTRUCTION**.
 - Forge exists as a top-level **UNDER KONSTRUCTION** shell without invented purpose or content.
 - The Forbidden Library remains inside the Library behind its construction-only gate.
 - Permanent Museum Certificate Exhibit placement remains intact for `RAU-EFI-2026-0828-001`, **Sertifikate of Ecosystem-First Inquiry — KANON Keeper Edition**.
@@ -42,7 +42,7 @@ These remain intentionally unfilled until verified or supplied:
 - final visual entrance artwork and generated visual targets;
 - real age-verification / age-assurance provider;
 - community implementation;
-- final Apothecary purpose, products, and content;
+- final Apothekary purpose, products, and content;
 - final Forge purpose, contents, threshold, and visual language;
 - Cherokee, Blackfoot, Elder Futhark, or other culturally specific writing/symbols;
 - actual adult/restricted content;

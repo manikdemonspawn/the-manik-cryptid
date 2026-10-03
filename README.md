@@ -19,7 +19,7 @@ Current top-level realm skeletons, in Kanon order:
 5. Morgue — clinical doors, gurneys, toe tags, ghost-resurrection logic;
 6. Kurio Shoppe — round storefront door, Manik-made goods, and affiliate Yard Sale out back;
 7. Forge — top-level realm, UNDER KONSTRUCTION; purpose/content deliberately deferred;
-8. Apothecary — top-level realm, physically upstairs in the Kurio Shoppe, UNDER KONSTRUCTION.
+8. Apothekary — top-level realm, physically upstairs in the Kurio Shoppe, UNDER KONSTRUCTION.
 
 The Forbidden Library lives inside the Library. The Katakombs are the legalese-only infrastructure realm, entered through a separate portal at the bottom of the Nexus rather than counted among the eight primary realms.
 

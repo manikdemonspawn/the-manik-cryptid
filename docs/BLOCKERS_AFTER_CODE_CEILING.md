@@ -20,7 +20,7 @@ The structural/code pass has reached the point where further progress depends on
 ## External services / commerce
 
 - Real age-assurance provider for the Forbidden Library.
-- Payment / digital-delivery method for Apothecary products.
+- Payment / digital-delivery method for Apothekary products.
 - Actual affiliate programs and links.
 - Actual product storefront(s).
 - App distribution destinations for each future app.
@@ -33,7 +33,7 @@ The structural/code pass has reached the point where further progress depends on
 - Morgue dead/resurrected project records and dates.
 - Guildhall portfolio/capability entries.
 - Kurio Shoppe products.
-- Apothecary ritual/practice products.
+- Apothekary ritual/practice products.
 - Yard-sale affiliate finds.
 - Katakombs infrastructure details beyond legalese, administration, and site machinery if/when Kanon establishes them.
 

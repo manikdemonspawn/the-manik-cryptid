@@ -78,7 +78,7 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 - round storybook door incorporated into a crooked storefront;
 - cozy/weird shop interior;
 - main floor for Cryptid-made goods;
-- visible upstairs stair route to the Apothecary with a rope at the bottom marked `UNDER KONSTRUCTION`;
+- visible upstairs stair route to the Apothekary with a rope at the bottom marked `UNDER KONSTRUCTION`;
 - visible back door toward Yard Sale;
 - not direct Tolkien imitation.
 
@@ -89,7 +89,7 @@ The Nexus should feel explorable rather than like a menu pasted on a forest wall
 - final purpose, threshold, visual language, and content are deliberately deferred;
 - do not invent symbolic details merely to fill the visual target.
 
-### Apothecary
+### Apothekary
 
 - upstairs room physically inside the Kurio Shoppe;
 - rope at the bottom of the stairs marked `UNDER KONSTRUCTION`;

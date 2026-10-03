@@ -19,7 +19,7 @@ Do not merge the construction branch into `main` merely because the pages render
 - [ ] Elder Futhark transliterations checked before visible final use.
 - [ ] Affiliate disclosure final wording reviewed and remains immediately visible on yard-sale entry.
 - [ ] Product/affiliate distinction remains clear.
-- [ ] Any health-adjacent Apothecary copy avoids unsupported medical-treatment claims.
+- [ ] Any health-adjacent Apothekary copy avoids unsupported medical-treatment claims.
 - [ ] External-platform links point to the correct creator-controlled destinations.
 - [ ] Restricted content remains absent until real age assurance exists.
 - [ ] Forbidden Library direct URLs/assets are actually protected, not merely hidden behind JavaScript theater.

@@ -1,6 +1,6 @@
 # Content Model
 
-The Manik Cryptid’s Resurrection Artifact Universe should grow by adding artifacts to established realms, not by inventing a new top-level realm every time a new project appears. The eight primary realms are Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, and Apothecary. The Katakombs is infrastructure, reached through the bottom Nexus portal.
+The Manik Cryptid’s Resurrection Artifact Universe should grow by adding artifacts to established realms, not by inventing a new top-level realm every time a new project appears. The eight primary realms are Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, and Apothekary. The Katakombs is infrastructure, reached through the bottom Nexus portal.
 
 ## Artifact identity
 
@@ -73,9 +73,9 @@ Alternative distribution does not require open-source licensing. Licensing, paym
 
 Cryptid-made products only.
 
-### Apothecary
+### Apothekary
 
-The Apothecary is physically upstairs inside the Kurio Shoppe, behind a rope at the bottom of the stairs marked **UNDER KONSTRUCTION**. Its final purpose, products, and content are deliberately deferred; do not infer a product model from the placeholder.
+The Apothekary is physically upstairs inside the Kurio Shoppe, behind a rope at the bottom of the stairs marked **UNDER KONSTRUCTION**. Its final purpose, products, and content are deliberately deferred; do not infer a product model from the placeholder.
 
 ### Yard sale
 

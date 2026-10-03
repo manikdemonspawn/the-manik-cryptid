@@ -16,7 +16,7 @@ The threshold should communicate the realm before the visitor reads the label. T
 - Manik Cryptid visual branding throughout: mushrooms, skulls, hanging curiosities, strange forest objects, carved trunks, roots, mist, etc.
 - Cultural zones remain distinct rather than becoming a generic folklore blend.
 - Irish / Scottish fairy influence is strongest around the Stonehenge Museum threshold.
-- The Apothecary is physically upstairs inside the Kurio Shoppe. Its top-level Nexus destination is visibly under construction; the Kurio Shoppe stairs have a rope at the bottom.
+- The Apothekary is physically upstairs inside the Kurio Shoppe. Its top-level Nexus destination is visibly under construction; the Kurio Shoppe stairs have a rope at the bottom.
 - Cherokee and Blackfoot inscriptions or writing must be sourced carefully, verified, and kept distinct from each other.
 - Dreamcatcher presence is personal/ambient, not presented as Cherokee or Blackfoot iconography. One medium-to-large piece is preferable to turning the whole zone into the brand motif.
 - The living-apothecary forest area may include rue, ginger, thyme, honey, bees/hive imagery, and other botanical details.
@@ -26,7 +26,7 @@ The threshold should communicate the realm before the visitor reads the label. T
 
 ## Primary realm order
 
-The Nexus presents these eight primary portals in this order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, Apothecary. The Forge and Apothecary remain visibly **UNDER KONSTRUCTION** until their unresolved purpose/content are verified.
+The Nexus presents these eight primary portals in this order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, Apothekary. The Forge and Apothekary remain visibly **UNDER KONSTRUCTION** until their unresolved purpose/content are verified.
 
 **Kurio Shoppe** is the locked Kanon spelling. Do not revert to Curio Shop except when preserving a historical quote, older artifact title, or explicitly identified legacy path notice.
 
@@ -144,13 +144,13 @@ Threshold: **round storybook / Hobbit-ish storefront door**, without direct Tolk
 
 Main floor: things made by The Manik Cryptid.
 
-Upstairs: the Apothecary, physically inside the Kurio Shoppe. A rope at the bottom of the stairs is marked **UNDER KONSTRUCTION** while the room's purpose and content remain deferred.
+Upstairs: the Apothekary, physically inside the Kurio Shoppe. A rope at the bottom of the stairs is marked **UNDER KONSTRUCTION** while the room's purpose and content remain deferred.
 
 Back door: affiliate yard sale.
 
-### Apothecary content boundary
+### Apothekary content boundary
 
-The Apothecary is a confirmed top-level destination and physical upstairs room, but its final purpose, voice, products, and content are intentionally deferred. Do not invent a product model or health-adjacent claims to fill the empty room.
+The Apothekary is a confirmed top-level destination and physical upstairs room, but its final purpose, voice, products, and content are intentionally deferred. Do not invent a product model or health-adjacent claims to fill the empty room.
 
 ### Affiliate Yard Sale
 

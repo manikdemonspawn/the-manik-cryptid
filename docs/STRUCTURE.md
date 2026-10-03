@@ -24,7 +24,7 @@ The `construction` branch is the only active build. The public `main` branch rem
 │   ├── krypt/index.html                  # primary realm
 │   ├── guildhall/index.html              # primary realm
 │   ├── morgue/index.html                 # primary realm
-│   ├── kurio-shop/index.html             # primary realm; Apothecary physically upstairs
+│   ├── kurio-shop/index.html             # primary realm; Apothekary physically upstairs
 │   ├── kurio-shop/yard-sale/index.html   # subordinate affiliate space
 │   ├── forge/index.html                  # primary realm; UNDER KONSTRUCTION
 │   ├── apothecary/index.html             # primary destination; upstairs; UNDER KONSTRUCTION
@@ -35,7 +35,7 @@ The `construction` branch is the only active build. The public `main` branch rem
 
 ## Navigation topology
 
-The Nexus shows eight primary portals near the top of the page, in Kanon order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, Apothecary. The Apothecary has a direct top-level destination for accessibility and orientation, while its in-world location remains upstairs inside the Kurio Shoppe behind a rope marked **UNDER KONSTRUCTION**.
+The Nexus shows eight primary portals near the top of the page, in Kanon order: Library, Museum, Krypt, Guildhall, Morgue, Kurio Shoppe, Forge, Apothekary. The Apothekary has a direct top-level destination for accessibility and orientation, while its in-world location remains upstairs inside the Kurio Shoppe behind a rope marked **UNDER KONSTRUCTION**.
 
 The Katakombs has a real portal entry at the bottom of the Nexus. It is an infrastructure realm for legalese, policies, permissions, administration, and site machinery—not an additional primary creative realm. The accessible Realm Index describes this distinction and does not list Katakombs among the eight primary cards.
 
