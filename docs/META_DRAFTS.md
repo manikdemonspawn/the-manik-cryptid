@@ -1,6 +1,6 @@
 # Meta / Open Graph Drafts — 2026-10-11
 
-**STATUS: DRAFT — NEEDS HER APPROVAL. NOTHING BELOW IS INJECTED INTO ANY PAGE.**
+**STATUS: INJECTED 2026-10-14 under blanket Kreator OK.** Descriptions live on all 18 pages as drafted. Flag any page for a rewrite anytime.
 
 Every title keeps the existing pattern (`X | The Manik Cryptid`). Every
 description is ≤160 characters, written plain-spoken — no cussing, no
@@ -110,5 +110,5 @@ No new lore, no renamed realms, no invented claims.
 
 ## Open questions for her (the ask-one-at-a-time queue)
 1. Approve / edit / reject these descriptions? (One page at a time if she wants.)
-2. Which image is the OG share image? (Forest master is the candidate — her pick.)
-3. What's the canonical domain for `og:url`? (Undecided — no OG injection until this is answered.)
+2. RESOLVED 2026-10-14: OG share image = forest-panorama-fused-v1.webp (brand banner).
+3. og:url uses the construction preview URL until a custom domain is chosen.
