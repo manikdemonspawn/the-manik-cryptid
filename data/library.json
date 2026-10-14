@@ -1,1 +1,58 @@
-{"categories":[{"description":"Novels, short stories, creepypastas, manuscripts, and written works.","id":"fiction","name":"Fiction"},{"description":"Narration, soundscapes, podcasts, voice work, and recordings.","id":"audio","name":"Audio"},{"description":"Apps, web experiences, and interactive projects.","id":"apps","name":"Apps"},{"description":"Photography, cover art, illustrations, and visual artifacts.","id":"photos","name":"Photos"},{"description":"Memes and shareable ephemera from the Universe.","id":"memes","name":"Memes"}],"notes":"Library record schema per blueprint §18.2. Categories are the Kreator's taxonomy (decided 2026-10-03): Fiction, Audio, Apps, Photos, Memes — data-driven, so new categories can be added here without code changes. Records carry a 'category' id matching one of the categories above and shelve alphabetically by title within their category. Seeded with a structural placeholder only — the 19-page archive handoff summary is NOT in the repo and no real Library records exist on the Library page yet. Do not fabricate the Kreator's books or stories; records are added only from real materials.","records":[{"Kanon_status":"PENDING KREATOR APPROVAL","Kanonikal_title":null,"archive_status":"NOT_ARCHIVED","category":null,"creation_date":null,"creator":null,"description":"Structural placeholder demonstrating the §18.2 Library record schema. Replace with a real record when Library materials are supplied.","media":{"audio_embed":null,"hero_image":null,"thumbnail":null,"video_embed":null},"notes":"PLACEHOLDER — do not publish. Real Library records come only from Kreator-supplied materials.","realm":"library","record_id":"LIB-PLACEHOLDER-001","related_artifacts":[],"source":null,"status":"PLACEHOLDER","title":"[Placeholder — do not publish]","type":null,"version":null}],"schema":"blueprint-§18.2","schema_version":2}
+{
+  "categories": [
+    {
+      "description": "Novels, short stories, creepypastas, manuscripts, and written works.",
+      "id": "fiction",
+      "name": "Fiction"
+    },
+    {
+      "description": "Narration, soundscapes, podcasts, voice work, and recordings.",
+      "id": "audio",
+      "name": "Audio"
+    },
+    {
+      "description": "Apps, web experiences, and interactive projects.",
+      "id": "apps",
+      "name": "Apps"
+    },
+    {
+      "description": "Photography, cover art, illustrations, and visual artifacts.",
+      "id": "photos",
+      "name": "Photos"
+    },
+    {
+      "description": "Memes and shareable ephemera from the Universe.",
+      "id": "memes",
+      "name": "Memes"
+    }
+  ],
+  "notes": "Library record schema per blueprint §18.2. Categories are the Kreator's taxonomy (decided 2026-10-03): Fiction, Audio, Apps, Photos, Memes — data-driven, so new categories can be added here without code changes. Records carry a 'category' id matching one of the categories above and shelve alphabetically by title within their category. First real record: LIB-BOOK-001 (A Mother's Day Miracle), supplied by the Kreator 2026-10-14. Do not fabricate the Kreator's books or stories; records are added only from real materials.",
+  "records": [
+    {
+      "record_id": "LIB-BOOK-001",
+      "title": "A Mother's Day Miracle",
+      "Kanonikal_title": "A Mother's Day Miracle (Appalachian Gothic Book 1)",
+      "category": "fiction",
+      "realm": "library",
+      "creator": "The Manik Cryptid",
+      "type": "novel",
+      "status": "PUBLISHED",
+      "Kanon_status": "KREATOR-APPROVED",
+      "archive_status": "NOT_ARCHIVED",
+      "creation_date": "2026-09-01",
+      "version": "1",
+      "description": "Appalachian Gothic Book 1. Sarah Elizabeth's Mother's Day trip to a remote Appalachian cottage turns into a confrontation with old mountain magic, restless dead, and inherited secrets. 140 pages, English.",
+      "notes": "Live on Amazon. Kreator's affiliate link earns a commission plus the book royalty.",
+      "source": "https://amzn.to/4x7g9Gr",
+      "media": {
+        "audio_embed": null,
+        "hero_image": null,
+        "thumbnail": null,
+        "video_embed": null
+      },
+      "related_artifacts": []
+    }
+  ],
+  "schema": "blueprint-§18.2",
+  "schema_version": 2
+}

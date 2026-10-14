@@ -195,6 +195,17 @@
       fieldRow("Notes", record.notes)
     ];
     for (const row of rows) if (row) modalBody.appendChild(row);
+    if (record.source) {
+      const srcRow = make("p", "catalog-modal-field");
+      srcRow.appendChild(make("strong", "", "Get it: "));
+      const a = document.createElement("a");
+      a.href = record.source;
+      a.textContent = "Buy on Amazon (affiliate link)";
+      a.setAttribute("rel", "sponsored noopener");
+      a.setAttribute("target", "_blank");
+      srcRow.appendChild(a);
+      modalBody.appendChild(srcRow);
+    }
     modal.removeAttribute("hidden");
     modalClose.focus();
   };
