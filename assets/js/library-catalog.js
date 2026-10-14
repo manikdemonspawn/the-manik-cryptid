@@ -200,7 +200,11 @@
       srcRow.appendChild(make("strong", "", "Get it: "));
       const a = document.createElement("a");
       a.href = record.source;
-      a.textContent = "Buy on Amazon (affiliate link)";
+      if (/patreon\.com/.test(record.source || "")) {
+        a.textContent = record.access === "members-only" ? "View on Patreon (members-only)" : "Read on Patreon";
+      } else {
+        a.textContent = "Buy on Amazon (affiliate link)";
+      }
       a.setAttribute("rel", "sponsored noopener");
       a.setAttribute("target", "_blank");
       srcRow.appendChild(a);
