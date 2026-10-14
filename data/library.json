@@ -1326,6 +1326,56 @@
         "video_embed": null
       },
       "related_artifacts": []
+    },
+    {
+      "record_id": "LIB-BOOK-002",
+      "title": "Huntington Gothic: The Odyssey",
+      "Kanonikal_title": "Huntington Gothic: The Odyssey",
+      "category": "fiction",
+      "realm": "library",
+      "creator": "The Manik Cryptid",
+      "type": "book",
+      "status": "IN_PROGRESS",
+      "Kanon_status": "KREATOR-APPROVED",
+      "archive_status": "NOT_ARCHIVED",
+      "creation_date": null,
+      "version": null,
+      "description": "Book 1 of the Huntington Gothic series. 16 parts, 43,583 words. Cover art final; KDP edition in progress.",
+      "notes": "Manuscript complete (restructured 2026-10-01). KDP EPUB built; upload is the Kreator's tap, still pending.",
+      "source": null,
+      "access": null,
+      "media": {
+        "audio_embed": null,
+        "hero_image": "/assets/images/books/huntington-gothic-odyssey-cover.jpg",
+        "thumbnail": "/assets/images/books/huntington-gothic-odyssey-cover.jpg",
+        "video_embed": null
+      },
+      "related_artifacts": []
+    },
+    {
+      "record_id": "LIB-BOOK-003",
+      "title": "Huntington Gothic: The Manor House",
+      "Kanonikal_title": "Huntington Gothic: The Manor House",
+      "category": "fiction",
+      "realm": "library",
+      "creator": "The Manik Cryptid",
+      "type": "book",
+      "status": "IN_PROGRESS",
+      "Kanon_status": "KREATOR-APPROVED",
+      "archive_status": "NOT_ARCHIVED",
+      "creation_date": null,
+      "version": null,
+      "description": "Book 2 of the Huntington Gothic series. Cover art final; manuscript in progress.",
+      "notes": "Front-matter dedication (Kreator's words): “He was perfect for his imperfections.”",
+      "source": null,
+      "access": null,
+      "media": {
+        "audio_embed": null,
+        "hero_image": "/assets/images/books/huntington-gothic-manor-house-cover.jpg",
+        "thumbnail": "/assets/images/books/huntington-gothic-manor-house-cover.jpg",
+        "video_embed": null
+      },
+      "related_artifacts": []
     }
   ],
   "schema": "blueprint-§18.2",

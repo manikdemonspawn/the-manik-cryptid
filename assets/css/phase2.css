@@ -133,3 +133,20 @@
   .monumental-frame{min-height:420px;border-width:14px}
   .portal{min-height:285px}
 }
+
+/* THE MANIK CRYPTID BRAND PALETTE — Kreator-locked 2026-10-14.
+   BLACK #000000 • BURGUNDY #800020 • DEEP PURPLE #5A2D82 • HOT PINK #FF69B4 */
+:root{
+  --brand-black:#000000;
+  --brand-burgundy:#800020;
+  --brand-purple:#5A2D82;
+  --brand-pink:#FF69B4;
+}
+.brand-strip{height:6px;border:0;background:linear-gradient(90deg,#000 0 25%,#800020 25% 50%,#5A2D82 50% 75%,#FF69B4 75% 100%);}
+.hero h1{background:linear-gradient(115deg,#f7ecf4 15%,#FF69B4 52%,#5A2D82 88%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.section h2::after{content:"";display:block;width:4.5rem;height:3px;margin-top:.45rem;background:linear-gradient(90deg,#800020,#5A2D82,#FF69B4);border-radius:2px;}
+a:hover{color:var(--brand-pink);}
+.status-chip{border-color:var(--brand-purple);color:#dccbf5;}
+.btn{background:linear-gradient(135deg,#2b0a12,#241239);border-color:var(--brand-burgundy);color:#f3e7f5;}
+.btn:hover{border-color:var(--brand-pink);filter:brightness(1.2);}
+.catalog-modal-cover{display:block;max-width:220px;width:100%;height:auto;margin:0 auto 1rem;border-radius:.4rem;border:1px solid #3a3450;box-shadow:0 8px 28px rgba(0,0,0,.5);}

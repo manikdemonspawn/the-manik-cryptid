@@ -183,6 +183,14 @@
     lastFocus = document.activeElement;
     modalBody.replaceChildren();
     modalBody.appendChild(make("h3", "catalog-modal-title", record.title || "Untitled record"));
+    const coverSrc = record.media && (record.media.hero_image || record.media.thumbnail);
+    if (coverSrc) {
+      const coverImg = document.createElement("img");
+      coverImg.src = coverSrc;
+      coverImg.alt = "Cover art: " + (record.title || "artifact");
+      coverImg.className = "catalog-modal-cover";
+      modalBody.appendChild(coverImg);
+    }
     const rows = [
       fieldRow("Category", categoryName),
       fieldRow("Kanonikal title", record.Kanonikal_title),
