@@ -1346,8 +1346,8 @@
       "access": null,
       "media": {
         "audio_embed": null,
-        "hero_image": "/assets/images/books/huntington-gothic-odyssey-cover.jpg",
-        "thumbnail": "/assets/images/books/huntington-gothic-odyssey-cover.jpg",
+        "hero_image": "/assets/images/books/huntington-gothic-odyssey-cover.webp",
+        "thumbnail": "/assets/images/books/huntington-gothic-odyssey-cover.webp",
         "video_embed": null
       },
       "related_artifacts": []
@@ -1371,8 +1371,33 @@
       "access": null,
       "media": {
         "audio_embed": null,
-        "hero_image": "/assets/images/books/huntington-gothic-manor-house-cover.jpg",
-        "thumbnail": "/assets/images/books/huntington-gothic-manor-house-cover.jpg",
+        "hero_image": "/assets/images/books/huntington-gothic-manor-house-cover.webp",
+        "thumbnail": "/assets/images/books/huntington-gothic-manor-house-cover.webp",
+        "video_embed": null
+      },
+      "related_artifacts": []
+    },
+    {
+      "record_id": "LIB-BOOK-004",
+      "title": "Court of Ash and Blood (The Original Story)",
+      "Kanonikal_title": "Court of Ash and Blood (The Original Story) — NSFW Edition, Book 1",
+      "category": "fiction",
+      "realm": "library",
+      "creator": "The Manik Cryptid",
+      "type": "book",
+      "status": "IN_PROGRESS",
+      "Kanon_status": "KREATOR-APPROVED",
+      "archive_status": "NOT_ARCHIVED",
+      "creation_date": null,
+      "version": null,
+      "description": "Court of Ash and Blood, the original story — NSFW edition, Book 1. Chapters publishing on Patreon.",
+      "notes": "Cover art is the NSFW-edition cover (Kreator identification 2026-10-14); regular-edition cover pending. NSFW chapters live on Patreon behind its membership gate.",
+      "source": null,
+      "access": null,
+      "media": {
+        "audio_embed": null,
+        "hero_image": "/assets/images/books/court-of-ash-and-blood-nsfw-cover.webp",
+        "thumbnail": "/assets/images/books/court-of-ash-and-blood-nsfw-cover.webp",
         "video_embed": null
       },
       "related_artifacts": []
