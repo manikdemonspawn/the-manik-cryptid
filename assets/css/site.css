@@ -145,6 +145,12 @@ footer { padding: 4rem 0 2rem; color: #8d887e; font-family: var(--font-reading);
 /* YARD SALE */
 .yard { background: radial-gradient(circle at 70% 15%, rgba(162,135,76,.12), transparent 18rem), linear-gradient(#151811,#10120d); }
 .affiliate-banner { margin: 1rem 0 2rem; padding: 1.5rem; border: 4px dashed #d1b879; background: #2b2417; text-align: center; font-family: var(--font-reading); font-size: 1.05rem; }
+.integrations-banner { margin: 1rem 0 2rem; padding: 1.5rem; border: 4px solid #7d8fc4; background: #1a2033; text-align: center; font-family: var(--font-reading); font-size: 1.05rem; }
+.integrations-banner strong { letter-spacing: .08em; color: #aebbe8; }
+
+/* LOST IN THE WOODS (404) */
+.lost-woods-art { margin: 2rem auto; max-width: 56rem; }
+.lost-woods-art img { display: block; width: 100%; height: auto; border-radius: .5rem; border: 1px solid #3a3450; box-shadow: 0 12px 40px rgba(0,0,0,.5); }
 .yard-table { min-height: 190px; padding: 1rem; border: 8px solid #4b3524; border-top-width: 18px; background: rgba(46,36,24,.35); }
 
 /* KATAKOMBS */
