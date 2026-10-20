@@ -1,1 +1,67 @@
-{"exhibits":[{"Kanonikal_title":"Sertifikate of Ecosystem-First Inquiry","approval_status":"APPROVED","artifact_ids":["rau-efi-2026-0828-001"],"collection":"permanent-certificate-exhibit","creation_date":"2026-08-28","creator":null,"description":"Permanent KANON Display: the Universe-issued Sertifikate of Ecosystem-First Inquiry, KANON Keeper Edition, preserved in the Museum's permanent Certificate Exhibit.","documents":[],"exhibit_date":null,"exhibit_id":"EXH-001","notes":"Rendered on the Museum page as 'Permanent KANON Display'. Approval: permanent Kanon display per the Kreator's Museum layout. Do not substitute generated art for the keeper image sequence.","provenance":"KANON Keeper Edition; existing approved keeper artifact retained without replacement.","realm":"museum","related_exhibits":[],"status":"ACTIVE","title":"Permanent KANON Display — Sertifikate of Ecosystem-First Inquiry","visual_assets":{"audio_embed":null,"hero_image":"assets/images/museum/RAU-EFI-2026-0828-001-keeper-01.webp","thumbnail":null,"video_embed":null},"work_ids":[]}],"notes":"Exhibit record schema per blueprint §7.3. Seeded ONLY with the one exhibit that actually exists on the Museum page (the permanent Sertifikate display). No exhibits invented. Provenance unknown for future exhibits → record 'UNKNOWN'.","schema":"blueprint-§7.3","schema_version":1}
+{
+  "exhibits": [
+    {
+      "Kanonikal_title": "Sertifikate of Ecosystem-First Inquiry",
+      "approval_status": "APPROVED",
+      "artifact_ids": [
+        "rau-efi-2026-0828-001"
+      ],
+      "collection": "permanent-certificate-exhibit",
+      "creation_date": "2026-08-28",
+      "creator": null,
+      "description": "Permanent KANON Display: the Universe-issued Sertifikate of Ecosystem-First Inquiry, KANON Keeper Edition, preserved in the Museum's permanent Certificate Exhibit.",
+      "documents": [],
+      "exhibit_date": null,
+      "exhibit_id": "EXH-001",
+      "notes": "Rendered on the Museum page as 'Permanent KANON Display'. Approval: permanent Kanon display per the Kreator's Museum layout. Do not substitute generated art for the keeper image sequence.",
+      "provenance": "KANON Keeper Edition; existing approved keeper artifact retained without replacement.",
+      "realm": "museum",
+      "related_exhibits": [],
+      "status": "ACTIVE",
+      "title": "Permanent KANON Display \u2014 Sertifikate of Ecosystem-First Inquiry",
+      "visual_assets": {
+        "audio_embed": null,
+        "hero_image": "assets/images/museum/RAU-EFI-2026-0828-001-keeper-01.webp",
+        "thumbnail": null,
+        "video_embed": null
+      },
+      "work_ids": []
+    },
+    {
+      "exhibit_id": "EXH-002",
+      "title": "Published Works \u2014 A Mother's Day Miracle",
+      "Kanonikal_title": "A Mother's Day Miracle (Appalachian Gothic, Book 1)",
+      "realm": "museum",
+      "collection": "published-works",
+      "status": "ACTIVE",
+      "approval_status": "APPROVED",
+      "creation_date": "2026-09-01",
+      "exhibit_date": "2026-10-16",
+      "creator": "The Manik Cryptid",
+      "description": "First published work on the Museum wall: cover plus purchase link. The work itself lives on Kindle; the Museum holds the cover and the link.",
+      "provenance": "Kreator order 2026-10-16: Museum holds published works only (cover + sale link); drafts and versions live in the Library.",
+      "visual_assets": {
+        "hero_image": "assets/images/books/mothers-day-miracle-cover.webp",
+        "thumbnail": null,
+        "audio_embed": null,
+        "video_embed": null
+      },
+      "purchase_links": [
+        {
+          "label": "Get it on Kindle",
+          "url": "https://amzn.to/4x7g9Gr",
+          "rel": "sponsored noopener",
+          "note": "Kreator affiliate link: earns the affiliate cut plus the royalty. $3.99 on Kindle, also on Kindle Unlimited."
+        }
+      ],
+      "artifact_ids": [],
+      "work_ids": [],
+      "related_exhibits": [],
+      "documents": [],
+      "notes": "Exhibit format per Kreator: cover photo laid out, link to where the work is sold. No full text on the Museum wall."
+    }
+  ],
+  "notes": "Exhibit record schema per blueprint \u00a77.3. Seeded ONLY with the one exhibit that actually exists on the Museum page (the permanent Sertifikate display). No exhibits invented. Provenance unknown for future exhibits \u2192 record 'UNKNOWN'.",
+  "schema": "blueprint-\u00a77.3",
+  "schema_version": 1
+}

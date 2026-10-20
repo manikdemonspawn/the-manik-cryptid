@@ -123,13 +123,5 @@
       "lore_status": "pending"
     }
   ],
-  "posthumous": [
-    {
-      "id": "mausoleum-master",
-      "scope": "mausoleum",
-      "status": "inactive-posthumous-only",
-      "approved": false,
-      "lore_status": "not-active"
-    }
-  ]
+  "posthumous": []
 }

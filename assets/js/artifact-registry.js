@@ -26,14 +26,16 @@
   };
 
   const renderMedia = artifact => {
-    const hero = artifact.media && artifact.media.hero_image;
+    const hero = (artifact.visual_assets && artifact.visual_assets.hero_image) ||
+      (artifact.media && artifact.media.hero_image);
     const src = safeSiteAssetUrl(hero);
     if (!src) return null;
 
     const figure = make("figure", "registry-media");
     const image = make("img", "registry-image");
     image.src = src;
-    image.alt = artifact.title ? `${artifact.title} artifact image` : "Artifact image";
+    const displayTitle = artifact.display_name || artifact.title;
+    image.alt = displayTitle ? `${displayTitle} artifact image` : "Artifact image";
     image.loading = "lazy";
     image.decoding = "async";
     figure.appendChild(image);
@@ -48,7 +50,7 @@
     const media = renderMedia(artifact);
     if (media) card.appendChild(media);
 
-    const title = make("h3", "registry-title", artifact.title || "Untitled artifact");
+    const title = make("h3", "registry-title", artifact.display_name || artifact.title || "Untitled artifact");
     card.appendChild(title);
 
     const meta = make("div", "registry-meta");
@@ -60,7 +62,8 @@
     if (artifact.restricted) meta.appendChild(make("span", "registry-chip", "restricted"));
     card.appendChild(meta);
 
-    if (artifact.summary) card.appendChild(make("p", "registry-summary", artifact.summary));
+    const summaryText = artifact.description || artifact.summary;
+    if (summaryText) card.appendChild(make("p", "registry-summary", summaryText));
 
     if (artifact.status === "deceased" || artifact.status === "resurrected") {
       const dates = make("dl", "registry-dates");

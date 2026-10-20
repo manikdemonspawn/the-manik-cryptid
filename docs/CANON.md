@@ -56,6 +56,9 @@ The Museum remembers where the Cryptid came from and what made her.
 
 The permanent Museum Certificate Exhibit retains `RAU-EFI-2026-0828-001`, **Sertifikate of Ecosystem-First Inquiry — KANON Keeper Edition**.
 
+### Kreator content rule (2026-10-16)
+**The Museum is the special shit.** Only works that actually got published go in the Museum — never every draft of everything. The Library is the catalog: it holds versions, drafts, and in-progress works. Museum = published/finished legacy; Library = the working catalog of everything.
+
 ## Library
 
 Threshold: **decontamination / preservation chamber**.
@@ -175,6 +178,8 @@ The Forge is a confirmed top-level realm and remains **UNDER KONSTRUCTION**. Its
 ## Future Mausoleum
 
 **Posthumous only. Do not expose an active Nexus portal while the creator is alive.**
+
+**Kreator order 2026-10-15:** the public Mausoleum page and all its references were removed from the live site entirely — no dormant placeholder, no mention, nothing a visitor can find. The realm exists in Kanon only, and stays that way until the posthumous condition is met. The Kreator called the placeholder creepy; it stays gone.
 
 When activated:
 
