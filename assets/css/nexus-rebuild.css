@@ -191,6 +191,7 @@
 .realm-threshold.kurio{--x:30%;--y:72%}
 .realm-threshold.forge{--x:52%;--y:74%}
 .realm-threshold.apothekary{--x:74%;--y:72%}
+.realm-threshold.semmaterry{--x:88%;--y:70%}
 
 .portal-wall-caption{
   margin:1rem 0 0;
@@ -289,6 +290,7 @@
   .realm-threshold.kurio{--x:73%;--y:61%}
   .realm-threshold.forge{--x:27%;--y:80%}
   .realm-threshold.apothekary{--x:73%;--y:80%}
+  .realm-threshold.semmaterry{--x:50%;--y:90%}
   .threshold-directory{grid-template-columns:1fr}
 }
 

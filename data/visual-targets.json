@@ -1,127 +1,138 @@
 {
-  "version": 2,
-  "rule": "Code first. Approved visual targets become lore-bearing artifacts.",
-  "targets": [
-    {
-      "id": "nexus-master",
-      "scope": "nexus",
-      "kind": "kanonikal-environment",
-      "status": "generated-local-review",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/nexus/nexus-master-v1.png",
-      "approved": false,
-      "lore_status": "implementation-candidate-pending-creator-approval"
-    },
-    {
-      "id": "museum-master",
-      "scope": "museum",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/museum/museum-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "library-master",
-      "scope": "library",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/library/library-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "forbidden-library-master",
-      "scope": "forbidden-library",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/forbidden-library/forbidden-library-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "morgue-master",
-      "scope": "morgue",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/morgue/morgue-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "krypt-master",
-      "scope": "krypt",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/krypt/krypt-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "guildhall-master",
-      "scope": "guildhall",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/guildhall/guildhall-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "kurio-shop-master",
-      "scope": "kurio-shop",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/kurio-shop/kurio-shop-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "apothecary-master",
-      "scope": "apothecary",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/apothecary/apothecary-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "forge-master",
-      "scope": "forge",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/forge/forge-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "yard-sale-master",
-      "scope": "yard-sale",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/yard-sale/yard-sale-master",
-      "approved": false,
-      "lore_status": "pending"
-    },
-    {
-      "id": "katakombs-master",
-      "scope": "katakombs",
-      "kind": "kanonikal-environment",
-      "status": "pending-generation",
-      "recommended_aspect_ratio": "16:9",
-      "expected_path": "assets/images/realms/katakombs/katakombs-master",
-      "approved": false,
-      "lore_status": "pending"
-    }
-  ],
-  "posthumous": []
+ "version": 2,
+ "rule": "Code first. Approved visual targets become lore-bearing artifacts.",
+ "targets": [
+  {
+   "id": "nexus-master",
+   "scope": "nexus",
+   "kind": "kanonikal-environment",
+   "status": "generated-local-review",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/nexus/nexus-master-v1.png",
+   "approved": false,
+   "lore_status": "implementation-candidate-pending-creator-approval"
+  },
+  {
+   "id": "museum-master",
+   "scope": "museum",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/museum/museum-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "library-master",
+   "scope": "library",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/library/library-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "forbidden-library-master",
+   "scope": "forbidden-library",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/forbidden-library/forbidden-library-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "morgue-master",
+   "scope": "morgue",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/morgue/morgue-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "krypt-master",
+   "scope": "krypt",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/krypt/krypt-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "guildhall-master",
+   "scope": "guildhall",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/guildhall/guildhall-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "kurio-shop-master",
+   "scope": "kurio-shop",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/kurio-shop/kurio-shop-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "apothecary-master",
+   "scope": "apothecary",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/apothecary/apothecary-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "forge-master",
+   "scope": "forge",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/forge/forge-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "yard-sale-master",
+   "scope": "yard-sale",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/yard-sale/yard-sale-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "katakombs-master",
+   "scope": "katakombs",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/katakombs/katakombs-master",
+   "approved": false,
+   "lore_status": "pending"
+  },
+  {
+   "id": "semmaterry-master",
+   "scope": "semmaterry",
+   "kind": "kanonikal-environment",
+   "status": "pending-generation",
+   "recommended_aspect_ratio": "16:9",
+   "expected_path": "assets/images/realms/semmaterry/semmaterry-master",
+   "approved": false,
+   "lore_status": "pending",
+   "notes": "Manifestation door per Kreator ruling 2026-10-23: a tombstone that says SEMMATERRY."
+  }
+ ],
+ "posthumous": []
 }
