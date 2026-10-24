@@ -46,8 +46,8 @@
       "source": "https://amzn.to/4x7g9Gr",
       "media": {
         "audio_embed": null,
-        "hero_image": null,
-        "thumbnail": null,
+        "hero_image": "/assets/images/books/mothers-day-miracle-cover.webp",
+        "thumbnail": "/assets/images/books/mothers-day-miracle-cover.webp",
         "video_embed": null
       },
       "related_artifacts": []
@@ -1398,6 +1398,30 @@
         "audio_embed": null,
         "hero_image": "/assets/images/books/court-of-ash-and-blood-nsfw-cover.webp",
         "thumbnail": "/assets/images/books/court-of-ash-and-blood-nsfw-cover.webp",
+        "video_embed": null
+      },
+      "related_artifacts": []
+    },
+    {
+      "record_id": "LIB-BOOK-005",
+      "title": "A Mother's Day Miracle (Ward of Hicks Holler cover)",
+      "Kanonikal_title": "A Mother's Day Miracle — Ward of Hicks Holler Cover",
+      "category": "fiction",
+      "realm": "library",
+      "creator": "The Manik Cryptid",
+      "type": "book",
+      "status": "PUBLISHED",
+      "Kanon_status": "KREATOR-APPROVED",
+      "archive_status": "NOT_ARCHIVED",
+      "creation_date": null,
+      "version": null,
+      "description": "Ward of Hicks Holler cover art for A Mother's Day Miracle (Appalachian Gothic Book 1): the cabin in the holler under a blood moon, windows lit, the HICKS HOLLER sign in the foreground. Handed to the build by the Kreator 2026-10-23 as the right cover.",
+      "notes": "Cover variant held in the Library per the Museum/Library rule (the Library keeps all versions). The Museum wall carries the published cover.",
+      "source": null,
+      "media": {
+        "audio_embed": null,
+        "hero_image": "/assets/images/books/mothers-day-miracle-ward-of-hicks-holler-cover.webp",
+        "thumbnail": "/assets/images/books/mothers-day-miracle-ward-of-hicks-holler-cover.webp",
         "video_embed": null
       },
       "related_artifacts": []
