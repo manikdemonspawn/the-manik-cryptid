@@ -1,9 +1,9 @@
 /* Phase 2 construction layer. Final generated art will replace many CSS-only set pieces. */
 
 :root{
-  --hand:"Segoe Print","Bradley Hand","Comic Sans MS",sans-serif;
-  --book:Georgia,"Times New Roman",serif;
-  --carved:"Palatino Linotype","Book Antiqua",Palatino,serif;
+  --hand:var(--font-hand); /* alias — canonical stack in tokens.css */
+  --book:var(--font-reading); /* alias — canonical stack in tokens.css */
+  --carved:var(--font-carved); /* alias — canonical stack in tokens.css */
 }
 
 .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;z-index:9999;background:#111;color:#fff;padding:.8rem 1rem;border:2px solid #d6bf80}

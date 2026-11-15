@@ -1,0 +1,157 @@
+/* ============================================================
+   DESIGN TOKENS — shared token layer (Proposal 1, Kreator YES
+   2026-11-15). Load FIRST, before every other stylesheet.
+
+   What this file is: the one home for the values that used to
+   live scattered across assets/css/ — global colors, the font
+   stacks, the spacing scale, the type scale, and every Realm's
+   color tokens. Pages read from here; Realm files reference
+   these variables instead of restating raw values.
+
+   What this file is NOT: a redesign. Except for the Katakombs
+   (Kreator directive, below), every value below is copied
+   EXACTLY from where it lived before. Plumbing, not paint.
+   Undo: git revert the Proposal 1 commit.
+   ============================================================ */
+
+:root {
+  /* ---------- Global palette (moved from site.css :root) ---------- */
+  --ink: #e9e3d7;
+  --muted: #aaa397;
+  --night: #090b0b;
+  --forest: #101c16;
+  --moss: #526b4e;
+  --bone: #d8ceb8;
+  --old-gold: #a58b55;
+  --blood: #6e1720;
+  --steel: #90979a;
+  --stone: #6f746c;
+  --wood: #4a3324;
+  --focus: #f0d487;
+
+  /* ---------- Type scale & font stacks (from site.css / phase2.css) ---------- */
+  --font-hand: "Segoe Print", "Bradley Hand", "Comic Sans MS", sans-serif;
+  --font-reading: Georgia, "Times New Roman", serif;
+  --font-carved: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --type-hero: clamp(2.3rem, 7vw, 5.5rem);
+  --type-hero-nexus: clamp(2.6rem, 8vw, 6rem);
+  --type-section: clamp(1.7rem, 4vw, 2.7rem);
+
+  /* ---------- Spacing scale (formalized from values in use) ---------- */
+  --space-1: .5rem;
+  --space-2: .75rem;
+  --space-3: 1rem;
+  --space-4: 1.25rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* ---------- Realm color tokens ----------
+     Values copied exactly from the body.<realm> blocks that
+     used to live in visual-world.css. Those blocks now point
+     here. Each Realm keeps its own visual style — tokens
+     organize the values, they do not flatten the Realms. */
+
+  /* Museum — lantern gold, Fairy-Tale region */
+  --museum-accent: #d8b56b;
+  --museum-accent-soft: rgba(216,181,107,.14);
+  --museum-ground: #d8ceb8;
+  --museum-stone: #6f746c;
+
+  /* Library — lantern gold, Fairy-Tale region (same palette as Museum) */
+  --library-accent: #d8b56b;
+  --library-accent-soft: rgba(216,181,107,.14);
+  --library-ground: #d8ceb8;
+  --library-stone: #6f746c;
+
+  /* Kurio Shoppe — moss, Native-inspired edge */
+  --kurio-accent: #8aa864;
+  --kurio-accent-soft: rgba(138,168,100,.13);
+  --kurio-ground: #5a4028;
+  --kurio-stone: #8a8f88;
+
+  /* Apothecary — moss, Native-inspired edge (same palette as Kurio) */
+  --apothecary-accent: #8aa864;
+  --apothecary-accent-soft: rgba(138,168,100,.13);
+  --apothecary-ground: #5a4028;
+  --apothecary-stone: #8a8f88;
+
+  /* Yard Sale — moss, Native-inspired edge (same palette as Kurio) */
+  --yard-accent: #8aa864;
+  --yard-accent-soft: rgba(138,168,100,.13);
+  --yard-ground: #5a4028;
+  --yard-stone: #8a8f88;
+
+  /* Krypt — sealed violet, protected / mysterious */
+  --krypt-accent: #9a86b8;
+  --krypt-accent-soft: rgba(154,134,184,.13);
+  --krypt-ground: #3a3348;
+  --krypt-stone: #5c5568;
+
+  /* Morgue — clinical steel, archival */
+  --morgue-accent: #9fb2b8;
+  --morgue-accent-soft: rgba(159,178,184,.12);
+  --morgue-ground: #d8cda8;
+  --morgue-stone: #656d70;
+
+  /* Semmaterry — moonlit stone, graveyard */
+  --semmaterry-accent: #b9c0c4;
+  --semmaterry-accent-soft: rgba(185,192,196,.12);
+  --semmaterry-ground: #4a3524;
+  --semmaterry-stone: #6e7478;
+
+  /* Mausoleum — dormant legacy block (Realm deleted 2026-10-15;
+     values preserved exactly, tokenized for completeness) */
+  --mausoleum-accent: #7d7d7a;
+  --mausoleum-accent-soft: rgba(125,125,122,.10);
+  --mausoleum-ground: #3a3a38;
+  --mausoleum-stone: #55554f;
+
+  /* Forge — ember, iron work */
+  --forge-accent: #c96a2e;
+  --forge-accent-soft: rgba(201,106,46,.13);
+  --forge-ground: #2c1a10;
+  --forge-stone: #55524e;
+
+  /* Guildhall — hearth wood */
+  --guildhall-accent: #b3813f;
+  --guildhall-accent-soft: rgba(179,129,63,.13);
+  --guildhall-ground: #241b14;
+  --guildhall-stone: #6c604b;
+
+  /* ==========================================================
+     KATAKOMBS — HELL-THEMED. DEMONCORE TOKENS.
+     KREATOR DIRECTIVE (2026-11-15, her words): "the catacombs
+     are basically hell. We need them in our demoncore colors."
+     Demoncore / dark-luxury family: black, crimson, burgundy,
+     plum. These values REPLACE the old tunnel-stone palette —
+     this is the one deliberate recolor in Proposal 1.
+     OLD values were: accent #8d8578, accent-soft
+     rgba(141,133,120,.12), ground #28251f, stone #47433b.
+     ========================================================== */
+  --katakombs-accent: #c1122f;                    /* crimson */
+  --katakombs-accent-soft: rgba(193,18,47,.16);   /* crimson, soft */
+  --katakombs-ground: #17060c;                    /* plum-black */
+  --katakombs-stone: #571f2e;                     /* burgundy-plum stone */
+
+  /* ==========================================================
+     ANGELCORE TOKEN FAMILY — defined, NOT yet applied.
+     KREATOR DIRECTIVE (2026-11-15, her words): "Anything that
+     would be afterlife, heaven, whatever, should probably be
+     angel core colors." Angelcore family: white, ivory, gold,
+     soft pale light tones.
+     STATUS: as of this commit, NO Realm in the manifest is
+     heaven/afterlife-themed — the death-cluster Realms (Morgue,
+     Semmaterry, Krypt) are archives and burial grounds, not
+     paradise, and their colors are preserved exactly above.
+     These tokens wait here until the Kreator classifies a
+     Realm or area as afterlife/heaven. Classifications are
+     flagged in the Proposal 1 report, never applied silently.
+     ========================================================== */
+  --angelcore-white: #ffffff;
+  --angelcore-ivory: #f6f1e3;
+  --angelcore-pale: #fdfbf4;
+  --angelcore-gold: #d8b56b;
+  --angelcore-halo: rgba(246,241,227,.14);
+}

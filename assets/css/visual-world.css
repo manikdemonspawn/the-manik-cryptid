@@ -21,62 +21,85 @@
    ============================================================ */
 
 /* ---------- Shared realm accent tokens ----------
-   Each body.<realm> sets --realm-accent / --realm-accent-soft /
-   --realm-ground so components can pick up the local palette
+   The VALUES now live in assets/css/tokens.css (Proposal 1,
+   2026-11-15). Each body.<realm> below points --realm-accent /
+   --realm-accent-soft / --realm-ground / --realm-stone at its
+   Realm's tokens so components pick up the local palette
    without restyling per page. */
-body.museum, body.library {
-  --realm-accent: #d8b56b;        /* lantern gold — Fairy-Tale region */
-  --realm-accent-soft: rgba(216,181,107,.14);
-  --realm-ground: #d8ceb8;       /* parchment */
-  --realm-stone: #6f746c;
+body.museum {
+  --realm-accent: var(--museum-accent);        /* lantern gold — Fairy-Tale region */
+  --realm-accent-soft: var(--museum-accent-soft);
+  --realm-ground: var(--museum-ground);       /* parchment */
+  --realm-stone: var(--museum-stone);
 }
-body.kurio, body.apothecary, body.yard {
-  --realm-accent: #8aa864;        /* moss — Native-inspired edge */
-  --realm-accent-soft: rgba(138,168,100,.13);
-  --realm-ground: #5a4028;       /* bark */
-  --realm-stone: #8a8f88;        /* river stone */
+body.library {
+  --realm-accent: var(--library-accent);        /* lantern gold — Fairy-Tale region */
+  --realm-accent-soft: var(--library-accent-soft);
+  --realm-ground: var(--library-ground);       /* parchment */
+  --realm-stone: var(--library-stone);
+}
+body.kurio {
+  --realm-accent: var(--kurio-accent);        /* moss — Native-inspired edge */
+  --realm-accent-soft: var(--kurio-accent-soft);
+  --realm-ground: var(--kurio-ground);       /* bark */
+  --realm-stone: var(--kurio-stone);        /* river stone */
+}
+body.apothecary {
+  --realm-accent: var(--apothecary-accent);        /* moss — Native-inspired edge */
+  --realm-accent-soft: var(--apothecary-accent-soft);
+  --realm-ground: var(--apothecary-ground);       /* bark */
+  --realm-stone: var(--apothecary-stone);        /* river stone */
+}
+body.yard {
+  --realm-accent: var(--yard-accent);        /* moss — Native-inspired edge */
+  --realm-accent-soft: var(--yard-accent-soft);
+  --realm-ground: var(--yard-ground);       /* bark */
+  --realm-stone: var(--yard-stone);        /* river stone */
 }
 body.krypt {
-  --realm-accent: #9a86b8;       /* sealed violet — protected/mysterious */
-  --realm-accent-soft: rgba(154,134,184,.13);
-  --realm-ground: #3a3348;
-  --realm-stone: #5c5568;
+  --realm-accent: var(--krypt-accent);        /* sealed violet — protected/mysterious */
+  --realm-accent-soft: var(--krypt-accent-soft);
+  --realm-ground: var(--krypt-ground);
+  --realm-stone: var(--krypt-stone);
 }
 body.morgue {
-  --realm-accent: #9fb2b8;       /* clinical steel — archival */
-  --realm-accent-soft: rgba(159,178,184,.12);
-  --realm-ground: #d8cda8;       /* ledger paper */
-  --realm-stone: #656d70;
+  --realm-accent: var(--morgue-accent);        /* clinical steel — archival */
+  --realm-accent-soft: var(--morgue-accent-soft);
+  --realm-ground: var(--morgue-ground);
+  --realm-stone: var(--morgue-stone);
 }
 body.semmaterry {
-  --realm-accent: #b9c0c4;       /* moonlit stone — graveyard */
-  --realm-accent-soft: rgba(185,192,196,.12);
-  --realm-ground: #4a3524;       /* turned earth */
-  --realm-stone: #6e7478;
+  --realm-accent: var(--semmaterry-accent);        /* moonlit stone — graveyard */
+  --realm-accent-soft: var(--semmaterry-accent-soft);
+  --realm-ground: var(--semmaterry-ground);
+  --realm-stone: var(--semmaterry-stone);
 }
 body.mausoleum {
-  --realm-accent: #7d7d7a;       /* dormant — muted, quiet */
-  --realm-accent-soft: rgba(125,125,122,.10);
-  --realm-ground: #3a3a38;
-  --realm-stone: #55554f;
+  --realm-accent: var(--mausoleum-accent);        /* dormant — muted, quiet */
+  --realm-accent-soft: var(--mausoleum-accent-soft);
+  --realm-ground: var(--mausoleum-ground);
+  --realm-stone: var(--mausoleum-stone);
 }
 body.forge {
-  --realm-accent: #c96a2e;       /* ember — iron work */
-  --realm-accent-soft: rgba(201,106,46,.13);
-  --realm-ground: #2c1a10;
-  --realm-stone: #55524e;
+  --realm-accent: var(--forge-accent);        /* ember — iron work */
+  --realm-accent-soft: var(--forge-accent-soft);
+  --realm-ground: var(--forge-ground);
+  --realm-stone: var(--forge-stone);
 }
 body.guildhall {
-  --realm-accent: #b3813f;       /* hearth wood */
-  --realm-accent-soft: rgba(179,129,63,.13);
-  --realm-ground: #241b14;
-  --realm-stone: #6c604b;
+  --realm-accent: var(--guildhall-accent);        /* hearth wood */
+  --realm-accent-soft: var(--guildhall-accent-soft);
+  --realm-ground: var(--guildhall-ground);
+  --realm-stone: var(--guildhall-stone);
 }
 body.katakombs {
-  --realm-accent: #8d8578;       /* tunnel stone */
-  --realm-accent-soft: rgba(141,133,120,.12);
-  --realm-ground: #28251f;
-  --realm-stone: #47433b;
+  /* DEMONCORE — Kreator directive 2026-11-15: "the catacombs are
+     basically hell. We need them in our demoncore colors."
+     Token values live in tokens.css (crimson / burgundy / plum / black). */
+  --realm-accent: var(--katakombs-accent);
+  --realm-accent-soft: var(--katakombs-accent-soft);
+  --realm-ground: var(--katakombs-ground);
+  --realm-stone: var(--katakombs-stone);
 }
 
 /* ---------- Realm hero treatments ----------
@@ -90,26 +113,26 @@ body.museum .hero h1, body.library .hero h1 {
   color: #f2e4c2;
   text-shadow: 0 0 34px rgba(216,181,107,.28), 0 2px 24px rgba(0,0,0,.7);
 }
-body.museum .status-chip, body.library .status-chip { border-color: #d8b56b; color: #e8d5a2; }
+body.museum .status-chip, body.library .status-chip { border-color: var(--realm-accent); color: #e8d5a2; }
 body.kurio .hero h1, body.apothecary .hero h1, body.yard .hero h1 {
   /* Native-inspired edge: moss-lit, earthen */
   color: #eef0df;
   text-shadow: 0 0 30px rgba(138,168,100,.30), 0 2px 24px rgba(0,0,0,.7);
 }
-body.kurio .status-chip, body.apothecary .status-chip, body.yard .status-chip { border-color: #8aa864; color: #cfe0b4; }
+body.kurio .status-chip, body.apothecary .status-chip, body.yard .status-chip { border-color: var(--realm-accent); color: #cfe0b4; }
 body.krypt .hero h1 {
   color: #ded3f2;
   text-shadow: 0 0 34px rgba(154,134,184,.32), 0 2px 24px rgba(0,0,0,.75);
 }
-body.krypt .status-chip { border-color: #9a86b8; color: #cdbde8; }
+body.krypt .status-chip { border-color: var(--realm-accent); color: #cdbde8; }
 body.morgue .hero h1 { color: #e2eaec; }
-body.morgue .status-chip { border-color: #9fb2b8; color: #c3d2d7; }
+body.morgue .status-chip { border-color: var(--realm-accent); color: #c3d2d7; }
 body.semmaterry .hero h1 {
   /* Graveyard: moonlit stone */
   color: #e8ecee;
   text-shadow: 0 0 40px rgba(185,192,196,.22), 0 2px 24px rgba(0,0,0,.8);
 }
-body.semmaterry .status-chip { border-color: #b9c0c4; color: #d5dbde; }
+body.semmaterry .status-chip { border-color: var(--realm-accent); color: #d5dbde; }
 body.mausoleum .hero,
 body.mausoleum .section {
   /* DORMANT: muted, quiet, veiled. The Kreator is alive — this is
@@ -117,12 +140,12 @@ body.mausoleum .section {
   filter: saturate(.55);
 }
 body.mausoleum .hero h1 { color: #b9b9b4; text-shadow: 0 2px 18px rgba(0,0,0,.8); }
-body.mausoleum .status-chip { border-color: #7d7d7a; color: #a9a9a4; }
+body.mausoleum .status-chip { border-color: var(--realm-accent); color: #a9a9a4; }
 body.forge .hero h1 {
   color: #f4ddc2;
   text-shadow: 0 0 34px rgba(201,106,46,.35), 0 2px 24px rgba(0,0,0,.7);
 }
-body.forge .status-chip { border-color: #c96a2e; color: #eec39a; }
+body.forge .status-chip { border-color: var(--realm-accent); color: #eec39a; }
 
 /* Realm section headings pick up the local accent. */
 .section h2 { border-bottom: 1px solid var(--realm-stone, #343634); padding-bottom: .5rem; }
