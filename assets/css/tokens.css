@@ -83,23 +83,63 @@
   --yard-ground: #5a4028;
   --yard-stone: #8a8f88;
 
-  /* Krypt — sealed violet, protected / mysterious */
-  --krypt-accent: #9a86b8;
-  --krypt-accent-soft: rgba(154,134,184,.13);
-  --krypt-ground: #3a3348;
-  --krypt-stone: #5c5568;
+  /* Krypt — ANGELCORE. KREATOR RULING (2026-11-15, her words):
+     "the crypt, that's all. That's Angelcore."
+     Full angelcore: the Krypt's tokens are wired to the
+     angelcore family defined below (white / ivory / pale /
+     gold / halo). Forward references are fine — custom
+     properties resolve at use time.
+     OLD values (sealed violet) were: accent #9a86b8,
+     accent-soft rgba(154,134,184,.13), ground #3a3348,
+     stone #5c5568. */
+  --krypt-accent: var(--angelcore-gold);
+  --krypt-accent-soft: var(--angelcore-halo);
+  --krypt-ground: var(--angelcore-pale);
+  --krypt-stone: var(--angelcore-ivory);
 
-  /* Morgue — clinical steel, archival */
+  /* Morgue — clinical steel, archival. Base palette UNCHANGED
+     (steel, sanitized workspace). KREATOR REFINEMENT
+     (2026-11-15, her words): "you can put hints of the demon
+     core and the angel core in the morgue, like a silver
+     accent here, something that crimson red there... it still
+     holds both sides of the plane right there in that room
+     while still being a sanitized workspace."
+     So: two hint tokens only — silver (angelcore) and crimson
+     (demoncore) — applied as small accents, never a theme.
+     Silver lands on the .ghost border (site.css); crimson
+     lands on the Morgue's toe-tag names (visual-world.css). */
   --morgue-accent: #9fb2b8;
   --morgue-accent-soft: rgba(159,178,184,.12);
   --morgue-ground: #d8cda8;
   --morgue-stone: #656d70;
+  --morgue-hint-silver: #c9ced4;    /* angelcore silver — a hint, not a theme */
+  --morgue-hint-crimson: #c1122f;   /* demoncore crimson — a hint, not a theme */
 
-  /* Semmaterry — moonlit stone, graveyard */
-  --semmaterry-accent: #b9c0c4;
-  --semmaterry-accent-soft: rgba(185,192,196,.12);
-  --semmaterry-ground: #4a3524;
-  --semmaterry-stone: #6e7478;
+  /* Semmaterry — ANGELCORE, MIDNIGHT VARIANT. KREATOR RULING
+     (2026-11-15, her words): "the cemetery still has to be
+     like Midnight's and Angelcore... it's dark and it has a
+     full moon but it's Angelcore... The stars can be that
+     silver. The moon can have a silver lining... the sky is
+     that midnight dark dark blue maybe with a couple
+     variations of that deep purple in certain places like
+     the galaxies... If there is even a sky."
+     So the Semmaterry stays dark: accent = silver (the
+     stars), moon/halo = pale silver (the silver lining),
+     ground/sky = midnight dark dark blue with deep-purple
+     galaxy variations. The page carries no sky graphic —
+     "if there is even a sky" — so the midnight lives in
+     these tokens; no imagery was invented for it.
+     OLD values were: accent #b9c0c4, accent-soft
+     rgba(185,192,196,.12), ground #4a3524, stone #6e7478. */
+  --semmaterry-accent: #c9ced4;                     /* silver — the stars */
+  --semmaterry-accent-soft: rgba(201,206,212,.14);  /* starlight, soft */
+  --semmaterry-ground: #0a0f26;                     /* midnight dark dark blue */
+  --semmaterry-stone: #38304f;                      /* violet-slate night stone */
+  --semmaterry-sky: #0a0f26;                        /* the midnight sky, if there is one */
+  --semmaterry-galaxy: #2c1a52;                     /* deep purple — galaxy accent */
+  --semmaterry-galaxy-deep: #180d33;                /* deep purple variation — galaxy shadow */
+  --semmaterry-moon: #eceef0;                       /* pale silver — the moon */
+  --semmaterry-halo: rgba(236,238,240,.16);         /* pale silver — the silver lining */
 
   /* Mausoleum — dormant legacy block (Realm deleted 2026-10-15;
      values preserved exactly, tokenized for completeness) */
@@ -136,18 +176,20 @@
   --katakombs-stone: #571f2e;                     /* burgundy-plum stone */
 
   /* ==========================================================
-     ANGELCORE TOKEN FAMILY — defined, NOT yet applied.
+     ANGELCORE TOKEN FAMILY — the afterlife/heaven palette.
      KREATOR DIRECTIVE (2026-11-15, her words): "Anything that
      would be afterlife, heaven, whatever, should probably be
      angel core colors." Angelcore family: white, ivory, gold,
      soft pale light tones.
-     STATUS: as of this commit, NO Realm in the manifest is
-     heaven/afterlife-themed — the death-cluster Realms (Morgue,
-     Semmaterry, Krypt) are archives and burial grounds, not
-     paradise, and their colors are preserved exactly above.
-     These tokens wait here until the Kreator classifies a
-     Realm or area as afterlife/heaven. Classifications are
-     flagged in the Proposal 1 report, never applied silently.
+     STATUS (updated 2026-11-15, Kreator rulings applied):
+     the KRYPT is wired to this family in full (her words:
+     "the crypt, that's all. That's Angelcore"); the
+     SEMMATERRY carries the midnight variant in its own block
+     above (silver / pale silver / midnight blue / deep
+     purple); the MORGUE is NOT angelcore — her ruling leaves
+     it steel, untouched. --angelcore-white stays defined as
+     the family's pure white, available wherever a Realm is
+     classified afterlife/heaven next.
      ========================================================== */
   --angelcore-white: #ffffff;
   --angelcore-ivory: #f6f1e3;

@@ -57,7 +57,7 @@ body.yard {
   --realm-stone: var(--yard-stone);        /* river stone */
 }
 body.krypt {
-  --realm-accent: var(--krypt-accent);        /* sealed violet — protected/mysterious */
+  --realm-accent: var(--krypt-accent);        /* angelcore — Kreator ruling 2026-11-15: "the crypt, that's all. That's Angelcore" */
   --realm-accent-soft: var(--krypt-accent-soft);
   --realm-ground: var(--krypt-ground);
   --realm-stone: var(--krypt-stone);
@@ -69,7 +69,7 @@ body.morgue {
   --realm-stone: var(--morgue-stone);
 }
 body.semmaterry {
-  --realm-accent: var(--semmaterry-accent);        /* moonlit stone — graveyard */
+  --realm-accent: var(--semmaterry-accent);        /* silver stars over midnight — angelcore, midnight variant (Kreator ruling 2026-11-15) */
   --realm-accent-soft: var(--semmaterry-accent-soft);
   --realm-ground: var(--semmaterry-ground);
   --realm-stone: var(--semmaterry-stone);
@@ -121,16 +121,16 @@ body.kurio .hero h1, body.apothecary .hero h1, body.yard .hero h1 {
 }
 body.kurio .status-chip, body.apothecary .status-chip, body.yard .status-chip { border-color: var(--realm-accent); color: #cfe0b4; }
 body.krypt .hero h1 {
-  color: #ded3f2;
-  text-shadow: 0 0 34px rgba(154,134,184,.32), 0 2px 24px rgba(0,0,0,.75);
+  color: #fdfbf4;
+  text-shadow: 0 0 34px rgba(216,181,107,.32), 0 2px 24px rgba(0,0,0,.75);
 }
-body.krypt .status-chip { border-color: var(--realm-accent); color: #cdbde8; }
+body.krypt .status-chip { border-color: var(--realm-accent); color: #f6f1e3; }
 body.morgue .hero h1 { color: #e2eaec; }
 body.morgue .status-chip { border-color: var(--realm-accent); color: #c3d2d7; }
 body.semmaterry .hero h1 {
-  /* Graveyard: moonlit stone */
+  /* Graveyard: pale-silver moonlight — the silver lining */
   color: #e8ecee;
-  text-shadow: 0 0 40px rgba(185,192,196,.22), 0 2px 24px rgba(0,0,0,.8);
+  text-shadow: 0 0 40px rgba(201,206,212,.22), 0 2px 24px rgba(0,0,0,.8);
 }
 body.semmaterry .status-chip { border-color: var(--realm-accent); color: #d5dbde; }
 body.mausoleum .hero,
@@ -151,9 +151,9 @@ body.forge .status-chip { border-color: var(--realm-accent); color: #eec39a; }
 .section h2 { border-bottom: 1px solid var(--realm-stone, #343634); padding-bottom: .5rem; }
 body.museum .section h2, body.library .section h2 { border-bottom-color: rgba(216,181,107,.35); }
 body.kurio .section h2, body.apothecary .section h2, body.yard .section h2 { border-bottom-color: rgba(138,168,100,.35); }
-body.krypt .section h2 { border-bottom-color: rgba(154,134,184,.35); }
+body.krypt .section h2 { border-bottom-color: rgba(216,181,107,.35); }
 body.morgue .section h2 { border-bottom-color: rgba(159,178,184,.35); }
-body.semmaterry .section h2 { border-bottom-color: rgba(185,192,196,.35); }
+body.semmaterry .section h2 { border-bottom-color: rgba(201,206,212,.35); }
 
 /* Realm-flavored panels: same component, local materials. */
 body.museum .panel, body.library .panel {
@@ -166,11 +166,18 @@ body.kurio .panel, body.apothecary .panel, body.yard .panel {
     repeating-linear-gradient(93deg, rgba(90,64,40,.16) 0 14px, transparent 14px 26px),
     linear-gradient(180deg, rgba(138,168,100,.05), rgba(0,0,0,.30));
 }
-body.krypt .panel { border-color: rgba(154,134,184,.30); background: linear-gradient(180deg, rgba(154,134,184,.06), rgba(0,0,0,.32)); }
+body.krypt .panel { border-color: rgba(216,181,107,.30); background: linear-gradient(180deg, rgba(216,181,107,.06), rgba(0,0,0,.32)); }
 body.morgue .panel { border-color: rgba(159,178,184,.30); }
+body.morgue .toe-tag strong {
+  /* Demoncore crimson HINT — Kreator refinement 2026-11-15 (see
+     --morgue-hint-crimson in tokens.css): the death record's name
+     in crimson, one small accent; the room stays steel.
+     Morgue-scoped so the Semmaterry's toe-tags are untouched. */
+  color: var(--morgue-hint-crimson);
+}
 body.semmaterry .panel {
-  border-color: rgba(185,192,196,.28);
-  background: linear-gradient(180deg, rgba(185,192,196,.05), rgba(0,0,0,.32));
+  border-color: rgba(201,206,212,.28);
+  background: linear-gradient(180deg, rgba(201,206,212,.05), rgba(0,0,0,.32));
 }
 
 /* ============================================================
@@ -857,13 +864,15 @@ body.library .obj-floppy-label {
    sees THAT something is held, never WHAT. Vessels are unlabeled;
    only the Kreator's seal mark. No opening mechanism exists — the
    release mechanism is a pending Kreator decision, so the vessels
-   stay shut. Sealed violet stone throughout.
+   stay shut. Sealed gold-lit stone throughout (angelcore —
+   Kreator ruling 2026-11-15). Only the Kreator's wax seal
+   keeps its violet; that mark is hers, not the room's.
    NOTE: vessel count is presentational, not an inventory of records. */
 
 body.krypt .vault-wall {
-  border: 1px solid rgba(154,134,184,.35);
+  border: 1px solid rgba(216,181,107,.35);
   border-radius: .8rem;
-  background: linear-gradient(180deg, #221c33 0%, #141020 60%, #0d0a16 100%);
+  background: linear-gradient(180deg, #211a0e 0%, #131007 60%, #0c0906 100%);
   box-shadow: inset 0 0 60px rgba(0,0,0,.7), 0 4px 18px rgba(0,0,0,.5);
   padding: 1.5rem 1.5rem 1.75rem;
 }
@@ -872,17 +881,17 @@ body.krypt .vault-plaque {
   margin: 0 auto 2rem;
   padding: 1.25rem 1.5rem;
   text-align: center;
-  border: 1px solid rgba(154,134,184,.5);
+  border: 1px solid rgba(216,181,107,.5);
   border-radius: .5rem;
-  background: linear-gradient(180deg, rgba(154,134,184,.12), rgba(0,0,0,.35));
-  box-shadow: inset 0 1px 0 rgba(222,211,242,.15), 0 4px 14px rgba(0,0,0,.5);
+  background: linear-gradient(180deg, rgba(216,181,107,.12), rgba(0,0,0,.35));
+  box-shadow: inset 0 1px 0 rgba(246,241,227,.15), 0 4px 14px rgba(0,0,0,.5);
 }
 body.krypt .vault-plaque h3 {
   font-family: Georgia, serif;
   letter-spacing: .14em;
   text-transform: uppercase;
   font-size: .85rem;
-  color: #ded3f2;
+  color: #fdfbf4;
   margin: 0 0 .75rem;
 }
 body.krypt .vault-plaque p {
@@ -894,7 +903,7 @@ body.krypt .vault-plaque .kreator-sign {
   margin: .5rem 0 0;
   font-family: Georgia, serif;
   letter-spacing: .2em;
-  color: #9a86b8;
+  color: #d8b56b;
   font-size: .85rem;
 }
 body.krypt .niche-grid {
@@ -913,8 +922,8 @@ body.krypt .niche {
   justify-content: center;
   padding: 1rem .5rem 1.25rem;
   border-radius: .6rem;
-  background: radial-gradient(ellipse at 50% 100%, rgba(154,134,184,.10) 0%, rgba(0,0,0,.55) 70%);
-  border: 1px solid rgba(92,85,104,.8);
+  background: radial-gradient(ellipse at 50% 100%, rgba(216,181,107,.10) 0%, rgba(0,0,0,.55) 70%);
+  border: 1px solid rgba(216,181,107,.5);
   box-shadow: inset 0 8px 24px rgba(0,0,0,.65);
 }
 /* Vessels are inert: shown, never opened. Not focusable, not buttons. */
@@ -929,8 +938,8 @@ body.krypt .vessel-jar {
 body.krypt .vessel-box {
   width: 96px;
   height: 64px;
-  background: linear-gradient(180deg, #3a2f52 0%, #241d38 60%, #171226 100%);
-  border: 1px solid rgba(154,134,184,.5);
+  background: linear-gradient(180deg, #3a2f1a 0%, #241c0e 60%, #171207 100%);
+  border: 1px solid rgba(216,181,107,.5);
   border-radius: 6px;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.4), 3px 4px 10px rgba(0,0,0,.6);
 }
@@ -942,7 +951,7 @@ body.krypt .vessel-box::before {
   right: 0;
   height: 2px;
   background: rgba(0,0,0,.55);
-  box-shadow: 0 1px 0 rgba(154,134,184,.25);
+  box-shadow: 0 1px 0 rgba(216,181,107,.25);
 }
 body.krypt .vessel-lock {
   position: absolute;
@@ -951,8 +960,8 @@ body.krypt .vessel-lock {
   transform: translateX(-50%);
   width: 22px;
   height: 28px;
-  background: linear-gradient(180deg, #6e5f8c, #453a5e);
-  border: 1px solid rgba(154,134,184,.6);
+  background: linear-gradient(180deg, #8c7a4a, #4a3d20);
+  border: 1px solid rgba(216,181,107,.6);
   border-radius: 3px;
 }
 body.krypt .vessel-lock::after {
@@ -964,16 +973,16 @@ body.krypt .vessel-lock::after {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #0d0a16;
-  box-shadow: 0 9px 0 -1px #0d0a16;
+  background: #0c0906;
+  box-shadow: 0 9px 0 -1px #0c0906;
 }
 /* Wax-sealed scroll: rolled, violet wax seal. */
 body.krypt .vessel-scroll {
   width: 110px;
   height: 40px;
   border-radius: 20px;
-  background: linear-gradient(180deg, #4a3f63 0%, #332b4a 55%, #211b33 100%);
-  box-shadow: inset 0 0 0 1px rgba(154,134,184,.35), 2px 3px 8px rgba(0,0,0,.6);
+  background: linear-gradient(180deg, #504322 0%, #332a17 55%, #211a0e 100%);
+  box-shadow: inset 0 0 0 1px rgba(216,181,107,.35), 2px 3px 8px rgba(0,0,0,.6);
 }
 body.krypt .vessel-scroll::before,
 body.krypt .vessel-scroll::after {
@@ -983,8 +992,8 @@ body.krypt .vessel-scroll::after {
   bottom: 4px;
   width: 14px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 40%, #4a3f63, #211b33);
-  box-shadow: inset 0 0 0 2px rgba(154,134,184,.45);
+  background: radial-gradient(circle at 50% 40%, #504322, #211a0e);
+  box-shadow: inset 0 0 0 2px rgba(216,181,107,.45);
 }
 body.krypt .vessel-scroll::before { left: 3px; }
 body.krypt .vessel-scroll::after { right: 3px; }
@@ -992,9 +1001,9 @@ body.krypt .vessel-scroll::after { right: 3px; }
 body.krypt .vessel-volume {
   width: 56px;
   height: 84px;
-  background: linear-gradient(90deg, rgba(0,0,0,.4) 0%, rgba(255,255,255,.06) 20%, rgba(0,0,0,0) 50%, rgba(0,0,0,.5) 100%), #3a2f52;
+  background: linear-gradient(90deg, rgba(0,0,0,.4) 0%, rgba(255,255,255,.06) 20%, rgba(0,0,0,0) 50%, rgba(0,0,0,.5) 100%), #3a2f1a;
   border-radius: 2px 5px 5px 2px;
-  box-shadow: inset 0 0 0 1px rgba(154,134,184,.4), 2px 3px 8px rgba(0,0,0,.6);
+  box-shadow: inset 0 0 0 1px rgba(216,181,107,.4), 2px 3px 8px rgba(0,0,0,.6);
 }
 body.krypt .vessel-volume::after {
   content: "";
@@ -1011,8 +1020,8 @@ body.krypt .vessel-volume::after {
 body.krypt .vessel-jar {
   width: 64px;
   height: 78px;
-  background: linear-gradient(180deg, #453a5e 0%, #2c2340 55%, #1a1428 100%);
-  border: 1px solid rgba(154,134,184,.45);
+  background: linear-gradient(180deg, #4a3d20 0%, #2c2312 55%, #1a1509 100%);
+  border: 1px solid rgba(216,181,107,.45);
   border-radius: 12px 12px 26px 26px / 10px 10px 30px 30px;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.35), 2px 4px 10px rgba(0,0,0,.6);
 }
@@ -1025,8 +1034,8 @@ body.krypt .vessel-jar::before {
   width: 44px;
   height: 14px;
   border-radius: 6px;
-  background: linear-gradient(180deg, #6e5f8c, #453a5e);
-  border: 1px solid rgba(154,134,184,.6);
+  background: linear-gradient(180deg, #8c7a4a, #4a3d20);
+  border: 1px solid rgba(216,181,107,.6);
 }
 /* The Kreator's seal mark: violet wax stamped "M". A seal, not a label. */
 body.krypt .wax-seal {

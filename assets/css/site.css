@@ -107,7 +107,8 @@ footer { padding: 4rem 0 2rem; color: #8d887e; font-family: var(--font-reading);
 .gurney { padding: 1rem; border: 2px solid #656d70; background: linear-gradient(#252a2b,#161a1b); }
 .toe-tag { display: inline-grid; gap: .25rem; min-width: 230px; margin-top: .8rem; padding: .75rem 1rem; color: #24201a; background: #d8cda8; border: 1px solid #877e61; font-family: "Courier New", monospace; transform: rotate(-1deg); }
 .toe-tag strong { letter-spacing: .06em; }
-.ghost { padding: 1.2rem; border: 1px solid rgba(218,225,226,.35); border-radius: 45% 45% 18% 18%; background: rgba(215,225,225,.06); animation: haunt 4s ease-in-out infinite; }
+/* Angelcore silver HINT (Kreator refinement 2026-11-15, see --morgue-hint-silver in tokens.css): the resurrected ghost's edge carries the silver; the room stays steel. */
+.ghost { padding: 1.2rem; border: 1px solid rgba(201,206,212,.5); border-radius: 45% 45% 18% 18%; background: rgba(215,225,225,.06); animation: haunt 4s ease-in-out infinite; }
 @keyframes haunt { 0%,100% { transform: translateY(0); opacity: .68; } 50% { transform: translateY(-12px); opacity: .9; } }
 
 /* KRYPT / NORSE ZONE */
