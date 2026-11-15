@@ -886,13 +886,24 @@ body.krypt .vault-plaque {
   background: linear-gradient(180deg, rgba(216,181,107,.12), rgba(0,0,0,.35));
   box-shadow: inset 0 1px 0 rgba(246,241,227,.15), 0 4px 14px rgba(0,0,0,.5);
 }
-body.krypt .vault-plaque h3 {
+body.krypt .vault-plaque h2, body.krypt .vault-plaque h3 {
   font-family: Georgia, serif;
   letter-spacing: .14em;
   text-transform: uppercase;
   font-size: .85rem;
   color: #fdfbf4;
   margin: 0 0 .75rem;
+  /* Proposal 2 (2026-11-15): plaque headings may be h2 (Stallard memorial,
+     where the plaque is a top-level section) or h3 (Krypt index, under the
+     Sealed Vault h2). The two declarations below keep an h2 plaque heading
+     from picking up the .section h2 border/padding, so the memorial page
+     renders exactly as it did when the heading was an h3. */
+  border-bottom: none;
+  padding-bottom: 0;
+}
+body.krypt .vault-plaque h2::after {
+  /* Neutralizes the phase2 .section h2 gradient bar inside plaques. */
+  content: none;
 }
 body.krypt .vault-plaque p {
   color: #ddd6c6;
